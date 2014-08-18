@@ -1,0 +1,14 @@
+@comment PKG_FORMAT_REVISION:1.1
+@name cvsps-2.1_1
+@comment ORIGIN:devel/cvsps
+@cwd /usr/local
+@conflicts cvsps-devel-[0-9]*
+bin/cvsps
+@comment MD5:a38f82795d7714c4a072d63d7ee5df5f
+man/man1/cvsps.1.gz
+@comment MD5:cf223abaca37f9675f09d15f3ffd027c
+@comment OPTIONS:
+@comment Build details:  ||||
+share/doc/cvsps/README
+@comment MD5:b85114d9e351c1655712036b1f1cfb71
+@dirrm share/doc/cvsps

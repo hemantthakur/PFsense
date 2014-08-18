@@ -1,0 +1,676 @@
+@comment PKG_FORMAT_REVISION:1.1
+@name gettext-0.18.3.1
+@comment ORIGIN:devel/gettext
+@cwd /usr/local
+@pkgdep libiconv-1.14_1
+@comment DEPORIGIN:converters/libiconv
+man/man1/autopoint.1.gz
+@comment MD5:875a00322d2339be983a03305709c5a7
+man/man1/envsubst.1.gz
+@comment MD5:56fda037ea90a014d95f4c7e5360012b
+man/man1/gettext.1.gz
+@comment MD5:65fffe46f891fa93b703b569c12826ec
+man/man1/gettextize.1.gz
+@comment MD5:634a035f61a9e6ff5c9ee93c44ef91f0
+man/man1/msgattrib.1.gz
+@comment MD5:b47915c50113ec54b52d7748942cd573
+man/man1/msgcat.1.gz
+@comment MD5:4edac4e85463b3727382303920008752
+man/man1/msgcmp.1.gz
+@comment MD5:4bccb0befdecdfad629b59820c82e1d6
+man/man1/msgcomm.1.gz
+@comment MD5:499089b06c1c8dcce32f4b97b3bef4f9
+man/man1/msgconv.1.gz
+@comment MD5:49df0b9b88986721aac9563a7d29454d
+man/man1/msgen.1.gz
+@comment MD5:b63b48922be0fa9a0ba0f397022502b2
+man/man1/msgexec.1.gz
+@comment MD5:0e34df4c7d6b75b881ab94da41b33743
+man/man1/msgfilter.1.gz
+@comment MD5:84ae48c1191d548297b59e0c93022f6c
+man/man1/msgfmt.1.gz
+@comment MD5:de3536a2e68047d0e9af2c9c9757a880
+man/man1/msggrep.1.gz
+@comment MD5:ab7c59ab20a24f098e3e2f054da60109
+man/man1/msginit.1.gz
+@comment MD5:39945f72827b9a8085181ae1696c5d0b
+man/man1/msgmerge.1.gz
+@comment MD5:8167ce25e0159c2842b0ad65cf682d05
+man/man1/msgunfmt.1.gz
+@comment MD5:5f0df366e79485353e5ad7a351fdf1f1
+man/man1/msguniq.1.gz
+@comment MD5:cb5e2aecf83f73d7fd3b88edf9963b08
+man/man1/ngettext.1.gz
+@comment MD5:f970710dc6ae5ec9ff12c80cc9079d4e
+man/man1/recode-sr-latin.1.gz
+@comment MD5:9387b669b6479db1c28685b602a5fd90
+man/man1/xgettext.1.gz
+@comment MD5:f6f9e068c0a9df1bc2e23a522d59db49
+man/man3/bind_textdomain_codeset.3.gz
+@comment MD5:9d64fd09004b947e23d4a09ea3db9bff
+man/man3/bindtextdomain.3.gz
+@comment MD5:0277dd2f172902e095d6aa5d14d1ba9c
+man/man3/dcgettext.3.gz
+@comment MD5:29e35d7a463d736a5ebe2d1648ef9d99
+man/man3/dcngettext.3.gz
+@comment MD5:9290e33a2fb777550d7ff12d903da16d
+man/man3/dgettext.3.gz
+@comment MD5:29e35d7a463d736a5ebe2d1648ef9d99
+man/man3/dngettext.3.gz
+@comment MD5:9290e33a2fb777550d7ff12d903da16d
+man/man3/gettext.3.gz
+@comment MD5:be550c76bab4299769c30af7bf78466f
+man/man3/ngettext.3.gz
+@comment MD5:a1554ef85a160b2f4c58c9f2ca138ba6
+man/man3/textdomain.3.gz
+@comment MD5:9222e07d3825724c33ae1e8c0eea2d9d
+bin/autopoint
+@comment MD5:cf8aa0643ead78bdb54cd60dbad428a2
+bin/envsubst
+@comment MD5:1fbb972fb4bf7f086f2899f0aa3eaf9d
+bin/gettext
+@comment MD5:76da54f8a2ce3d1f8145f6bc3202d185
+bin/gettext.sh
+@comment MD5:789296fe6a16a78fbabfdde0112cb503
+bin/gettextize
+@comment MD5:a5d612b9c474ab8850f4c5f640f0eb57
+bin/msgattrib
+@comment MD5:4dab62f49434243b6649169fe3ea6514
+bin/msgcat
+@comment MD5:df682d2d05acdc1a21abf984c78ac345
+bin/msgcmp
+@comment MD5:2b7b1ac98074909262395e7b987730f4
+bin/msgcomm
+@comment MD5:e4f716d11bbed77c4915e11548ae14cf
+bin/msgconv
+@comment MD5:0a3b9f87ec13bc4e874a8d681c95c4eb
+bin/msgen
+@comment MD5:4bf068062627235f084bcfb0a26f5ba3
+bin/msgexec
+@comment MD5:f43c1ddd9eec23a21a8bfb6846024ec2
+bin/msgfilter
+@comment MD5:7d8a5e3835c34e98b4579d9c349b1046
+bin/msgfmt
+@comment MD5:3c932ca2e4b5a54edd7b4e9410508c24
+bin/msggrep
+@comment MD5:3450daa472cb0b1914d1d16444ae774b
+bin/msginit
+@comment MD5:8d965a40242c8e251c28a0f0b7d47cf6
+bin/msgmerge
+@comment MD5:c9f03d74c0a7780896bc9fa7dcd76ed9
+bin/msgunfmt
+@comment MD5:c5c684dfd95354d3c7a4d298c8c9951d
+bin/msguniq
+@comment MD5:879b07460cf1d3ce927535bfba6b8123
+bin/ngettext
+@comment MD5:6975ff4727acbebdf3f62156fc2428f8
+bin/recode-sr-latin
+@comment MD5:a5eaa3c18859aa00b81b5ec2c35a394c
+bin/xgettext
+@comment MD5:e3de08dcf6c3e8d4ace3802c0cd331b6
+include/autosprintf.h
+@comment MD5:b836ed1b3c4dce2244e79a9aaf75306e
+include/gettext-po.h
+@comment MD5:66abdb2928eff57e1f9528f856935a88
+include/libintl.h
+@comment MD5:16048a0410679c180b72979c4bc7d64b
+@exec /bin/mkdir -p %D/lib/gettext
+lib/libasprintf.a
+@comment MD5:a5c6c30eeb8f92deaa16c7abc855922a
+lib/libasprintf.la
+@comment MD5:9b3a7f6db669e37a849a430cb174ecc6
+lib/libasprintf.so
+@comment MD5:bc776b0095702e7e5dde32a8f57da50a
+lib/libasprintf.so.0
+@comment MD5:e6545c3582b025f0b40b72a19814dd07
+lib/libgettextlib-0.18.3.so
+@comment MD5:eaa458e964b984f66fea583a930e5081
+lib/libgettextlib.la
+@comment MD5:8e00effce6827e3612cd0adccc716ab4
+lib/libgettextlib.so
+@comment MD5:ff685efcc71a5592985781f0ba65cf29
+lib/libgettextpo.a
+@comment MD5:3d52e65bf3c7d24506e5523c76dcfe60
+lib/libgettextpo.la
+@comment MD5:13b456ff97b9c6117e9f22237cf25699
+lib/libgettextpo.so
+@comment MD5:b6afa0012f206deeeb21b56d4b6baf3a
+lib/libgettextpo.so.5
+@comment MD5:0d798064d37791a7709b3ad1b3ac4895
+lib/libgettextsrc.la
+@comment MD5:ec3eeb29a0610a84291bf6f7a48308e3
+lib/libgettextsrc-0.18.3.so
+@comment MD5:49da351d5fa9a001e28337944d44e54e
+lib/libgettextsrc.so
+@comment MD5:2918a1e58a38b1bcd723be0f5f973b6f
+lib/libintl.a
+@comment MD5:779dbac847372ebddecb13e40e33d972
+lib/libintl.la
+@comment MD5:109f2268fdde02e7260c0afb9c224747
+lib/libintl.so
+@comment MD5:f7973cd27202a71a180736a468f65c33
+lib/libintl.so.9
+@comment MD5:5606a483b8f037f4f2793d83e7f971a7
+lib/gettext/hostname
+@comment MD5:04e83f51c590446d8942d5a37f5bfef6
+lib/gettext/project-id
+@comment MD5:a9398973e0ab385471e28192499a3465
+lib/gettext/urlget
+@comment MD5:3cc74573e611c581b27dab1903c473f4
+lib/gettext/user-email
+@comment MD5:962d1c77323f303f4c2d40f99cc81cb5
+share/aclocal/codeset.m4
+@comment MD5:3a68e20be2033ef0671c8e9e58c5d17d
+share/aclocal/gettext.m4
+@comment MD5:ce8d9ec63ddd5287c1495a1a88287e91
+share/aclocal/fcntl-o.m4
+@comment MD5:4fd48354a8132d3362044681a0cacaa9
+share/aclocal/glibc2.m4
+@comment MD5:d3744026ed94d651cb125543aafd9729
+share/aclocal/glibc21.m4
+@comment MD5:1bbff9c8969c99d1899a5815e8b9f03e
+share/aclocal/iconv.m4
+@comment MD5:0b64f44dba1fb593e76bf51309059c24
+share/aclocal/intdiv0.m4
+@comment MD5:009b13c8a605f2e30857e77b1656b7bc
+share/aclocal/intl.m4
+@comment MD5:1180527821bb06318c3898269ddaeaac
+share/aclocal/intldir.m4
+@comment MD5:2acf43a7c1b441c11b192272dbf14966
+share/aclocal/intlmacosx.m4
+@comment MD5:47c22037f9d4c4937359e3cf0c6ac857
+share/aclocal/intmax.m4
+@comment MD5:b33f196e5bd1f1f089908dcdb67170c9
+share/aclocal/inttypes-pri.m4
+@comment MD5:5cd496a38b584e71ee0d567413690d8a
+share/aclocal/inttypes_h.m4
+@comment MD5:32021c2a603dbd58527f2cea9c526a35
+share/aclocal/lcmessage.m4
+@comment MD5:67bd8850844aa5031e70b9bb5a7424bf
+share/aclocal/lib-ld.m4
+@comment MD5:f64d99f2f098b8c96d5937931bbc6072
+share/aclocal/lib-link.m4
+@comment MD5:4cbd48e82705819ea6dc870847e28850
+share/aclocal/lib-prefix.m4
+@comment MD5:a21658b3758f6b05e5cebb5e9d36b282
+share/aclocal/lock.m4
+@comment MD5:966bd5c341022443e5937b8eb2ae461c
+share/aclocal/longlong.m4
+@comment MD5:aaa3e127f6021443efcd4d8b906997ef
+share/aclocal/nls.m4
+@comment MD5:3850de3298acff5bcc5ede008c306eb1
+share/aclocal/po.m4
+@comment MD5:6b5d174e5386b5f07581e8ef47a47d72
+share/aclocal/printf-posix.m4
+@comment MD5:d02707bd49a96a9ce35894ffe677ac11
+share/aclocal/progtest.m4
+@comment MD5:2dfd955f7cef0256edf7d8c4c264246e
+share/aclocal/size_max.m4
+@comment MD5:1df3f8aef95aa2bbfe4aebbe9897a74f
+share/aclocal/stdint_h.m4
+@comment MD5:ca306bf966a4dee29bcab9803d974906
+share/aclocal/threadlib.m4
+@comment MD5:47a90e1d4d2b2eb561216b3f6713723a
+share/aclocal/uintmax_t.m4
+@comment MD5:f2c78cdd6f685f3a5ca597320cecec3b
+share/aclocal/visibility.m4
+@comment MD5:d83c67c825152e6619d71483b9bc03a3
+share/aclocal/wchar_t.m4
+@comment MD5:ee12a6e5782724025e11b0e317ea759d
+share/aclocal/wint_t.m4
+@comment MD5:2ea26284b79074942d6b1f00d666adf5
+share/aclocal/xsize.m4
+@comment MD5:b63750d07782cb530213ac738db6caaa
+@comment share/doc/gettext/FAQ.html
+@comment share/doc/gettext/csharpdoc/GNU_Gettext.html
+@comment share/doc/gettext/csharpdoc/GNU_Gettext_GettextResourceManager.html
+@comment share/doc/gettext/csharpdoc/GNU_Gettext_GettextResourceSet.html
+@comment share/doc/gettext/csharpdoc/begin.html
+@comment share/doc/gettext/csharpdoc/index.html
+@comment share/doc/gettext/csharpdoc/namespaces.html
+@comment share/doc/gettext/examples/build-aux/csharpcomp.m4
+@comment share/doc/gettext/examples/build-aux/csharpcomp.sh.in
+@comment share/doc/gettext/examples/build-aux/csharpexec.m4
+@comment share/doc/gettext/examples/build-aux/csharpexec.sh.in
+@comment share/doc/gettext/examples/build-aux/csharpexec-test.exe
+@comment share/doc/gettext/examples/build-aux/gcj.m4
+@comment share/doc/gettext/examples/build-aux/javacomp.m4
+@comment share/doc/gettext/examples/build-aux/javacomp.sh.in
+@comment share/doc/gettext/examples/build-aux/javaexec.m4
+@comment share/doc/gettext/examples/build-aux/javaexec.sh.in
+@comment share/doc/gettext/gettext_1.html
+@comment share/doc/gettext/gettext_2.html
+@comment share/doc/gettext/gettext_3.html
+@comment share/doc/gettext/gettext_4.html
+@comment share/doc/gettext/gettext_5.html
+@comment share/doc/gettext/gettext_6.html
+@comment share/doc/gettext/gettext_7.html
+@comment share/doc/gettext/gettext_8.html
+@comment share/doc/gettext/gettext_9.html
+@comment share/doc/gettext/gettext_10.html
+@comment share/doc/gettext/gettext_11.html
+@comment share/doc/gettext/gettext_12.html
+@comment share/doc/gettext/gettext_13.html
+@comment share/doc/gettext/gettext_14.html
+@comment share/doc/gettext/gettext_15.html
+@comment share/doc/gettext/gettext_16.html
+@comment share/doc/gettext/gettext_17.html
+@comment share/doc/gettext/gettext_18.html
+@comment share/doc/gettext/gettext_19.html
+@comment share/doc/gettext/gettext_20.html
+@comment share/doc/gettext/gettext_21.html
+@comment share/doc/gettext/gettext_22.html
+@comment share/doc/gettext/gettext_23.html
+@comment share/doc/gettext/gettext_24.html
+@comment share/doc/gettext/gettext_25.html
+@comment share/doc/gettext/gettext_foot.html
+@comment share/doc/gettext/gettext_toc.html
+@comment share/doc/gettext/javadoc2/allclasses-frame.html
+@comment share/doc/gettext/javadoc2/deprecated-list.html
+@comment share/doc/gettext/javadoc2/gnu/gettext/GettextResource.html
+@comment share/doc/gettext/javadoc2/gnu/gettext/package-frame.html
+@comment share/doc/gettext/javadoc2/gnu/gettext/package-summary.html
+@comment share/doc/gettext/javadoc2/gnu/gettext/package-tree.html
+@comment share/doc/gettext/javadoc2/help-doc.html
+@comment share/doc/gettext/javadoc2/index-all.html
+@comment share/doc/gettext/javadoc2/index.html
+@comment share/doc/gettext/javadoc2/overview-tree.html
+@comment share/doc/gettext/javadoc2/package-list
+@comment share/doc/gettext/javadoc2/packages.html
+@comment share/doc/gettext/javadoc2/serialized-form.html
+@comment share/doc/gettext/javadoc2/stylesheet.css
+@comment share/doc/gettext/tutorial.html
+@comment share/doc/libasprintf/autosprintf_all.html
+share/gettext/ABOUT-NLS
+@comment MD5:32d0c7ec87f712a9d22796e361d9c4f1
+share/gettext/archive.dir.tar.xz
+@comment MD5:df63031d36d40ee3fa3b153b73fbc3d5
+share/gettext/config.rpath
+@comment MD5:2547eb44589484b1ab6ce9e20686643d
+share/gettext/gettext.h
+@comment MD5:b7adb6b90d0911df01aa4507468854c7
+share/gettext/intl/COPYING.LIB
+@comment MD5:a4b192f7208753fc0fc8d88c733e6106
+share/gettext/intl/ChangeLog
+@comment MD5:fe9e45c6a5124e81871204ec5d79d9d6
+share/gettext/intl/Makefile.in
+@comment MD5:ff9b5c93026b456af6008c971c8ce27d
+share/gettext/intl/VERSION
+@comment MD5:80bec2d31f8245ae29481d7aa647baa3
+share/gettext/intl/bindtextdom.c
+@comment MD5:a5659b0d95ac9d23d1e3a1cc3b3517fe
+share/gettext/intl/config.charset
+@comment MD5:42a471c22cbfc66c8d406a84517d6d47
+share/gettext/intl/dcgettext.c
+@comment MD5:829d89b59d2602d02e92b09210602298
+share/gettext/intl/dcigettext.c
+@comment MD5:5a4f3809ca27c2ee1792626d88aafda1
+share/gettext/intl/dcngettext.c
+@comment MD5:e750ea6094241b24d7b4d7ed2798aca3
+share/gettext/intl/dgettext.c
+@comment MD5:9e092f0cc9fb91713b925e6b9da18066
+share/gettext/intl/dngettext.c
+@comment MD5:a02f0acb60b888f61b499ce440fb5c82
+share/gettext/intl/eval-plural.h
+@comment MD5:59aeb09d88ba0a241092b041fd176bf6
+share/gettext/intl/explodename.c
+@comment MD5:e829918635334e009173101a841c8a62
+share/gettext/intl/export.h
+@comment MD5:890a7338d36e286fe841b9b287565541
+share/gettext/intl/finddomain.c
+@comment MD5:3d1c6f57094869fe18252fe14201e19e
+share/gettext/intl/gettext.c
+@comment MD5:76d8624b35120ef154805ecb339c53db
+share/gettext/intl/gettextP.h
+@comment MD5:a88df04425d2ce2d76cb7d511cd97833
+share/gettext/intl/gmo.h
+@comment MD5:3bce17c0ae4041fd371adc6e81a90bd2
+share/gettext/intl/hash-string.c
+@comment MD5:b6c6cabbfd1a0ee08572251519f1a23e
+share/gettext/intl/hash-string.h
+@comment MD5:e2765cd468eef7b0c16fbf26c241289f
+share/gettext/intl/intl-compat.c
+@comment MD5:5907cb5d29bf0aa653dd401f0fbda3dc
+share/gettext/intl/intl-exports.c
+@comment MD5:e62a501e6d625fb043d7daa90383a51a
+share/gettext/intl/l10nflist.c
+@comment MD5:d7d010bda3a596f5a27846e85dc914d6
+share/gettext/intl/langprefs.c
+@comment MD5:758d2166142df94bfdf1fb3ee93f927a
+share/gettext/intl/libgnuintl.in.h
+@comment MD5:a34733d65820a667c8f59f966286bb22
+share/gettext/intl/libintl.rc
+@comment MD5:69a6b34c3af1ec3d9a4bae96f610674c
+share/gettext/intl/loadinfo.h
+@comment MD5:5f0f68090472b8b93dd10d9080dbb5dc
+share/gettext/intl/loadmsgcat.c
+@comment MD5:bdfc8c4697b4be43b75431065598da41
+share/gettext/intl/localcharset.c
+@comment MD5:6a8837096a72bf64eb0b917f3a79550f
+share/gettext/intl/localcharset.h
+@comment MD5:8317120c1cbc076cefe873c5e49e1cec
+share/gettext/intl/locale.alias
+@comment MD5:48598d190a7d6e29fe6c0811058a5762
+share/gettext/intl/localealias.c
+@comment MD5:3dee90711702dd27741810cf6639ae52
+share/gettext/intl/localename.c
+@comment MD5:89de876d3e9ea0642babe66cbd19c0e3
+share/gettext/intl/lock.c
+@comment MD5:6834b7cf7119d24775913597bd8a5fab
+share/gettext/intl/lock.h
+@comment MD5:e7ce6aec7756a89b853d7b572257084a
+share/gettext/intl/log.c
+@comment MD5:220387de658a6888a89244492fd1ff04
+share/gettext/intl/ngettext.c
+@comment MD5:e911a4ab5828d919bb20c3f0c8d235cf
+share/gettext/intl/os2compat.c
+@comment MD5:ae374cc88a5346ea5093b9a5d384e47d
+share/gettext/intl/os2compat.h
+@comment MD5:a015a3744d80212e8ab0442d9c9fb45e
+share/gettext/intl/osdep.c
+@comment MD5:71f559c72867d2bdcf302fbc70ceaf13
+share/gettext/intl/plural-exp.c
+@comment MD5:f1fe36dd9975658f154a3299466ff860
+share/gettext/intl/plural-exp.h
+@comment MD5:02125e828952fc09574ce843c0e1124c
+share/gettext/intl/plural.c
+@comment MD5:e1dbe70ff3367608f4de2d7ca870e208
+share/gettext/intl/plural.y
+@comment MD5:007fa29e0c2398f05a8e467b950791cd
+share/gettext/intl/printf-args.c
+@comment MD5:229ba5a98a0294acaba2e6d1b51b88fb
+share/gettext/intl/printf-args.h
+@comment MD5:6247eef5c437c155646ee0398abbb64b
+share/gettext/intl/printf-parse.c
+@comment MD5:686facb78a4526e1e99189c822c1952e
+share/gettext/intl/printf-parse.h
+@comment MD5:bfaf4c23a03850fcd4df499ce1328ba9
+share/gettext/intl/printf.c
+@comment MD5:844e24c915a8fb7f9e213f610f8e23b5
+share/gettext/intl/ref-add.sin
+@comment MD5:990acab78751ae98879070a909feb537
+share/gettext/intl/ref-del.sin
+@comment MD5:94ea1778a909971d6f2ce8819824f274
+share/gettext/intl/relocatable.c
+@comment MD5:795a884f9808097e074284ee097b9ec5
+share/gettext/intl/relocatable.h
+@comment MD5:9e98b823d53721a0de2ece8134fe7f48
+share/gettext/intl/setlocale.c
+@comment MD5:51d68b52a78302f5c65da5807ed25634
+share/gettext/intl/textdomain.c
+@comment MD5:7819d6598e7000410c451d759c0e68d7
+share/gettext/intl/threadlib.c
+@comment MD5:747a90a1ef63e47803fd7d55b9f0a229
+share/gettext/intl/tsearch.c
+@comment MD5:0174e9555af29c281d353d944f34cfb9
+share/gettext/intl/tsearch.h
+@comment MD5:05de70e23943dad2eb111f25337f9f1e
+share/gettext/intl/vasnprintf.c
+@comment MD5:9f673b55d2cd48b3bba7609208371c81
+share/gettext/intl/vasnprintf.h
+@comment MD5:554ad6379e363b0480c1dba57ff5036a
+share/gettext/intl/vasnwprintf.h
+@comment MD5:ac23a240d0d22c0a08bafa2b1e6c2fbe
+share/gettext/intl/verify.h
+@comment MD5:997703df408ac902a84b281b323643fd
+share/gettext/intl/version.c
+@comment MD5:fa1652a3150f284870805d3000099351
+share/gettext/intl/wprintf-parse.h
+@comment MD5:5242e2128d46d7bede437f165c7e2b07
+share/gettext/intl/xsize.c
+@comment MD5:056b6a1bd36545d584778991d2d29efd
+share/gettext/intl/xsize.h
+@comment MD5:681c2decc65556a8c346ef56c84ce625
+share/gettext/javaversion.class
+@comment MD5:70db60a5939769e23e8396c1d5851091
+share/gettext/msgunfmt.tcl
+@comment MD5:edddb476fcb8bd53e623c1d95ca0cea2
+share/gettext/po/Makefile.in.in
+@comment MD5:d3fd551d7d74c78bcad28f83980e9bfb
+share/gettext/po/Makevars.template
+@comment MD5:e1d37d718d85811c5647c860b6293a10
+share/gettext/po/Rules-quot
+@comment MD5:6e9d4a56601a1fed4c2c03f2ed5e1491
+share/gettext/po/boldquot.sed
+@comment MD5:9f72ef7fe3e7c7330c158be85dc1bd4c
+share/gettext/po/en@boldquot.header
+@comment MD5:140858226cbabd8977f21e2f29168bb1
+share/gettext/po/en@quot.header
+@comment MD5:4fab037eca87181f2066bda633c7aca7
+share/gettext/po/insert-header.sin
+@comment MD5:b8d349a13678a4e0e18c8ee06c1bebea
+share/gettext/po/quot.sed
+@comment MD5:f652c7cf9496049a47b091513f120a45
+share/gettext/po/remove-potcdate.sin
+@comment MD5:ae2ad0156895c4461ca32fe0524ef902
+share/gettext/projects/GNOME/team-address
+@comment MD5:be4539881e4d230bad0021b7ce5a0a58
+share/gettext/projects/GNOME/teams.html
+@comment MD5:670acd4e766f915bf7ecde61b3a58bf0
+share/gettext/projects/GNOME/teams.url
+@comment MD5:dbb38a81635fb4de126a88442937479c
+share/gettext/projects/GNOME/trigger
+@comment MD5:63e25facf4da380d363834d4700078cd
+share/gettext/projects/KDE/team-address
+@comment MD5:014de27ab42705dd92013bed4b83c06b
+share/gettext/projects/KDE/teams.html
+@comment MD5:efd4c8000788c247e90af1c42671cddd
+share/gettext/projects/KDE/teams.url
+@comment MD5:4e1421465eb9f66395e0cb629be0da63
+share/gettext/projects/KDE/trigger
+@comment MD5:132acbd01f9f7aab4c66d0202553ca54
+share/gettext/projects/TP/team-address
+@comment MD5:c8d33577dcb83b47d8800b47f046f525
+share/gettext/projects/TP/teams.html
+@comment MD5:800b44c4619ce24145c3901e9a80dcd3
+share/gettext/projects/TP/teams.url
+@comment MD5:3b6aa81b1f092d1aca4551cb96f01304
+share/gettext/projects/TP/trigger
+@comment MD5:0bb713aa9daedab60388e883c926591b
+share/gettext/projects/index
+@comment MD5:01b2f2426d7e272f1e6b62567315a969
+share/gettext/projects/team-address
+@comment MD5:55428cddcde69a780d0a55ee408a590a
+share/gettext/styles/po-default.css
+@comment MD5:339c923376adc5e77dad1cc29ff69906
+share/gettext/styles/po-emacs-x.css
+@comment MD5:cd073ead343f46313d3612add8a8e2d7
+share/gettext/styles/po-emacs-xterm.css
+@comment MD5:72ea2e6ccedcb608ed41818f450e20d7
+share/gettext/styles/po-emacs-xterm16.css
+@comment MD5:490dc4e128083a1554cfe3cb043211a1
+share/gettext/styles/po-emacs-xterm256.css
+@comment MD5:c6f4d8c6aa8dd9c9f403260c79504785
+share/gettext/styles/po-vim.css
+@comment MD5:bfe922eff08dbb4f1399efa896b1eeb7
+share/locale/be/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:5cec66930dfcbd7f65bf1da73db91123
+share/locale/be/LC_MESSAGES/gettext-tools.mo
+@comment MD5:f2639039dd26a049ef1dff74972b3fbd
+share/locale/bg/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:8be1ca312d634c0bade0cb0fea4d7a00
+share/locale/bg/LC_MESSAGES/gettext-tools.mo
+@comment MD5:f80f07b5e5e0fb864d9eb3b0b44d9b09
+share/locale/ca/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:82727c37718f99cc447865fa97390b5c
+share/locale/ca/LC_MESSAGES/gettext-tools.mo
+@comment MD5:92aa7e9010918cbcdd9f37864d51a4a9
+share/locale/cs/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:7b04aec657b36bc7aca5425e725844ac
+share/locale/cs/LC_MESSAGES/gettext-tools.mo
+@comment MD5:642fe0d51c7242b7958c9f36329205fe
+share/locale/da/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:27dfeea19cb10cdd07692d4ee35618a7
+share/locale/da/LC_MESSAGES/gettext-tools.mo
+@comment MD5:dc8723239a24cd11fe36dea3505f9bab
+share/locale/de/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:b717152cbb7e80ef953c42b144a6d0c5
+share/locale/de/LC_MESSAGES/gettext-tools.mo
+@comment MD5:46ca4d01114f1895873f2b5bc1040217
+share/locale/el/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:19c6528ed2c25cf3d196d9a7fcc62a61
+share/locale/el/LC_MESSAGES/gettext-tools.mo
+@comment MD5:516a375662f2599b932d49dcbc8e9562
+share/locale/en@boldquot/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:e77c45154dea921e8ab67d99883e5797
+share/locale/en@boldquot/LC_MESSAGES/gettext-tools.mo
+@comment MD5:f5022b6f1b570257b231980cdab3d9bf
+share/locale/en@quot/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:a39537fd61c42a09d4fb5f6ba771f090
+share/locale/en@quot/LC_MESSAGES/gettext-tools.mo
+@comment MD5:89d473ce5e25a597c631223f4a000fbc
+share/locale/eo/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:fc73b8fba8df535305a901ca569a12d2
+share/locale/es/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:9ebd8ce50f3076578d3ed1c3787dc97c
+share/locale/es/LC_MESSAGES/gettext-tools.mo
+@comment MD5:f98daa2cd7b4ada5de458c65c998dfc0
+share/locale/et/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:e287aca535ce8b68909a7828192c9f42
+share/locale/et/LC_MESSAGES/gettext-tools.mo
+@comment MD5:aecd2772c4537afb11031fdbfacdce8c
+share/locale/eu/LC_MESSAGES/gettext-tools.mo
+@comment MD5:d7be3da7879677ff4641b25091169d73
+share/locale/fi/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:123bd9d6893f350acd6abe41afea379f
+share/locale/fi/LC_MESSAGES/gettext-tools.mo
+@comment MD5:2619832c415a8bbe1190c94e4ebd52e6
+share/locale/fr/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:729871d8dad919a0b57b7b63a44b6e4b
+share/locale/fr/LC_MESSAGES/gettext-tools.mo
+@comment MD5:85b6a3b58a3c25935a14aa8b77aeb98d
+share/locale/ga/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:18674834db54d3f17279161cd17d52f8
+share/locale/gl/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:dea86ab1422b459d7252af62b98e37a6
+share/locale/gl/LC_MESSAGES/gettext-tools.mo
+@comment MD5:443cbab72ff9436e19b989cb63d7e2e8
+share/locale/hr/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:78a776ceb6e3a462a5fdc7f5cddb4b60
+share/locale/id/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:42f96b0d331e962642d6711dd50ab3ec
+share/locale/id/LC_MESSAGES/gettext-tools.mo
+@comment MD5:78e5254f49b35c95af6bec862ad9d7c9
+share/locale/it/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:a5c936ee4ab80ff262832fa757fe1e95
+share/locale/it/LC_MESSAGES/gettext-tools.mo
+@comment MD5:772426ef25274508bd5833db65bd37e4
+share/locale/ja/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:e23e3fe15c8f4e895ec744b7c05641dd
+share/locale/ja/LC_MESSAGES/gettext-tools.mo
+@comment MD5:5653915f414431487fc90aadf4f02f3d
+share/locale/ko/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:0d6390e61358e77eb03a88479dee16ed
+share/locale/ko/LC_MESSAGES/gettext-tools.mo
+@comment MD5:a7a2f131ee170cda99f97298d143a1ad
+share/locale/locale.alias
+@comment MD5:c6641567172d383fe20fbecb11868664
+share/locale/nb/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:a7e7cbaaddf32905c3e21c008c33a354
+share/locale/nb/LC_MESSAGES/gettext-tools.mo
+@comment MD5:8d3425c06c77ed3bd8ce03bbc008d591
+share/locale/nl/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:3ae59912f50594cd6f3454fec1ef9a90
+share/locale/nl/LC_MESSAGES/gettext-tools.mo
+@comment MD5:d66dd3ab2be4822fc4be7f22cb1065bb
+share/locale/nn/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:563b110d393fe5386c7c92dddae27c18
+share/locale/nn/LC_MESSAGES/gettext-tools.mo
+@comment MD5:1c0d8aa96609918b34598d0fa64839d5
+share/locale/pa/LC_MESSAGES/gettext-tools.mo
+@comment MD5:1586b5c2318824a7901b50277b380b72
+share/locale/pl/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:9a970a40376c997ea51a664b42947567
+share/locale/pl/LC_MESSAGES/gettext-tools.mo
+@comment MD5:7bda34ba2eb3bf6797e3f2349a275d19
+share/locale/pt/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:a1797984b6bef0d3d63863dd8b0595c0
+share/locale/pt/LC_MESSAGES/gettext-tools.mo
+@comment MD5:ae62193b494abe9ba2d6359b487c1bc6
+share/locale/pt_BR/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:6eedcc52d3843f40e845d9e286ada96c
+share/locale/pt_BR/LC_MESSAGES/gettext-tools.mo
+@comment MD5:eba92e3e88a27e7f1565510d4e563a82
+share/locale/ro/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:628c19f11e503be7b319a8731246ca15
+share/locale/ro/LC_MESSAGES/gettext-tools.mo
+@comment MD5:441b39b8e1d48db2dbfcbbb03276c218
+share/locale/ru/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:461c04e2f48c2e20fc0d82420567aa38
+share/locale/ru/LC_MESSAGES/gettext-tools.mo
+@comment MD5:5df5032d3ff7bbd7351950d8f1cda5e2
+share/locale/sk/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:07daa9121bf1115c147eb1450486e2a3
+share/locale/sk/LC_MESSAGES/gettext-tools.mo
+@comment MD5:ab52323bfd418c0f428e7ac7ccff339f
+share/locale/sl/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:e0916221c565ddce9e54771916b33d3e
+share/locale/sl/LC_MESSAGES/gettext-tools.mo
+@comment MD5:98445a400111a82dd2926d7eaeeb4a5d
+share/locale/sr/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:65ddaca07e8c0829f2ba424ea1f8c0e2
+share/locale/sr/LC_MESSAGES/gettext-tools.mo
+@comment MD5:fd37e09b76bbc49d1f69012532395dfe
+share/locale/sv/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:cffbe7760e6c70a07d2d0ef59900e722
+share/locale/sv/LC_MESSAGES/gettext-tools.mo
+@comment MD5:203f333c65462d65b269e7727f6cf388
+share/locale/tr/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:19d91c17b324dea84ce228bcaadccc77
+share/locale/tr/LC_MESSAGES/gettext-tools.mo
+@comment MD5:91ce0c4ad55eede68ee8145cee8f7f4a
+share/locale/uk/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:c1282a46b306c275ed026032cbb0adb1
+share/locale/uk/LC_MESSAGES/gettext-tools.mo
+@comment MD5:093ac94ac942eb695498087df8f487d4
+share/locale/vi/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:d75062c1d43b4fa3076186799e1b1fdf
+share/locale/vi/LC_MESSAGES/gettext-tools.mo
+@comment MD5:81bc8ae46d1042ad24fb869465f5b764
+share/locale/zh_CN/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:1ad149019ab5f5bb5edb979532a77a9c
+share/locale/zh_CN/LC_MESSAGES/gettext-tools.mo
+@comment MD5:05f38360cc113c29c5d84121870f2ad1
+share/locale/zh_HK/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:fb85b2f784bf2a3b1193d067e0bc4365
+share/locale/zh_TW/LC_MESSAGES/gettext-runtime.mo
+@comment MD5:4bb875b44709ca0a5887ff1d3614dbe4
+share/locale/zh_TW/LC_MESSAGES/gettext-tools.mo
+@comment MD5:c9f9d8b23a8f3069d78c891b345c56ab
+@dirrm share/gettext/styles
+@dirrm share/gettext/projects/TP
+@dirrm share/gettext/projects/KDE
+@dirrm share/gettext/projects/GNOME
+@dirrm share/gettext/projects
+@dirrm share/gettext/po
+@dirrm share/gettext/intl
+@dirrm share/gettext
+@comment @dirrm share/doc/libasprintf
+@comment @dirrm share/doc/gettext/javadoc2/gnu/gettext
+@comment @dirrm share/doc/gettext/javadoc2/gnu
+@comment @dirrm share/doc/gettext/javadoc2
+@comment @dirrm share/doc/gettext/examples/build-aux
+@comment @dirrm share/doc/gettext/examples
+@comment @dirrm share/doc/gettext/csharpdoc
+@comment @dirrm share/doc/gettext
+@dirrm lib/gettext
+@unexec rmdir "%D/share/locale/en@boldquot/LC_MESSAGES" 2>/dev/null || true
+@unexec rmdir "%D/share/locale/en@quot/LC_MESSAGES" 2>/dev/null || true
+@unexec rmdir "%D/share/locale/zh_HK/LC_MESSAGES" 2>/dev/null || true
+@unexec rmdir "%D/share/locale/en@boldquot" 2>/dev/null || true
+@unexec rmdir "%D/share/locale/en@quot" 2>/dev/null || true
+@unexec rmdir "%D/share/locale/zh_HK" 2>/dev/null || true
+@exec /sbin/ldconfig -m /usr/local/lib
+@unexec /sbin/ldconfig -R
+@comment OPTIONS:-DOCS
+@unexec install-info --quiet --delete %D/info/autosprintf.info %D/info/dir
+@unexec [ `info -d %D/info  --output - 2>/dev/null | grep -c '^*'` -eq 1 ] && rm -f %D/info/dir || :
+info/autosprintf.info
+@comment MD5:572e329d620521db20d9dc57b51bfbeb
+@exec install-info --quiet %D/info/autosprintf.info %D/info/dir
+@unexec install-info --quiet --delete %D/info/gettext.info %D/info/dir
+@unexec [ `info -d %D/info  --output - 2>/dev/null | grep -c '^*'` -eq 1 ] && rm -f %D/info/dir || :
+info/gettext.info
+@comment MD5:7703457499432b84950bac85c88854a8
+@exec install-info --quiet %D/info/gettext.info %D/info/dir
+@unexec if [ -f %D/info/dir ]; then if sed -e '1,/Menu:/d' %D/info/dir | grep -q '^[*] '; then true; else rm %D/info/dir; fi; fi

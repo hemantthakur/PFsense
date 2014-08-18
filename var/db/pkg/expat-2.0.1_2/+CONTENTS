@@ -1,0 +1,24 @@
+@comment PKG_FORMAT_REVISION:1.1
+@name expat-2.0.1_2
+@comment ORIGIN:textproc/expat2
+@cwd /usr/local
+man/man1/xmlwf.1.gz
+@comment MD5:2c1bfd188c4734c56a5b23bdfa8a5d86
+bin/xmlwf
+@comment MD5:48013726c595a52609770044223282fd
+include/expat.h
+@comment MD5:f235455608da0e14424b2cba731be0c6
+include/expat_external.h
+@comment MD5:8e2b8dce543d6ff4cdb37f4a8daabd9e
+lib/libexpat.a
+@comment MD5:0e11abd9a118efc4cf81e62ed7895ca8
+lib/libexpat.la
+@comment MD5:39bbac9c6a1dc750d466e1b9b45aa996
+lib/libexpat.so
+@comment MD5:09edb1d6b84068894c992ae9c3ca38b7
+lib/libexpat.so.6
+@comment MD5:5bf05539170b3e8040db63f7887b1215
+@exec /sbin/ldconfig -m /usr/local/lib
+@unexec /sbin/ldconfig -R
+@comment OPTIONS:
+@comment Build details:  ||||

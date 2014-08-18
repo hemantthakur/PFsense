@@ -1,0 +1,16 @@
+X-vi-recover-file: /etc/inc/dsdFunctions.inc
+X-vi-recover-path: /var/tmp/vi.recover/vi.ubUnES
+Reply-To: root
+From: root (Nvi recovery program)
+To: root
+Subject: Nvi saved the file dsdFunctions.inc
+Precedence: bulk
+
+On Mon Aug 18 06:20:35 2014, the user root was editing a
+file named /etc/inc/dsdFunctions.inc on the machine
+pfSense.localdomain, when it was saved for recovery. You can
+recover most, if not all, of the changes to this file using
+the -r option to vi:
+
+	vi -r /etc/inc/dsdFunctions.inc
+

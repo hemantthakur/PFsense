@@ -1,0 +1,5 @@
+set limit tables 3000
+set optimization normal
+set timeout { adaptive.start 0, adaptive.end 0 }
+set limit states 48000
+set limit src-nodes 48000

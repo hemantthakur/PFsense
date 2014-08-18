@@ -1,0 +1,19 @@
+#	   user: root
+#	machine: pf2_1_1_amd64.pfsense.org
+#	   tree: /usr/local/pfsense-fs/root
+#	   date: Thu May  1 16:24:25 2014
+
+# .
+/set type=file uid=0 gid=0 mode=0644 nlink=1 flags=none
+.               type=dir mode=0755 nlink=2 size=512 \
+                time=1398975865.000000000
+    .cshrc      nlink=2 size=724 time=1398975434.000000000
+    .gitsync_merge.sample \
+                size=167 time=1398974562.000000000
+    .hushlogin  size=0 time=1398974562.000000000
+    .login      size=229 time=1398975434.000000000
+    .profile    size=165 time=1398974562.000000000
+    .shrc       size=165 time=1398974562.000000000
+    .tcshrc     size=1003 time=1398974562.000000000
+..
+

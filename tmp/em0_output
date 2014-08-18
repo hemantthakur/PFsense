@@ -1,0 +1,7 @@
+dhclient: PREINIT
+dhclient: Starting delete_old_states()
+OLD_IP: not found
+dhclient: Comparing IPs: Old:  New: 
+DHCPREQUEST on em0 to 255.255.255.255 port 67
+DHCPACK from 10.10.1.100
+bound to 10.10.1.102 -- renewal in 157680000 seconds.

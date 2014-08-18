@@ -1,0 +1,4 @@
+<?php
+	require_once('dsd_Block_url_log.inc');
+	newDevice();
+?>

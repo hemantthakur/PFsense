@@ -1,0 +1,560 @@
+@comment PKG_FORMAT_REVISION:1.1
+@name curl-7.24.0_2
+@comment ORIGIN:ftp/curl
+@cwd /usr/local
+@pkgdep ca_root_nss-3.14.3
+@comment DEPORIGIN:security/ca_root_nss
+share/licenses/curl-7.24.0_2/catalog.mk
+@comment MD5:625c0af7adb2367173f47a1979adfd64
+share/licenses/curl-7.24.0_2/LICENSE
+@comment MD5:110d93d56e4d1d0aebaf6d66f99f49ed
+share/licenses/curl-7.24.0_2/MIT
+@comment MD5:17d912d153f19ac2dbf3471c79ce94cd
+man/man1/curl.1.gz
+@comment MD5:ffe8e33f1d8d7537b7bdc7849bb6f29a
+man/man1/curl-config.1.gz
+@comment MD5:b67258fe8982eb44f9043fc913842610
+man/man3/curl_easy_cleanup.3.gz
+@comment MD5:192dd136d24e62ff5ba694dcb81d8f1f
+man/man3/curl_easy_duphandle.3.gz
+@comment MD5:3f4bfe3b2c4485b0fed4930f8bbefe20
+man/man3/curl_easy_escape.3.gz
+@comment MD5:369020b5a3ad7d2351da0f27cb6b1ebd
+man/man3/curl_easy_getinfo.3.gz
+@comment MD5:fd39481710b450b982dfb9135f17730d
+man/man3/curl_easy_init.3.gz
+@comment MD5:eabb5e8b9872df0551c1080230debfa9
+man/man3/curl_easy_pause.3.gz
+@comment MD5:077e3550491557e33681b3a6ef302a02
+man/man3/curl_easy_perform.3.gz
+@comment MD5:8944b9fd6b159dc1cd47f87e5a87892b
+man/man3/curl_easy_recv.3.gz
+@comment MD5:81af750939018e30d841062af963b8d6
+man/man3/curl_easy_reset.3.gz
+@comment MD5:5937d14eba2c98db2e1fbfad8242ab84
+man/man3/curl_easy_send.3.gz
+@comment MD5:379f05d21ceef86f70e3784fc2ddbe3c
+man/man3/curl_easy_setopt.3.gz
+@comment MD5:93dfcc80b0e286b4c4fc14038a50afe4
+man/man3/curl_easy_strerror.3.gz
+@comment MD5:f20703d622d9d4a692bb169a63e3e0a4
+man/man3/curl_easy_unescape.3.gz
+@comment MD5:1748d674d2cc53acab8d03b66309168f
+man/man3/curl_escape.3.gz
+@comment MD5:189ab311941c8fe9680b5d915a520e2d
+man/man3/curl_formadd.3.gz
+@comment MD5:2103ae405cc8e4b366dd1e2f46eb3311
+man/man3/curl_formfree.3.gz
+@comment MD5:89ebb4920bd20fc34b761c33e5097d2b
+man/man3/curl_formget.3.gz
+@comment MD5:6690d96e0c06cf5cc5361013b12c3d00
+man/man3/curl_free.3.gz
+@comment MD5:4cf878884c6eaf631c729ff83dadb326
+man/man3/curl_getdate.3.gz
+@comment MD5:199585f72da57c88892d52abf8ecafdc
+man/man3/curl_getenv.3.gz
+@comment MD5:7a0fa29f47d8236c686a968e6332faf6
+man/man3/curl_global_cleanup.3.gz
+@comment MD5:b7b54aab7dfa0db872b243593b4419f6
+man/man3/curl_global_init.3.gz
+@comment MD5:daabe9b864aa01323c5823709ce3f564
+man/man3/curl_global_init_mem.3.gz
+@comment MD5:d55df6c20bc40181f23a6e901e7f7a32
+man/man3/curl_mprintf.3.gz
+@comment MD5:a1b1e8926539443ddd67535b265f467a
+man/man3/curl_multi_add_handle.3.gz
+@comment MD5:59a136f7551134a06bbaf9fe47e0c749
+man/man3/curl_multi_assign.3.gz
+@comment MD5:cef32f84d6332ae7e6725ec12ff10191
+man/man3/curl_multi_cleanup.3.gz
+@comment MD5:41302449f4100dce50586da05d49b4b6
+man/man3/curl_multi_fdset.3.gz
+@comment MD5:578d63c858957e08c6d7cc211a5c5292
+man/man3/curl_multi_info_read.3.gz
+@comment MD5:2532df2715f76e7bf495a7f19ff6c71b
+man/man3/curl_multi_init.3.gz
+@comment MD5:8b95394f4538ccf582dfad36d2423da0
+man/man3/curl_multi_perform.3.gz
+@comment MD5:8848f0fad50786321b078eb30fc6bcbd
+man/man3/curl_multi_remove_handle.3.gz
+@comment MD5:be023ab5f05bbd98ae09095c05f0eff6
+man/man3/curl_multi_setopt.3.gz
+@comment MD5:4399d375cd8defc3aa69114d7c81c8c7
+man/man3/curl_multi_socket.3.gz
+@comment MD5:35f7290c3cdb693724ef9e01aaf4547b
+man/man3/curl_multi_socket_action.3.gz
+@comment MD5:62869eb52eb7b6cc1dc1c2282fc1c38f
+man/man3/curl_multi_strerror.3.gz
+@comment MD5:26787fbe1af8838727e848177cdad50a
+man/man3/curl_multi_timeout.3.gz
+@comment MD5:80b1771a10c136e80947e325d3e461cb
+man/man3/curl_share_cleanup.3.gz
+@comment MD5:ba4eb7c175ed0fff00dcef7b0f8bd4d5
+man/man3/curl_share_init.3.gz
+@comment MD5:fa322232436ce01c9f0a2f92df57f627
+man/man3/curl_share_setopt.3.gz
+@comment MD5:79bfd2f61f820011c4ab6e2f212f9169
+man/man3/curl_share_strerror.3.gz
+@comment MD5:b6c5f320a9f68edace6d5110946e05c7
+man/man3/curl_slist_append.3.gz
+@comment MD5:e811faf1473e26fe1fdc8372c4891823
+man/man3/curl_slist_free_all.3.gz
+@comment MD5:8f3a13b05f7582fb539d913b63a8b95d
+man/man3/curl_strequal.3.gz
+@comment MD5:344baa7c2d8f7768defb5474aed23d70
+man/man3/curl_unescape.3.gz
+@comment MD5:c8c7d88c50c37ce0af89bc72cba0df3a
+man/man3/curl_version.3.gz
+@comment MD5:60795dd125e6e37189f3d0bbcfbcdf3c
+man/man3/curl_version_info.3.gz
+@comment MD5:aee0f48a5dbaab2f08f34517e37a1af5
+man/man3/libcurl.3.gz
+@comment MD5:4065e3263b47846b6f04ed3923b10023
+man/man3/libcurl-easy.3.gz
+@comment MD5:327acc59a2bfef5d89a35ea5612163b0
+man/man3/libcurl-errors.3.gz
+@comment MD5:339f910ca937a691b595acb5bbc00094
+man/man3/libcurl-multi.3.gz
+@comment MD5:bd2458574c6ce2bd6324bef8d101fbc6
+man/man3/libcurl-share.3.gz
+@comment MD5:faca9a6578653c6f4effefcc05f296d5
+man/man3/libcurl-tutorial.3.gz
+@comment MD5:615f0e50040e279fcdf8f787010cbdc0
+bin/curl
+@comment MD5:3fb9b580f5db29d396f1e4d5002ae2c9
+bin/curl-config
+@comment MD5:96e60de2d27b886da37c10a7bdd75ab4
+include/curl/curl.h
+@comment MD5:b2b2d8798c09d0b83858d951fb2a547c
+include/curl/curlbuild.h
+@comment MD5:8b9637946894e2cd85658877bb915505
+include/curl/curlrules.h
+@comment MD5:9e7f8b768255827f9bac344297a1d51f
+include/curl/curlver.h
+@comment MD5:6912598b499ecabb520516ef5137f0aa
+include/curl/easy.h
+@comment MD5:0bacb9036436a91bf66c007a56a2f9b9
+include/curl/mprintf.h
+@comment MD5:aa358cbaa44e19f43cc05ea772d037af
+include/curl/multi.h
+@comment MD5:63dd390e82a97e3115abc2795d9e77ab
+include/curl/stdcheaders.h
+@comment MD5:18c029ed6fdad0ce85ac094ca2841515
+include/curl/typecheck-gcc.h
+@comment MD5:d14636f063e0d5e7bbf98fe8d20bc1b2
+share/aclocal/libcurl.m4
+@comment MD5:5e22a13d29fa628c83c267cf9b4f3218
+@dirrm include/curl
+lib/libcurl.a
+@comment MD5:05522f7892b36ec8ae9a9a3daf859a74
+lib/libcurl.la
+@comment MD5:b2300b283a61f2b258570e0f25cdc252
+lib/libcurl.so
+@comment MD5:39019b18f20694bddd2c8230cb494d38
+lib/libcurl.so.6
+@comment MD5:1161c94e3c0f364d4a8d02d849a99c6f
+libdata/pkgconfig/libcurl.pc
+@comment MD5:dac9e96b72359eab5932904cd767e161
+share/doc/curl/BINDINGS
+@comment MD5:693dfd64d8ae11d957b21c1e776d0a4f
+share/doc/curl/BUGS
+@comment MD5:7c3ce80a9938f6dd99bef4edb8ca26ba
+share/doc/curl/CONTRIBUTE
+@comment MD5:6a45cd2280d233b1a31f69383b3b1200
+share/doc/curl/DISTRO-DILEMMA
+@comment MD5:3c3eca51b37c2238c9a255642a1f12bf
+share/doc/curl/FAQ
+@comment MD5:f5a47d5e3e8888c4288682404c4f8309
+share/doc/curl/FEATURES
+@comment MD5:edf86557882693725e5ee8726da988a6
+share/doc/curl/HISTORY
+@comment MD5:da19f6d3a5f80488104b321ae4ab0371
+share/doc/curl/INSTALL
+@comment MD5:b857266590175f2fb195d438205fa9fb
+share/doc/curl/INSTALL.devcpp
+@comment MD5:af563b0424bc91234d34fb14572de128
+share/doc/curl/INTERNALS
+@comment MD5:93fdeadf787a204b253508eadb3d465d
+share/doc/curl/KNOWN_BUGS
+@comment MD5:c989f65ac57ed618e0a1b36a6d31bbd5
+share/doc/curl/LICENSE-MIXING
+@comment MD5:4b412b3524533112f57d5f960c98cb13
+share/doc/curl/MANUAL
+@comment MD5:18ec3ab5f8069c5bebac7fa9d0e02dff
+share/doc/curl/README.netware
+@comment MD5:dca02e6297aaeb8425f42e46b2607ace
+share/doc/curl/README.win32
+@comment MD5:5a45db412c4c70a91b2a2b9ebcfce695
+share/doc/curl/RESOURCES
+@comment MD5:fb96d7d95754e165d43ddd42e9a33478
+share/doc/curl/SSLCERTS
+@comment MD5:b42d0a4c9ef9b7bba28937555ce23a36
+share/doc/curl/THANKS
+@comment MD5:d2ef637c92cd1a054436976204a7cdc9
+share/doc/curl/TODO
+@comment MD5:3acaf3033915c7aa10a14ef216844b29
+share/doc/curl/TheArtOfHttpScripting
+@comment MD5:b48278a15ffd31077bb7dee97834757c
+share/doc/curl/VERSIONS
+@comment MD5:78f4048896098d2760bf1dd3442983dd
+share/doc/curl/curl-config.html
+@comment MD5:e92c0e17273e79509042e9febb5bef19
+share/doc/curl/curl-config.pdf
+@comment MD5:eb986c4c924b229aa7a589308c5ada22
+share/doc/curl/curl.html
+@comment MD5:85b30d86e9b8de46037ecd53d6b522fd
+share/doc/curl/curl.pdf
+@comment MD5:594c283fc2cbcc1598fa439382f61563
+share/doc/curl/index.html
+@comment MD5:e31b2cc659a77d405a461c0972dfffdc
+share/doc/curl/libcurl/ABI
+@comment MD5:aaff4b04efac86e0c7e826da8be4547a
+share/doc/curl/libcurl/curl_easy_cleanup.html
+@comment MD5:d6ba59c884669e6f26d925a579b16afe
+share/doc/curl/libcurl/curl_easy_cleanup.pdf
+@comment MD5:3719278be314d0f42041a2ed007d02b6
+share/doc/curl/libcurl/curl_easy_duphandle.html
+@comment MD5:a47228ee9e4789a6bee6fda98e020361
+share/doc/curl/libcurl/curl_easy_duphandle.pdf
+@comment MD5:4aaf0efaf14e481b06ae2a65e98fd9a2
+share/doc/curl/libcurl/curl_easy_escape.html
+@comment MD5:387c9bf5fbd1bcf1ad45d401d1b8339a
+share/doc/curl/libcurl/curl_easy_escape.pdf
+@comment MD5:055e7086667085fac51562f5cb9e4444
+share/doc/curl/libcurl/curl_easy_getinfo.html
+@comment MD5:da9acc62aa1861272c1979ce43022c61
+share/doc/curl/libcurl/curl_easy_getinfo.pdf
+@comment MD5:0a114b62d1c24269d2a5bbe2869c8cfc
+share/doc/curl/libcurl/curl_easy_init.html
+@comment MD5:ae68e2c3e7e3a4f2c0c0ec813fac6082
+share/doc/curl/libcurl/curl_easy_init.pdf
+@comment MD5:e880342d4d80f87ffd2c4a717246cc9e
+share/doc/curl/libcurl/curl_easy_pause.html
+@comment MD5:a5eda31d91ec83afea71a103475c9bb4
+share/doc/curl/libcurl/curl_easy_pause.pdf
+@comment MD5:80e302704ab6462456c06b2f2923d909
+share/doc/curl/libcurl/curl_easy_perform.html
+@comment MD5:9e3f3c77547567b5a42274e8551667da
+share/doc/curl/libcurl/curl_easy_perform.pdf
+@comment MD5:977adc3c6ecb1cedef0243164d8fe646
+share/doc/curl/libcurl/curl_easy_recv.html
+@comment MD5:a01b8ec9a952d59c673fd417c429b5ea
+share/doc/curl/libcurl/curl_easy_recv.pdf
+@comment MD5:0dca11dfa00ed205dfdbe554ecbc55b7
+share/doc/curl/libcurl/curl_easy_reset.html
+@comment MD5:205bd27d31fcf809ab1f6070df9f774e
+share/doc/curl/libcurl/curl_easy_reset.pdf
+@comment MD5:a317339af3d801eea98a74c75d3f6ddf
+share/doc/curl/libcurl/curl_easy_send.html
+@comment MD5:0f13c0d2041068be51bc5787c4e77012
+share/doc/curl/libcurl/curl_easy_send.pdf
+@comment MD5:918b4be3f8ab8e139ee97959c678daae
+share/doc/curl/libcurl/curl_easy_setopt.html
+@comment MD5:da3ba22437cce857f9f6641a90b2c665
+share/doc/curl/libcurl/curl_easy_setopt.pdf
+@comment MD5:e9c2c6188b20b0d4fe0c25fcfeca375b
+share/doc/curl/libcurl/curl_easy_strerror.html
+@comment MD5:a5e10ded6d47c46a7f4071847af678af
+share/doc/curl/libcurl/curl_easy_strerror.pdf
+@comment MD5:a0884bdac9cad2ba6f342021326e5730
+share/doc/curl/libcurl/curl_easy_unescape.html
+@comment MD5:8970d91880be9b18a4b618310c1701bd
+share/doc/curl/libcurl/curl_easy_unescape.pdf
+@comment MD5:af602d77178bf35946306a04210611ad
+share/doc/curl/libcurl/curl_escape.html
+@comment MD5:24a9c4543155e13b33669bce1810f928
+share/doc/curl/libcurl/curl_escape.pdf
+@comment MD5:92e94db575ef20c16db150b9e647242b
+share/doc/curl/libcurl/curl_formadd.html
+@comment MD5:d2dde6222c8fe64ab33035388356af45
+share/doc/curl/libcurl/curl_formadd.pdf
+@comment MD5:71f8d2342c6a3a54b22d976dc7f49431
+share/doc/curl/libcurl/curl_formfree.html
+@comment MD5:7b652fa5d2c652b852869d99bf571465
+share/doc/curl/libcurl/curl_formfree.pdf
+@comment MD5:78572f930db7681788abc4404b896970
+share/doc/curl/libcurl/curl_formget.html
+@comment MD5:fa7b6bd353e6c689c455042b3c9ab74e
+share/doc/curl/libcurl/curl_formget.pdf
+@comment MD5:ffa8b15b353f163647258e3e2e81b7f9
+share/doc/curl/libcurl/curl_free.html
+@comment MD5:f97ba7e32e47cdac9805dbe5e33348cd
+share/doc/curl/libcurl/curl_free.pdf
+@comment MD5:5b741a168d5a55c7325f0f1e747e8a3a
+share/doc/curl/libcurl/curl_getdate.html
+@comment MD5:75d60cc5b8d961c8cd83cc2303b14318
+share/doc/curl/libcurl/curl_getdate.pdf
+@comment MD5:89192a7388949af38b6012f9e44e8411
+share/doc/curl/libcurl/curl_getenv.html
+@comment MD5:af999145d785cdf0f5f069f9eb2bf76a
+share/doc/curl/libcurl/curl_getenv.pdf
+@comment MD5:3f85b815c0ac12000906d40b31fd01fd
+share/doc/curl/libcurl/curl_global_cleanup.html
+@comment MD5:4c7ffa0582346485887aac1f50465606
+share/doc/curl/libcurl/curl_global_cleanup.pdf
+@comment MD5:7213cb3cb7bf45a76930cbb7a4ca2a1e
+share/doc/curl/libcurl/curl_global_init.html
+@comment MD5:3fd5259ec0e11d82f84ed8e0c3b32f0a
+share/doc/curl/libcurl/curl_global_init.pdf
+@comment MD5:1e6069ba9339d87c96cd40969cb592a7
+share/doc/curl/libcurl/curl_global_init_mem.html
+@comment MD5:3d34ab2adee2e7bfb46d37e9667b4262
+share/doc/curl/libcurl/curl_global_init_mem.pdf
+@comment MD5:8c5fcad6055517b328fa4d62aefbde19
+share/doc/curl/libcurl/curl_mprintf.html
+@comment MD5:5997ae2d7511849ba343a9ac6819fcd0
+share/doc/curl/libcurl/curl_mprintf.pdf
+@comment MD5:c28d97c0da3754585de6aca91170f021
+share/doc/curl/libcurl/curl_multi_add_handle.html
+@comment MD5:0e2c9a2d77b12b794192779660762433
+share/doc/curl/libcurl/curl_multi_add_handle.pdf
+@comment MD5:453af52e4fce18a1c5a4a16392824702
+share/doc/curl/libcurl/curl_multi_assign.html
+@comment MD5:4218c0bc841de36ce59682a004f2d339
+share/doc/curl/libcurl/curl_multi_assign.pdf
+@comment MD5:e5f5935d450f59e638d4c56dd3e58d10
+share/doc/curl/libcurl/curl_multi_cleanup.html
+@comment MD5:76c5fd88bca4394a1459beee803e4c98
+share/doc/curl/libcurl/curl_multi_cleanup.pdf
+@comment MD5:2d3d0e5ba9da7c19bf8c9058b77a1b55
+share/doc/curl/libcurl/curl_multi_fdset.html
+@comment MD5:5e7c222a62b0d3592ea660d79526a220
+share/doc/curl/libcurl/curl_multi_fdset.pdf
+@comment MD5:d2fade8ef8c54964d820035d29fb7d6d
+share/doc/curl/libcurl/curl_multi_info_read.html
+@comment MD5:8f4db46413820514551dc762228f8739
+share/doc/curl/libcurl/curl_multi_info_read.pdf
+@comment MD5:7a0be7a6c0f45cbbce53681cdf21251a
+share/doc/curl/libcurl/curl_multi_init.html
+@comment MD5:ff7ef7582458dc319814233404031503
+share/doc/curl/libcurl/curl_multi_init.pdf
+@comment MD5:4d8bafe5cd0ee2c9dbcf4d156d7230f0
+share/doc/curl/libcurl/curl_multi_perform.html
+@comment MD5:e7bef90ace1b6983a563e2342a1ff4f0
+share/doc/curl/libcurl/curl_multi_perform.pdf
+@comment MD5:07ac04f5b8aa843fc03e6fe7762a0ae2
+share/doc/curl/libcurl/curl_multi_remove_handle.html
+@comment MD5:dd7a2fc24ed6dfdb739a639b93555a51
+share/doc/curl/libcurl/curl_multi_remove_handle.pdf
+@comment MD5:e9d9cdb841536baf19462549022669d3
+share/doc/curl/libcurl/curl_multi_setopt.html
+@comment MD5:4e5f9ea4fd2bb3b855c3f2e5f4202b31
+share/doc/curl/libcurl/curl_multi_setopt.pdf
+@comment MD5:2476480fe20d03d3bb57b1f946ba5070
+share/doc/curl/libcurl/curl_multi_socket.html
+@comment MD5:84c7e9291a2c5b4189d80d54bd7ada74
+share/doc/curl/libcurl/curl_multi_socket.pdf
+@comment MD5:63d54efea82e4c50e64a38b3c8f52738
+share/doc/curl/libcurl/curl_multi_socket_action.html
+@comment MD5:d2cd5427af80791bf9883662e2e7e28b
+share/doc/curl/libcurl/curl_multi_socket_action.pdf
+@comment MD5:5968e4d5732207c3bb33a1285decc1f1
+share/doc/curl/libcurl/curl_multi_strerror.html
+@comment MD5:616150b681d9a0bf3fc0761f27922791
+share/doc/curl/libcurl/curl_multi_strerror.pdf
+@comment MD5:ebe0e923b3b09101a8e4f776e63080d0
+share/doc/curl/libcurl/curl_multi_timeout.html
+@comment MD5:ebf806ad0875d65f718de98d4e82ae3a
+share/doc/curl/libcurl/curl_multi_timeout.pdf
+@comment MD5:057b17610dc0c0ece94f917a957ed1e2
+share/doc/curl/libcurl/curl_share_cleanup.html
+@comment MD5:1172adc3fdf514ba5d092bdc3e8a8b02
+share/doc/curl/libcurl/curl_share_cleanup.pdf
+@comment MD5:672a462c8ebe98273b25b5e501af5a80
+share/doc/curl/libcurl/curl_share_init.html
+@comment MD5:ce7ae57b5e9404ff8f47f302cced5a45
+share/doc/curl/libcurl/curl_share_init.pdf
+@comment MD5:ee67c379499a452f7029a4aab925a8e0
+share/doc/curl/libcurl/curl_share_setopt.html
+@comment MD5:1a8f1193af59b6026b65fc0f417bdd38
+share/doc/curl/libcurl/curl_share_setopt.pdf
+@comment MD5:a0a990177c2f247b4e1dcccdd242b151
+share/doc/curl/libcurl/curl_share_strerror.html
+@comment MD5:776874f873c78738395730df0307157b
+share/doc/curl/libcurl/curl_share_strerror.pdf
+@comment MD5:0902f33f8d192a7f1241b6e67db8690b
+share/doc/curl/libcurl/curl_slist_append.html
+@comment MD5:be3c49ddb8ecc1c7f6ba1a6136eb52e0
+share/doc/curl/libcurl/curl_slist_append.pdf
+@comment MD5:df08a9a13149ff32b713fd2e2ed3fe9c
+share/doc/curl/libcurl/curl_slist_free_all.html
+@comment MD5:395fa4d4cc2e5309b554d3ab4590d591
+share/doc/curl/libcurl/curl_slist_free_all.pdf
+@comment MD5:7c40e6aaa5a4d2c5f09d4d711a9410f8
+share/doc/curl/libcurl/curl_strequal.html
+@comment MD5:a86d1bf8a375a3367c40e32e48d2cdc8
+share/doc/curl/libcurl/curl_strequal.pdf
+@comment MD5:bc45a4e62a5b7ef5d4040b1535d88171
+share/doc/curl/libcurl/curl_unescape.html
+@comment MD5:786c39cb32a5f213b16edcc332ab5de9
+share/doc/curl/libcurl/curl_unescape.pdf
+@comment MD5:c0f553abec45df98ebcc68a50d9e2761
+share/doc/curl/libcurl/curl_version.html
+@comment MD5:889a62970358a4b08d4d3e76ed8fc9e3
+share/doc/curl/libcurl/curl_version.pdf
+@comment MD5:c201b178a013723b2ff28bd0ba92c815
+share/doc/curl/libcurl/curl_version_info.html
+@comment MD5:3081807cee681483498fecb4611884d3
+share/doc/curl/libcurl/curl_version_info.pdf
+@comment MD5:507257882211c48b2991a0dec376aac3
+share/doc/curl/libcurl/index.html
+@comment MD5:1e1ceb1f56f20c28aff5b8e2d112d1c0
+share/doc/curl/libcurl/libcurl-easy.html
+@comment MD5:d7513337e9babdfe548a6979c3bcbc60
+share/doc/curl/libcurl/libcurl-easy.pdf
+@comment MD5:56ffc0ced4314240ea71c016df4d3e3d
+share/doc/curl/libcurl/libcurl-errors.html
+@comment MD5:5400311b17353c20253e3ce4aee6285d
+share/doc/curl/libcurl/libcurl-errors.pdf
+@comment MD5:22931d8f0eb9af1f5296eebcbb2ddfc5
+share/doc/curl/libcurl/libcurl-multi.html
+@comment MD5:831cf884a93d85eaded868c5207c468b
+share/doc/curl/libcurl/libcurl-multi.pdf
+@comment MD5:cd65a63d513c04291154dcf1b66e40cb
+share/doc/curl/libcurl/libcurl-share.html
+@comment MD5:41f43b67ada53a7d9724466d8c17112d
+share/doc/curl/libcurl/libcurl-share.pdf
+@comment MD5:1ba341191ccb7796bd1352d554f31847
+share/doc/curl/libcurl/libcurl-tutorial.html
+@comment MD5:256c55d6d367880e3d361e05337aefee
+share/doc/curl/libcurl/libcurl-tutorial.pdf
+@comment MD5:76cda60a789b70b090e84ce5d421ae50
+share/doc/curl/libcurl/libcurl.html
+@comment MD5:e898c6ed17b88bf5e425ae8eb0329c38
+share/doc/curl/libcurl/libcurl.m4
+@comment MD5:5e22a13d29fa628c83c267cf9b4f3218
+share/doc/curl/libcurl/libcurl.pdf
+@comment MD5:2d478e1277fcb1fb275ad58696a33901
+@dirrm share/doc/curl/libcurl
+@dirrm share/doc/curl
+share/examples/curl/10-at-a-time.c
+@comment MD5:805f9dffb322d87e7d468ca06d601dc0
+share/examples/curl/Makefile.example
+@comment MD5:256fbbcf5d086beca31d3930cc91bb73
+share/examples/curl/README
+@comment MD5:e3b518d9ddd28479f609bf6d5d2955e9
+share/examples/curl/anyauthput.c
+@comment MD5:6e453e61c9a4ce2ffb540c5dc4f03b25
+share/examples/curl/cacertinmem.c
+@comment MD5:9ea6a8ba54ac89dc66da96820c035bc0
+share/examples/curl/certinfo.c
+@comment MD5:815c3a0f28a00a9a6ce7309f5588d14a
+share/examples/curl/chkspeed.c
+@comment MD5:4d6e7adba199f9f0a4fd255af0dbef5d
+share/examples/curl/cookie_interface.c
+@comment MD5:870d4f682e06a242f59143c59f01fd9c
+share/examples/curl/curlgtk.c
+@comment MD5:ddfeb4452408a89d43d1dbef557d2faf
+share/examples/curl/curlx.c
+@comment MD5:7a8fa05869899ec05271d4ff8e0a09fe
+share/examples/curl/debug.c
+@comment MD5:7b19440577ed2379fed45419836b695a
+share/examples/curl/evhiperfifo.c
+@comment MD5:a13aae0c0e14aee40bd48e3733a71679
+share/examples/curl/externalsocket.c
+@comment MD5:b56e2baf63c0303b2b0626cc55f7403e
+share/examples/curl/fileupload.c
+@comment MD5:fd57c6ab912b4eac6b97e5e0cbdcd467
+share/examples/curl/fopen.c
+@comment MD5:38452f5dc57e5a7d4ac8e2ddcc473479
+share/examples/curl/ftp-wildcard.c
+@comment MD5:4278e638c0b881025a731b71f29f5839
+share/examples/curl/ftpget.c
+@comment MD5:bdeef6da4458197d6b24b78da2401a89
+share/examples/curl/ftpgetinfo.c
+@comment MD5:309c4a52fb3f1c1306377c68d9994c1a
+share/examples/curl/ftpgetresp.c
+@comment MD5:30d76dc05926cbe93185d95b19c6fe97
+share/examples/curl/ftpupload.c
+@comment MD5:1d75a37fa718dab8684b51da3bf67b67
+share/examples/curl/ftpuploadresume.c
+@comment MD5:abee05e5cbd23bc88d1c2fd10f2f061c
+share/examples/curl/getinfo.c
+@comment MD5:a1ba6c784b69bf79f74fb465a92e43c9
+share/examples/curl/getinmemory.c
+@comment MD5:2e6b69fb6af2a087449fae4e756bd666
+share/examples/curl/ghiper.c
+@comment MD5:82e92950559db7d9f1e115692c0c45e0
+share/examples/curl/hiperfifo.c
+@comment MD5:78fef03c7b6966311061a591ddc00cfb
+share/examples/curl/htmltidy.c
+@comment MD5:f26ffebd9e1cdd6a1ce15257d79449cf
+share/examples/curl/htmltitle.cc
+@comment MD5:e4e7bda11fd63fcfe750ca76bf8a5180
+share/examples/curl/http-post.c
+@comment MD5:1a67fd8a98ac6d508b30a6e3cb18c43d
+share/examples/curl/httpcustomheader.c
+@comment MD5:f4c6ee537a442f1dee73102d9b6747bb
+share/examples/curl/httpput.c
+@comment MD5:bf09b5ebcde5815b9150de4ffe6afc1b
+share/examples/curl/https.c
+@comment MD5:d5a9291feaeaecfbc4a4fe9973a39b1c
+share/examples/curl/imap.c
+@comment MD5:2158c183f37f8e0684f57d6a704cee8b
+share/examples/curl/makefile.dj
+@comment MD5:03b00c17bbac293dd0b1b94ff6cf512b
+share/examples/curl/multi-app.c
+@comment MD5:bab3ed7c927d2e01ae3c5c18f197a609
+share/examples/curl/multi-debugcallback.c
+@comment MD5:d183e36a452db0894f97bb5d130de609
+share/examples/curl/multi-double.c
+@comment MD5:f754d9a47d5d09c8081c47b8f3e59460
+share/examples/curl/multi-post.c
+@comment MD5:11a7fd3e80800591998592567e82d946
+share/examples/curl/multi-single.c
+@comment MD5:1b4548423e7b2338346de9c5ba16fedf
+share/examples/curl/multithread.c
+@comment MD5:85820e828da2b5fae3b486061db4c88e
+share/examples/curl/opensslthreadlock.c
+@comment MD5:1e0baa39de075dda5daa0d9170fce906
+share/examples/curl/persistant.c
+@comment MD5:5947460b9693eea28a88d61ca21cb5a6
+share/examples/curl/pop3s.c
+@comment MD5:552140cfebf2252b0f42ad79975070f9
+share/examples/curl/pop3slist.c
+@comment MD5:98d0860f14c132c9dc7267dfb9c17096
+share/examples/curl/post-callback.c
+@comment MD5:fd7399c4010b521e99ef913db31bbff2
+share/examples/curl/postit2.c
+@comment MD5:05c33df24b34ca5268bf8cae3999605b
+share/examples/curl/progressfunc.c
+@comment MD5:8b58d8ec2a90cdbc737623410624acc0
+share/examples/curl/resolve.c
+@comment MD5:4cba5811c1cc2f501f751e443447e9eb
+share/examples/curl/rtsp.c
+@comment MD5:2e8baebdc57c0cb9a0e7a59a3d0a2ed4
+share/examples/curl/sampleconv.c
+@comment MD5:f49011ffa49a87ee251461a5711b895b
+share/examples/curl/sepheaders.c
+@comment MD5:a577db68f8f5ebc3ff181d602293bcc8
+share/examples/curl/sendrecv.c
+@comment MD5:0e1f0a6a78b885c3c6799b0b723eebd1
+share/examples/curl/simple.c
+@comment MD5:41c98059d87b5ed4598c9e5ceed5c8c0
+share/examples/curl/simplepost.c
+@comment MD5:6f07d6874c066f032e3f7e743576fdf8
+share/examples/curl/simplesmtp.c
+@comment MD5:0a4a5e0a350c9ae2e67bd4ea16f5a69d
+share/examples/curl/simplessl.c
+@comment MD5:8f26ce72313b6347a0efa9d4fdb4862e
+share/examples/curl/smooth-gtk-thread.c
+@comment MD5:1e227c5219a2ac36aec10df88d039068
+share/examples/curl/smtp-multi.c
+@comment MD5:86804256601e78c34af9823503386723
+share/examples/curl/smtp-tls.c
+@comment MD5:fbd673c203b0418394a438d33c13cd19
+share/examples/curl/synctime.c
+@comment MD5:041864e2cb4f0fb9a1bfaa6b05dd1a6a
+share/examples/curl/threaded-ssl.c
+@comment MD5:88e9d49af22420750c8a88b23e160b9d
+share/examples/curl/url2file.c
+@comment MD5:b345a0781a5ec6548177bba16ebf79c3
+@dirrm share/examples/curl
+@exec /sbin/ldconfig -m /usr/local/lib
+@unexec /sbin/ldconfig -R
+@comment OPTIONS:-CARES +CA_BUNDLE -CURL_DEBUG +DOCS +EXAMPLES +IPV6 -KERBEROS4 -LDAP -LDAPS -LIBIDN -LIBSSH2 -NTLM +PROXY -RTMP
+@comment OPTIONS:-TRACKMEMORY SSL( +OPENSSL -GNUTLS )
+@cwd /usr/local
+@dirrm share/licenses/curl-7.24.0_2
+@unexec rmdir %D/share/licenses 2>/dev/null || true
+@comment Build details:  ||||

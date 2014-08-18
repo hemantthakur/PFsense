@@ -1,0 +1,162 @@
+set limit tables 3000
+set optimization normal
+set timeout { adaptive.start 0, adaptive.end 0 }
+set limit states 48000
+set limit src-nodes 48000
+
+#System aliases
+  
+loopback = "{ lo0 }"
+WAN = "{ em0 }"
+LAN = "{ em1 }"
+
+#SSH Lockout Table
+table <sshlockout> persist
+table <webConfiguratorlockout> persist
+#Snort tables
+table <snort2c>
+table <virusprot>
+table <bogons> persist file "/etc/bogons"
+table <bogonsv6> persist file "/etc/bogonsv6"
+table <negate_networks> 
+
+# User Aliases 
+ = "{  }"
+ 
+# Gateways
+GWWAN_DHCP = " route-to ( em0 10.10.1.1 ) "
+GWWAN_DHCP6 = " route-to ( em0 fe80::226:15ff:fe6d:5455 ) "
+
+ 
+set loginterface em1
+
+set skip on pfsync0
+
+scrub on $WAN all    fragment reassemble
+scrub on $LAN all    fragment reassemble
+
+
+no nat proto carp
+no rdr proto carp
+nat-anchor "natearly/*"
+nat-anchor "natrules/*"
+
+
+# Outbound NAT rules
+
+# Subnets to NAT 
+tonatsubnets	= "{ 192.168.1.0/24 127.0.0.0/8  }"
+nat on $WAN  from $tonatsubnets port 500 to any port 500 -> 10.10.1.102/32 port 500  
+nat on $WAN  from $tonatsubnets to any -> 10.10.1.102/32 port 1024:65535  
+
+
+# Load balancing anchor
+rdr-anchor "relayd/*"
+# TFTP proxy
+rdr-anchor "tftp-proxy/*"
+# UPnPd rdr anchor
+rdr-anchor "miniupnpd"
+
+anchor "relayd/*"
+anchor "openvpn/*"
+anchor "ipsec/*"
+#---------------------------------------------------------------------------
+# default deny rules
+#---------------------------------------------------------------------------
+block in log inet all label "Default deny rule IPv4"
+block out log inet all label "Default deny rule IPv4"
+block in log inet6 all label "Default deny rule IPv6"
+block out log inet6 all label "Default deny rule IPv6"
+
+# IPv6 ICMP is not auxilary, it is required for operation
+# See man icmp6(4)
+# 1    unreach         Destination unreachable
+# 2    toobig          Packet too big
+# 128  echoreq         Echo service request
+# 129  echorep         Echo service reply
+# 133  routersol       Router solicitation
+# 134  routeradv       Router advertisement
+# 135  neighbrsol      Neighbor solicitation
+# 136  neighbradv      Neighbor advertisement
+pass quick inet6 proto ipv6-icmp from any to any icmp6-type {1,2,135,136} keep state
+
+# Allow only bare essential icmpv6 packets (NS, NA, and RA, echoreq, echorep)
+pass out quick inet6 proto ipv6-icmp from fe80::/10 to fe80::/10 icmp6-type {129,133,134,135,136} keep state
+pass out quick inet6 proto ipv6-icmp from fe80::/10 to ff02::/16 icmp6-type {129,133,134,135,136} keep state
+pass in quick inet6 proto ipv6-icmp from fe80::/10 to fe80::/10 icmp6-type {128,133,134,135,136} keep state
+pass in quick inet6 proto ipv6-icmp from ff02::/16 to fe80::/10 icmp6-type {128,133,134,135,136} keep state
+pass in quick inet6 proto ipv6-icmp from fe80::/10 to ff02::/16 icmp6-type {128,133,134,135,136} keep state
+
+# We use the mighty pf, we cannot be fooled.
+block quick inet proto { tcp, udp } from any port = 0 to any
+block quick inet proto { tcp, udp } from any to any port = 0
+block quick inet6 proto { tcp, udp } from any port = 0 to any
+block quick inet6 proto { tcp, udp } from any to any port = 0
+
+# Snort package
+block quick from <snort2c> to any label "Block snort2c hosts"
+block quick from any to <snort2c> label "Block snort2c hosts"
+
+# SSH lockout
+block in log quick proto tcp from <sshlockout> to (self) port 22 label "sshlockout"
+
+# webConfigurator lockout
+block in log quick proto tcp from <webConfiguratorlockout> to (self) port 443 label "webConfiguratorlockout"
+block in quick from <virusprot> to any label "virusprot overload table"
+# block bogon networks (IPv4)
+# http://www.cymru.com/Documents/bogon-bn-nonagg.txt
+block in log quick on $WAN from <bogons> to any label "block bogon IPv4 networks from WAN"
+# allow our DHCPv6 client out to the WAN
+pass in quick on $WAN proto udp from fe80::/10 port = 546 to fe80::/10 port = 546 label "allow dhcpv6 client in WAN"
+pass in quick on $WAN proto udp from any port = 547 to any port = 546 label "allow dhcpv6 client in WAN"
+pass out quick on $WAN proto udp from any port = 546 to any port = 547 label "allow dhcpv6 client out WAN"
+# block bogon networks (IPv6)
+# http://www.team-cymru.org/Services/Bogons/fullbogons-ipv6.txt
+block in log quick on $WAN from <bogonsv6> to any label "block bogon IPv6 networks from WAN"
+antispoof for em0
+# block anything from private networks on interfaces with the option set
+antispoof for $WAN
+block in log quick on $WAN from 10.0.0.0/8 to any label "Block private networks from WAN block 10/8"
+block in log quick on $WAN from 127.0.0.0/8 to any label "Block private networks from WAN block 127/8"
+block in log quick on $WAN from 100.64.0.0/10 to any label "Block private networks from WAN block 100.64/10"
+block in log quick on $WAN from 172.16.0.0/12 to any label "Block private networks from WAN block 172.16/12"
+block in log quick on $WAN from 192.168.0.0/16 to any label "Block private networks from WAN block 192.168/16"
+block in log quick on $WAN from fc00::/7 to any label "Block ULA networks from WAN block fc00::/7"
+# allow our DHCP client out to the WAN
+pass in on $WAN proto udp from any port = 67 to any port = 68 label "allow dhcp client out WAN"
+pass out on $WAN proto udp from any port = 68 to any port = 67 label "allow dhcp client out WAN"
+# Not installing DHCP server firewall rules for WAN which is configured for DHCP.
+antispoof for em1
+# allow access to DHCP server on LAN
+pass in quick on $LAN proto udp from any port = 68 to 255.255.255.255 port = 67 label "allow access to DHCP server"
+pass in quick on $LAN proto udp from any port = 68 to 192.168.1.1 port = 67 label "allow access to DHCP server"
+pass out quick on $LAN proto udp from 192.168.1.1 port = 67 to any port = 68 label "allow access to DHCP server"
+# allow access to DHCPv6 server on LAN
+# We need inet6 icmp for stateless autoconfig and dhcpv6
+pass quick on $LAN inet6 proto udp from fe80::/10 to fe80::/10 port = 546 label "allow access to DHCPv6 server"
+pass quick on $LAN inet6 proto udp from fe80::/10 to ff02::/16 port = 546 label "allow access to DHCPv6 server"
+pass quick on $LAN inet6 proto udp from fe80::/10 to ff02::/16 port = 547 label "allow access to DHCPv6 server"
+pass quick on $LAN inet6 proto udp from ff02::/16 to fe80::/10 port = 547 label "allow access to DHCPv6 server"
+
+# loopback
+pass in on $loopback inet all label "pass IPv4 loopback"
+pass out on $loopback inet all label "pass IPv4 loopback"
+pass in on $loopback inet6 all label "pass IPv6 loopback"
+pass out on $loopback inet6 all label "pass IPv6 loopback"
+# let out anything from the firewall host itself and decrypted IPsec traffic
+pass out inet all keep state allow-opts label "let out anything IPv4 from firewall host itself"
+pass out inet6 all keep state allow-opts label "let out anything IPv6 from firewall host itself"
+pass out route-to ( em0 10.10.1.1 ) from 10.10.1.102 to !10.10.1.0/24 keep state allow-opts label "let out anything from firewall host itself"
+# make sure the user cannot lock himself out of the webConfigurator or SSH
+pass in quick on em1 proto tcp from any to (em1) port { 443 80 } keep state label "anti-lockout rule"
+
+# User-defined rules follow
+
+anchor "userrules/*"
+pass  in  quick  on $LAN inet from 192.168.1.0/24 to any keep state  label "USER_RULE: Default allow LAN to any rule"
+# at the break! label "USER_RULE: Default allow LAN IPv6 to any rule"
+
+# VPN Rules
+
+anchor "tftp-proxy/*"
+

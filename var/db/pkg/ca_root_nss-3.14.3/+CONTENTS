@@ -1,0 +1,11 @@
+@comment PKG_FORMAT_REVISION:1.1
+@name ca_root_nss-3.14.3
+@comment ORIGIN:security/ca_root_nss
+@cwd /usr/local
+share/certs/ca-root-nss.crt
+@comment MD5:8c8f3d5e4dc8eac15ca44b1157520dc4
+@unexec rmdir "%D/share/certs" 2>/dev/null || true
+@comment @cwd /
+@comment etc/ssl/cert.pem
+@comment OPTIONS:-ETCSYMLINK
+@comment Build details:  ||||

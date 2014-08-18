@@ -1,0 +1,31 @@
+@comment PKG_FORMAT_REVISION:1.1
+@name p5-Error-0.17019
+@comment ORIGIN:lang/p5-Error
+@cwd /usr/local
+@pkgdep perl-5.14.2_3
+@comment DEPORIGIN:lang/perl5.14
+share/licenses/p5-Error-0.17019/catalog.mk
+@comment MD5:8d6dbc6366bf8667a87fee306dd11739
+share/licenses/p5-Error-0.17019/LICENSE
+@comment MD5:0c4291169d0e44bfd359bf1abc92568a
+share/licenses/p5-Error-0.17019/ART10
+@comment MD5:75f0b28b760ca1e6c2ae934bf7c9d3b9
+share/licenses/p5-Error-0.17019/GPLv1
+@comment MD5:3d52d594e48f458370dd7db82e75735b
+lib/perl5/5.14.2/man/man3/Error.3.gz
+@comment MD5:1597046b73d3f8ba1cf54830c19733f9
+lib/perl5/5.14.2/man/man3/Error::Simple.3.gz
+@comment MD5:b551100b2a9c501cb1f6f4d5befe716d
+lib/perl5/site_perl/5.14.2/Error.pm
+@comment MD5:f10330a2e97cf8940cc8d8829367b18c
+lib/perl5/site_perl/5.14.2/Error/Simple.pm
+@comment MD5:6b95f88c3b729906eb37bff09328c803
+lib/perl5/site_perl/5.14.2/mach/auto/Error/.packlist
+@comment MD5:251a98f21b353fccf5788e78802e8a77
+@unexec rmdir "%D/lib/perl5/site_perl/5.14.2/mach/auto/Error" 2>/dev/null || true
+@unexec rmdir "%D/lib/perl5/site_perl/5.14.2/Error" 2>/dev/null || true
+@comment OPTIONS:
+@cwd /usr/local
+@dirrm share/licenses/p5-Error-0.17019
+@unexec rmdir %D/share/licenses 2>/dev/null || true
+@comment Build details:  ||||

@@ -1,0 +1,858 @@
+BSD Installer started
+DFUI connection on tcp:9999 successfully established
+,- opened pty to '/sbin/sysctl -n hw.physmem'
+< 513708032
+`- closed pty to '/sbin/sysctl -n hw.physmem'
+`/sbin/sysctl -n hw.physmem` returned: 513708032
+,- opened pty to '/sbin/sysctl -n kern.disks'
+< ad0
+`- closed pty to '/sbin/sysctl -n kern.disks'
+`/sbin/sysctl -n kern.disks` returned: ad0
+Testing ad0
+Invoking survey for ad0
+Surveying Disk: ad0 ...
+,- opened pty to '/sbin/atacontrol list'
+< ATA channel 0:
+<     Master:  ad0 <VBOX HARDDISK/1.0> ATA/ATAPI revision 6
+<     Slave:       no device present
+< ATA channel 1:
+<     Master: acd0 <VBOX CD-ROM/1.0> ATA/ATAPI revision 6
+<     Slave:       no device present
+( EOF )
+`- closed pty to '/sbin/atacontrol list'
+,- opened pty to '/sbin/fdisk ad0'
+< ******* Working on device /dev/ad0 *******
+< parameters extracted from in-core disklabel are:
+< cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+< 
+< Figures below won't work with BIOS for partitions not in cyl 1
+< parameters to be used for BIOS calculations are:
+< cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+< 
+< fdisk: invalid fdisk partition table found
+< Media sector size is 512
+< Warning: BIOS sector numbering starts with sector 1
+< Information from DOS bootblock is:
+< The data for partition 1 is:
+< sysid 165 (0xa5),(FreeBSD/NetBSD/386BSD)
+<     start 63, size 4194225 (2047 Meg), flag 80 (active)
+< 	beg: cyl 0/ head 1/ sector 1;
+< 	end: cyl 64/ head 15/ sector 63
+< The data for partition 2 is:
+< <UNUSED>
+< The data for partition 3 is:
+< <UNUSED>
+< The data for partition 4 is:
+< <UNUSED>
+( EOF )
+`- closed pty to '/sbin/fdisk ad0'
+Disk ad0 (ad0: 2048MB <VBOX HARDDISK 1.0> at ata0-master UDMA33): 1.99G: 4161/16/63
+,- opened pty to '/sbin/fdisk -s ad0'
+< fdisk: invalid fdisk partition table found
+< fdisk: read_s0: No such file or directory
+( EOF )
+`- closed pty to '/sbin/fdisk -s ad0'
+,- opened pty to '/sbin/ifconfig -l'
+< em0 em1 enc0 pfsync0 lo0 pflog0
+`- closed pty to '/sbin/ifconfig -l'
+,- opened pty to '/sbin/ifconfig em0'
+< em0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
+< 	options=9b<RXCSUM,TXCSUM,VLAN_MTU,VLAN_HWTAGGING,VLAN_HWCSUM>
+< 	ether 08:00:27:d6:55:b3
+< 	inet 10.10.1.145 netmask 0xffffff00 broadcast 10.10.1.255
+< 	inet6 fe80::a00:27ff:fed6:55b3%em0 prefixlen 64 scopeid 0x1 
+< 	nd6 options=3<PERFORMNUD,ACCEPT_RTADV>
+< 	media: Ethernet autoselect (1000baseT <full-duplex>)
+< 	status: active
+( EOF )
+`- closed pty to '/sbin/ifconfig em0'
+,- opened pty to '/sbin/ifconfig em1'
+< em1: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
+< 	options=9b<RXCSUM,TXCSUM,VLAN_MTU,VLAN_HWTAGGING,VLAN_HWCSUM>
+< 	ether 08:00:27:a8:25:54
+< 	inet 192.168.1.1 netmask 0xffffff00 broadcast 192.168.1.255
+< 	inet6 fe80::1:1%em1 prefixlen 64 scopeid 0x3 
+< 	nd6 options=1<PERFORMNUD>
+< 	media: Ethernet autoselect (1000baseT <full-duplex>)
+< 	status: active
+( EOF )
+`- closed pty to '/sbin/ifconfig em1'
+,- opened pty to '/sbin/ifconfig enc0'
+< enc0: flags=0<> metric 0 mtu 1536
+( EOF )
+`- closed pty to '/sbin/ifconfig enc0'
+,- opened pty to '/sbin/ifconfig pfsync0'
+< pfsync0: flags=0<> metric 0 mtu 1460
+< 	syncpeer: 224.0.0.240 maxupd: 128 syncok: 1
+( EOF )
+`- closed pty to '/sbin/ifconfig pfsync0'
+,- opened pty to '/sbin/ifconfig lo0'
+< lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
+< 	options=3<RXCSUM,TXCSUM>
+< 	inet6 ::1 prefixlen 128 
+< 	inet6 fe80::1%lo0 prefixlen 64 scopeid 0x7 
+< 	inet 127.0.0.1 netmask 0xffffff00 
+< 	nd6 options=3<PERFORMNUD,ACCEPT_RTADV>
+( EOF )
+`- closed pty to '/sbin/ifconfig lo0'
+,- opened pty to '/sbin/ifconfig pflog0'
+< pflog0: flags=100<PROMISC> metric 0 mtu 33144
+( EOF )
+`- closed pty to '/sbin/ifconfig pflog0'
+'/usr/local/share/dfuibe_lua/pit//.' skipped, it is a directory
+'/usr/local/share/dfuibe_lua/pit//..' skipped, it is a directory
+UINav.Atom 'pre_install_tasks/welcome' was configured as 'ignore'
+couldn't register UINav atom from file '050_welcome.lua'
+UINav.Atom 'pre_install_tasks/select_language' was configured as 'ignore'
+couldn't register UINav atom from file '100_select_language.lua'
+registered UINav atom 'pre_install_tasks/configure_console'
+UINav.Atom 'pre_install_tasks/load_kernel_modules' was configured as 'ignore'
+couldn't register UINav atom from file '400_load_kernel_modules.lua'
+UINav.Atom 'pre_install_tasks/configure_network' was configured as 'ignore'
+couldn't register UINav atom from file '800_configure_network.lua'
+'main.lua' skipped, it is the currently executing script
+Flow executing -> pre_install_tasks/configure_console (Configure Console)
+[Wed Aug 13 10:25:45 2014]
+'/usr/local/share/dfuibe_lua//.' skipped, it is a directory
+'/usr/local/share/dfuibe_lua//..' skipped, it is a directory
+registered UINav atom 'main/set_up_easy_install'
+registered UINav atom 'main/install_os'
+registered UINav atom 'main/rescue_config'
+UINav.Atom 'main/configure_installed_system' was configured as 'ignore'
+couldn't register UINav atom from file '400_configure.lua'
+'500_create_geom_mirror.lua' skipped, reason: nil
+UINav.Atom 'main/upgrade_installed_system' was configured as 'ignore'
+couldn't register UINav atom from file '600_upgrade.lua'
+UINav.Atom 'main/set_up_netboot' was configured as 'ignore'
+couldn't register UINav atom from file '800_netboot.lua'
+registered UINav atom 'main/reboot'
+'/usr/local/share/dfuibe_lua//conf' skipped, it is a directory
+'/usr/local/share/dfuibe_lua//configure' skipped, it is a directory
+'/usr/local/share/dfuibe_lua//easy_install' skipped, it is a directory
+'/usr/local/share/dfuibe_lua//install' skipped, it is a directory
+'/usr/local/share/dfuibe_lua//lib' skipped, it is a directory
+'main.lua' skipped, it is the currently executing script
+'/usr/local/share/dfuibe_lua//netboot' skipped, it is a directory
+'/usr/local/share/dfuibe_lua//pit' skipped, it is a directory
+'/usr/local/share/dfuibe_lua//upgrade' skipped, it is a directory
+[Wed Aug 13 10:25:46 2014]
+Menu.Item Selected -> main/install_os (Custom Install)
+'/usr/local/share/dfuibe_lua/install//.' skipped, it is a directory
+'/usr/local/share/dfuibe_lua/install//..' skipped, it is a directory
+UINav.Atom 'main/install/welcome' was configured as 'ignore'
+couldn't register UINav atom from file '100_welcome.lua'
+registered UINav atom 'main/install/select_disk'
+registered UINav atom 'main/install/format_disk'
+registered UINav atom 'main/install/partition_disk'
+registered UINav atom 'main/install/install_bootblocks'
+registered UINav atom 'main/install/select_part'
+registered UINav atom 'main/install/select_subparts'
+UINav.Atom 'main/install/warn_omitted_subpartitions' was configured as 'ignore'
+couldn't register UINav atom from file '405_warn_omitted_subparts.lua'
+registered UINav atom 'main/install/create_subparts'
+UINav.Atom 'main/install/select_additional_filesystems' was configured as 'ignore'
+couldn't register UINav atom from file '410_select_additional_filesystems.lua'
+registered UINav atom 'main/install/preselect_packages'
+UINav.Atom 'main/install/select_packages' was configured as 'ignore'
+couldn't register UINav atom from file '450_select_packages.lua'
+UINav.Atom 'main/install/confirm_install_os' was configured as 'ignore'
+couldn't register UINav atom from file '490_confirm_install_os.lua'
+registered UINav atom 'main/install/install_os'
+registered UINav atom 'main/install/install_kernel'
+registered UINav atom 'main/install/pfsense_after_install'
+UINav.Atom 'main/install/finished' was configured as 'ignore'
+couldn't register UINav atom from file '800_finished.lua'
+registered UINav atom 'main/install/reboot'
+'main.lua' skipped, it is the currently executing script
+Flow executing -> main/install/select_disk (Select Disk)
+[Wed Aug 13 10:25:47 2014]
+Flow executing -> main/install/format_disk (Format Disk)
+[Wed Aug 13 10:25:51 2014]
+,-<<< Executing `/usr/sbin/cleargpt.sh ad0'
+| gpart: No such geom: ad0.
+| gpart: geom 'ad0': Invalid argument
+`->>> Exit status: 0
+[Wed Aug 13 10:25:52 2014]
+,-<<< Executing `/sbin/fdisk -I ad0'
+| ******* Working on device /dev/ad0 *******
+| fdisk: invalid fdisk partition table found
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'g c4161 h16 s63' >/tmp/format.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'p 1 165 63 4194225' >>/tmp/format.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'p 2 0 0 0' >>/tmp/format.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'p 3 0 0 0' >>/tmp/format.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'p 4 0 0 0' >>/tmp/format.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'a 1' >>/tmp/format.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/cat /tmp/format.fdisk'
+| g c4161 h16 s63
+| p 1 165 63 4194225
+| p 2 0 0 0
+| p 3 0 0 0
+| p 4 0 0 0
+| a 1
+`->>> Exit status: 0
+,-<<< Executing `/sbin/fdisk -v -f /tmp/format.fdisk ad0'
+| ******* Working on device /dev/ad0 *******
+| fdisk: WARNING line 1: number of cylinders (4161) may be out-of-range
+|     (must be within 1-1024 for normal BIOS operation, unless the entire disk
+|     is dedicated to FreeBSD)
+| parameters extracted from in-core disklabel are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Figures below won't work with BIOS for partitions not in cyl 1
+| parameters to be used for BIOS calculations are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Information from DOS bootblock is:
+| 1: sysid 165 (0xa5),(FreeBSD/NetBSD/386BSD)
+|     start 63, size 4194225 (2047 Meg), flag 80 (active)
+| 	beg: cyl 0/ head 1/ sector 1;
+| 	end: cyl 64/ head 15/ sector 63
+| 2: <UNUSED>
+| 3: <UNUSED>
+| 4: <UNUSED>
+`->>> Exit status: 0
+,-<<< Executing `/sbin/fdisk ad0'
+| ******* Working on device /dev/ad0 *******
+| parameters extracted from in-core disklabel are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Figures below won't work with BIOS for partitions not in cyl 1
+| parameters to be used for BIOS calculations are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Media sector size is 512
+| Warning: BIOS sector numbering starts with sector 1
+| Information from DOS bootblock is:
+| The data for partition 1 is:
+| sysid 165 (0xa5),(FreeBSD/NetBSD/386BSD)
+|     start 63, size 4194225 (2047 Meg), flag 80 (active)
+| 	beg: cyl 0/ head 1/ sector 1;
+| 	end: cyl 64/ head 15/ sector 63
+| The data for partition 2 is:
+| <UNUSED>
+| The data for partition 3 is:
+| <UNUSED>
+| The data for partition 4 is:
+| <UNUSED>
+`->>> Exit status: 0
+,-<<< Executing `/usr/bin/yes | /sbin/fdisk -B ad0'
+| ******* Working on device /dev/ad0 *******
+| parameters extracted from in-core disklabel are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Figures below won't work with BIOS for partitions not in cyl 1
+| parameters to be used for BIOS calculations are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Media sector size is 512
+| Warning: BIOS sector numbering starts with sector 1
+| Information from DOS bootblock is:
+| The data for partition 1 is:
+| sysid 165 (0xa5),(FreeBSD/NetBSD/386BSD)
+|     start 63, size 4194225 (2047 Meg), flag 80 (active)
+| 	beg: cyl 0/ head 1/ sector 1;
+| 	end: cyl 64/ head 15/ sector 63
+| The data for partition 2 is:
+| <UNUSED>
+| The data for partition 3 is:
+| <UNUSED>
+| The data for partition 4 is:
+| <UNUSED>
+| Do you want to change the boot code? [n] 
+| We haven't changed the partition table yet.  This is your last chance.
+| parameters extracted from in-core disklabel are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Figures below won't work with BIOS for partitions not in cyl 1
+| parameters to be used for BIOS calculations are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Information from DOS bootblock is:
+| 1: sysid 165 (0xa5),(FreeBSD/NetBSD/386BSD)
+|     start 63, size 4194225 (2047 Meg), flag 80 (active)
+| 	beg: cyl 0/ head 1/ sector 1;
+| 	end: cyl 64/ head 15/ sector 63
+| 2: <UNUSED>
+| 3: <UNUSED>
+| 4: <UNUSED>
+| Should we write new partition table? [n] yes: stdout: Broken pipe
+`->>> Exit status: 0
+,- opened pty to '/sbin/sysctl -n hw.physmem'
+( EOF )
+`- closed pty to '/sbin/sysctl -n hw.physmem'
+`/sbin/sysctl -n hw.physmem` returned: nil
+,- opened pty to '/sbin/sysctl -n kern.disks'
+< ad0
+`- closed pty to '/sbin/sysctl -n kern.disks'
+`/sbin/sysctl -n kern.disks` returned: ad0
+Testing ad0
+Invoking survey for ad0
+Surveying Disk: ad0 ...
+,- opened pty to '/sbin/atacontrol list'
+< ATA channel 0:
+<     Master:  ad0 <VBOX HARDDISK/1.0> ATA/ATAPI revision 6
+<     Slave:       no device present
+< ATA channel 1:
+<     Master: acd0 <VBOX CD-ROM/1.0> ATA/ATAPI revision 6
+<     Slave:       no device present
+( EOF )
+`- closed pty to '/sbin/atacontrol list'
+,- opened pty to '/sbin/fdisk ad0'
+< ******* Working on device /dev/ad0 *******
+< parameters extracted from in-core disklabel are:
+< cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+< 
+< Figures below won't work with BIOS for partitions not in cyl 1
+< parameters to be used for BIOS calculations are:
+< cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+< 
+< Media sector size is 512
+< Warning: BIOS sector numbering starts with sector 1
+< Information from DOS bootblock is:
+< The data for partition 1 is:
+< sysid 165 (0xa5),(FreeBSD/NetBSD/386BSD)
+<     start 63, size 4194225 (2047 Meg), flag 80 (active)
+< 	beg: cyl 0/ head 1/ sector 1;
+< 	end: cyl 64/ head 15/ sector 63
+< The data for partition 2 is:
+< <UNUSED>
+< The data for partition 3 is:
+< <UNUSED>
+< The data for partition 4 is:
+< <UNUSED>
+( EOF )
+`- closed pty to '/sbin/fdisk ad0'
+Disk ad0 (ad0: 2048MB <VBOX HARDDISK 1.0> at ata0-master UDMA33): 1.99G: 4161/16/63
+,- opened pty to '/sbin/fdisk -s ad0'
+< /dev/ad0: 4161 cyl 16 hd 63 sec
+< Part        Start        Size Type Flags
+<    1:          63     4194225 0xa5 0x80
+( EOF )
+`- closed pty to '/sbin/fdisk -s ad0'
+Surveying Partition: 1: 63,4194225:165/true
+,- opened pty to '/sbin/bsdlabel ad0s1s1'
+< bsdlabel: unable to get correct path for ad0s1s1: No such file or directory
+( EOF )
+`- closed pty to '/sbin/bsdlabel ad0s1s1'
+Flow executing -> main/install/partition_disk (Partition Disk)
+,- opened pty to '/sbin/mount'
+< /dev/iso9660/PFSENSE on / (cd9660, local, read-only)
+< devfs on /dev (devfs, local)
+< /dev/md0 on /tmp (ufs, local)
+< /dev/md1 on /var (ufs, local, noatime)
+< /dev/md2 on /etc (ufs, local, noatime)
+< /dev/md3 on /conf (ufs, local)
+< /conf on /cf/conf (nullfs, local)
+< /dev/md4 on /home (ufs, local)
+< <above>:/tmp/unionfs/usr on /usr (unionfs, local)
+< <above>:/tmp/unionfs/root on /root (unionfs, local)
+< <above>:/tmp/unionfs/bin on /bin (unionfs, local)
+< <above>:/tmp/unionfs/sbin on /sbin (unionfs, local)
+< <above>:/tmp/unionfs/boot on /boot (unionfs, local)
+< <above>:/tmp/unionfs/confdefault on /conf.default (unionfs, local)
+< devfs on /var/dhcpd/dev (devfs, local)
+( EOF )
+`- closed pty to '/sbin/mount'
+[Wed Aug 13 10:25:56 2014]
+,-<<< Executing `/bin/echo 'g c4161 h16 s63' >/tmp/new.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'p 1 165 63 4194225' >>/tmp/new.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'p 2 0 0 0' >>/tmp/new.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'p 3 0 0 0' >>/tmp/new.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'p 4 0 0 0' >>/tmp/new.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'a 1' >>/tmp/new.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/cat /tmp/new.fdisk'
+| g c4161 h16 s63
+| p 1 165 63 4194225
+| p 2 0 0 0
+| p 3 0 0 0
+| p 4 0 0 0
+| a 1
+`->>> Exit status: 0
+,-<<< Executing `/sbin/fdisk -v -f /tmp/new.fdisk ad0'
+| ******* Working on device /dev/ad0 *******
+| fdisk: WARNING line 1: number of cylinders (4161) may be out-of-range
+|     (must be within 1-1024 for normal BIOS operation, unless the entire disk
+|     is dedicated to FreeBSD)
+| parameters extracted from in-core disklabel are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Figures below won't work with BIOS for partitions not in cyl 1
+| parameters to be used for BIOS calculations are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Information from DOS bootblock is:
+| 1: sysid 165 (0xa5),(FreeBSD/NetBSD/386BSD)
+|     start 63, size 4194225 (2047 Meg), flag 80 (active)
+| 	beg: cyl 0/ head 1/ sector 1;
+| 	end: cyl 64/ head 15/ sector 63
+| 2: <UNUSED>
+| 3: <UNUSED>
+| 4: <UNUSED>
+`->>> Exit status: 0
+,-<<< Executing `/sbin/fdisk ad0'
+| ******* Working on device /dev/ad0 *******
+| parameters extracted from in-core disklabel are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Figures below won't work with BIOS for partitions not in cyl 1
+| parameters to be used for BIOS calculations are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Media sector size is 512
+| Warning: BIOS sector numbering starts with sector 1
+| Information from DOS bootblock is:
+| The data for partition 1 is:
+| sysid 165 (0xa5),(FreeBSD/NetBSD/386BSD)
+|     start 63, size 4194225 (2047 Meg), flag 80 (active)
+| 	beg: cyl 0/ head 1/ sector 1;
+| 	end: cyl 64/ head 15/ sector 63
+| The data for partition 2 is:
+| <UNUSED>
+| The data for partition 3 is:
+| <UNUSED>
+| The data for partition 4 is:
+| <UNUSED>
+`->>> Exit status: 0
+,- opened pty to '/sbin/sysctl -n hw.physmem'
+< 513708032
+`- closed pty to '/sbin/sysctl -n hw.physmem'
+`/sbin/sysctl -n hw.physmem` returned: 513708032
+,- opened pty to '/sbin/sysctl -n kern.disks'
+< ad0
+`- closed pty to '/sbin/sysctl -n kern.disks'
+`/sbin/sysctl -n kern.disks` returned: ad0
+Testing ad0
+Invoking survey for ad0
+Surveying Disk: ad0 ...
+,- opened pty to '/sbin/atacontrol list'
+( EOF )
+`- closed pty to '/sbin/atacontrol list'
+,- opened pty to '/sbin/fdisk ad0'
+< ******* Working on device /dev/ad0 *******
+< parameters extracted from in-core disklabel are:
+< cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+< 
+< Figures below won't work with BIOS for partitions not in cyl 1
+< parameters to be used for BIOS calculations are:
+< cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+< 
+< Media sector size is 512
+< Warning: BIOS sector numbering starts with sector 1
+< Information from DOS bootblock is:
+< The data for partition 1 is:
+< sysid 165 (0xa5),(FreeBSD/NetBSD/386BSD)
+<     start 63, size 4194225 (2047 Meg), flag 80 (active)
+< 	beg: cyl 0/ head 1/ sector 1;
+< 	end: cyl 64/ head 15/ sector 63
+< The data for partition 2 is:
+< <UNUSED>
+< The data for partition 3 is:
+< <UNUSED>
+< The data for partition 4 is:
+< <UNUSED>
+( EOF )
+`- closed pty to '/sbin/fdisk ad0'
+Disk ad0 (ad0: 2048MB <VBOX HARDDISK 1.0> at ata0-master UDMA33): 1.99G: 4161/16/63
+,- opened pty to '/sbin/fdisk -s ad0'
+< /dev/ad0: 4161 cyl 16 hd 63 sec
+< Part        Start        Size Type Flags
+<    1:          63     4194225 0xa5 0x80
+( EOF )
+`- closed pty to '/sbin/fdisk -s ad0'
+Surveying Partition: 1: 63,4194225:165/true
+,- opened pty to '/sbin/bsdlabel ad0s1s1'
+< bsdlabel: unable to get correct path for ad0s1s1: No such file or directory
+( EOF )
+`- closed pty to '/sbin/bsdlabel ad0s1s1'
+[Wed Aug 13 10:25:57 2014]
+Flow executing -> main/install/install_bootblocks (Install Bootblocks)
+,-<<< Executing `echo ad0  > /tmp/debug'
+`->>> Exit status: 0
+[Wed Aug 13 10:25:59 2014]
+,-<<< Executing `/usr/sbin/boot0cfg -B  -s 1 /dev/ad0'
+`->>> Exit status: 0
+,-<<< Executing `/usr/sbin/boot0cfg -v /dev/ad0'
+| #   flag     start chs   type       end chs       offset         size
+| 1   0x80      0:  1: 1   0xa5     64: 15:63           63      4194225
+| 
+| version=2.0  drive=0x80  mask=0xf  ticks=182  bell=# (0x23)
+| options=packet,update,nosetdrv
+| volume serial ID 9090-9090
+| default_selection=F1 (Slice 1)
+`->>> Exit status: 0
+Flow executing -> main/install/select_part (Select Partition)
+[Wed Aug 13 10:26:00 2014]
+,- opened pty to '/sbin/mount'
+< /dev/iso9660/PFSENSE on / (cd9660, local, read-only)
+< devfs on /dev (devfs, local)
+< /dev/md0 on /tmp (ufs, local)
+< /dev/md1 on /var (ufs, local, noatime)
+< /dev/md2 on /etc (ufs, local, noatime)
+< /dev/md3 on /conf (ufs, local)
+< /conf on /cf/conf (nullfs, local)
+< /dev/md4 on /home (ufs, local)
+< <above>:/tmp/unionfs/usr on /usr (unionfs, local)
+< <above>:/tmp/unionfs/root on /root (unionfs, local)
+< <above>:/tmp/unionfs/bin on /bin (unionfs, local)
+< <above>:/tmp/unionfs/sbin on /sbin (unionfs, local)
+< <above>:/tmp/unionfs/boot on /boot (unionfs, local)
+< <above>:/tmp/unionfs/confdefault on /conf.default (unionfs, local)
+< devfs on /var/dhcpd/dev (devfs, local)
+( EOF )
+`- closed pty to '/sbin/mount'
+,- opened pty to '/usr/sbin/pstat -s -k'
+< Device          1K-blocks     Used    Avail Capacity
+( EOF )
+`- closed pty to '/usr/sbin/pstat -s -k'
+[Wed Aug 13 10:26:01 2014]
+,-<<< Executing `/sbin/fdisk ad0'
+| ******* Working on device /dev/ad0 *******
+| parameters extracted from in-core disklabel are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Figures below won't work with BIOS for partitions not in cyl 1
+| parameters to be used for BIOS calculations are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Media sector size is 512
+| Warning: BIOS sector numbering starts with sector 1
+| Information from DOS bootblock is:
+| The data for partition 1 is:
+| sysid 165 (0xa5),(FreeBSD/NetBSD/386BSD)
+|     start 63, size 4194225 (2047 Meg), flag 80 (active)
+| 	beg: cyl 0/ head 1/ sector 1;
+| 	end: cyl 64/ head 15/ sector 63
+| The data for partition 2 is:
+| <UNUSED>
+| The data for partition 3 is:
+| <UNUSED>
+| The data for partition 4 is:
+| <UNUSED>
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'g c4161 h16 s63' >/tmp/new.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'p 1 165 63 4194225' >>/tmp/new.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo 'a 1' >>/tmp/new.fdisk'
+`->>> Exit status: 0
+,-<<< Executing `/bin/cat /tmp/new.fdisk'
+| g c4161 h16 s63
+| p 1 165 63 4194225
+| a 1
+`->>> Exit status: 0
+,-<<< Executing `/sbin/fdisk -v -f /tmp/new.fdisk ad0'
+| ******* Working on device /dev/ad0 *******
+| fdisk: WARNING line 1: number of cylinders (4161) may be out-of-range
+|     (must be within 1-1024 for normal BIOS operation, unless the entire disk
+|     is dedicated to FreeBSD)
+| parameters extracted from in-core disklabel are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Figures below won't work with BIOS for partitions not in cyl 1
+| parameters to be used for BIOS calculations are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Information from DOS bootblock is:
+| 1: sysid 165 (0xa5),(FreeBSD/NetBSD/386BSD)
+|     start 63, size 4194225 (2047 Meg), flag 80 (active)
+| 	beg: cyl 0/ head 1/ sector 1;
+| 	end: cyl 64/ head 15/ sector 63
+| 2: <UNUSED>
+| 3: <UNUSED>
+| 4: <UNUSED>
+`->>> Exit status: 0
+,-<<< Executing `/sbin/fdisk ad0'
+| ******* Working on device /dev/ad0 *******
+| parameters extracted from in-core disklabel are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Figures below won't work with BIOS for partitions not in cyl 1
+| parameters to be used for BIOS calculations are:
+| cylinders=4161 heads=16 sectors/track=63 (1008 blks/cyl)
+| 
+| Media sector size is 512
+| Warning: BIOS sector numbering starts with sector 1
+| Information from DOS bootblock is:
+| The data for partition 1 is:
+| sysid 165 (0xa5),(FreeBSD/NetBSD/386BSD)
+|     start 63, size 4194225 (2047 Meg), flag 80 (active)
+| 	beg: cyl 0/ head 1/ sector 1;
+| 	end: cyl 64/ head 15/ sector 63
+| The data for partition 2 is:
+| <UNUSED>
+| The data for partition 3 is:
+| <UNUSED>
+| The data for partition 4 is:
+| <UNUSED>
+`->>> Exit status: 0
+,-<<< Executing `/sbin/bsdlabel -B -r -w ad0s1 auto'
+`->>> Exit status: 0
+,-<<< Executing `/sbin/bsdlabel -r ad0s1 >/tmp/install.disklabel.ad0s1'
+`->>> Exit status: 0
+Flow executing -> main/install/select_subparts (Select Subpartitions)
+[Wed Aug 13 10:26:05 2014]
+Flow executing -> main/install/create_subparts (Create Subpartitions)
+,-<<< Executing `/usr/bin/awk '$2=="partitions:" || cut { cut = 1 } !cut { print $0 }' </tmp/install.disklabel.ad0s1 >/tmp/install.disklabel'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo '8 partitions:' >>/tmp/install.disklabel'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo '#        size   offset    fstype   [fsize bsize bps/cpg]' >>/tmp/install.disklabel'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo '  a:	3145633	16	4.2BSD	2048	16384	99' >>/tmp/install.disklabel'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo '  b:	1048576	3145649	swap' >>/tmp/install.disklabel'
+`->>> Exit status: 0
+,-<<< Executing `/usr/bin/grep -E '^[[:space:]]*[c][[:space:]]*:' /tmp/install.disklabel.ad0s1 >>/tmp/install.disklabel'
+`->>> Exit status: 0
+,-<<< Executing `/bin/cat /tmp/install.disklabel'
+| # /dev/ad0s1:
+| 8 partitions:
+| #        size   offset    fstype   [fsize bsize bps/cpg]
+|   a:	3145633	16	4.2BSD	2048	16384	99
+|   b:	1048576	3145649	swap
+|   c:    4194225          0    unused        0     0     # "raw" part, don't edit
+`->>> Exit status: 0
+,-<<< Executing `/sbin/bsdlabel -R -r ad0s1 /tmp/install.disklabel'
+`->>> Exit status: 0
+,-<<< Executing `/sbin/bsdlabel ad0s1'
+| # /dev/ad0s1:
+| 8 partitions:
+| #          size     offset    fstype   [fsize bsize bps/cpg]
+|   a:    3145633         16    4.2BSD     2048 16384    99
+|   b:    1048576    3145649      swap                    
+|   c:    4194225          0    unused        0     0     # "raw" part, don't edit
+`->>> Exit status: 0
+,-<<< Executing `/sbin/bsdlabel -B ad0s1'
+`->>> Exit status: 0
+,-<<< Executing `/sbin/newfs /dev/ad0s1a'
+| /dev/ad0s1a: 1536.0MB (3145632 sectors) block size 16384, fragment size 2048
+| 	using 9 cylinder groups of 183.72MB, 11758 blks, 23552 inodes.
+| super-block backups (for fsck -b #) at:
+|  160, 376416, 752672, 1128928, 1505184, 1881440, 2257696, 2633952, 3010208
+`->>> Exit status: 0
+Flow executing -> main/install/preselect_packages (Pre-select Packages)
+Flow executing -> main/install/install_os (Install OS)
+,- opened pty to '/usr/sbin/pstat -s -k'
+< Device          1K-blocks     Used    Avail Capacity
+( EOF )
+`- closed pty to '/usr/sbin/pstat -s -k'
+,- opened pty to '/sbin/mount'
+< /dev/iso9660/PFSENSE on / (cd9660, local, read-only)
+< devfs on /dev (devfs, local)
+< /dev/md0 on /tmp (ufs, local)
+< /dev/md1 on /var (ufs, local, noatime)
+< /dev/md2 on /etc (ufs, local, noatime)
+< /dev/md3 on /conf (ufs, local)
+< /conf on /cf/conf (nullfs, local)
+< /dev/md4 on /home (ufs, local)
+< <above>:/tmp/unionfs/usr on /usr (unionfs, local)
+< <above>:/tmp/unionfs/root on /root (unionfs, local)
+< <above>:/tmp/unionfs/bin on /bin (unionfs, local)
+< <above>:/tmp/unionfs/sbin on /sbin (unionfs, local)
+< <above>:/tmp/unionfs/boot on /boot (unionfs, local)
+< <above>:/tmp/unionfs/confdefault on /conf.default (unionfs, local)
+< devfs on /var/dhcpd/dev (devfs, local)
+( EOF )
+`- closed pty to '/sbin/mount'
+,-<<< Executing `/sbin/mount /dev/ad0s1a /mnt/'
+`->>> Exit status: 0
+,-<<< Executing `/sbin/dumpon -v /dev/ad0s1b'
+| kernel dumps on /dev/ad0s1b
+`->>> Exit status: 0
+,-<<< Executing `/sbin/swapon /dev/ad0s1b'
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /boot /mnt/boot'
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /COPYRIGHT /mnt/COPYRIGHT'
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /bin /mnt/bin'
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /conf /mnt/conf'
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /conf.default /mnt/conf.default'
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /dev /mnt/dev'
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /etc /mnt/etc'
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /home /mnt/home'
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /kernels /mnt/kernels'
+[Wed Aug 13 10:26:06 2014]
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /libexec /mnt/libexec'
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /lib /mnt/lib'
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /root /mnt/root'
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /sbin /mnt/sbin'
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /usr /mnt/usr'
+[Wed Aug 13 10:26:12 2014]
+`->>> Exit status: 0
+,-<<< Executing `/usr/local/bin/cpdup -vvv -I -o /var /mnt/var'
+`->>> Exit status: 0
+,-<<< Executing `/bin/rm -rf /mnt//var/db/pkg'
+`->>> Exit status: 0
+,-<<< Executing `/bin/mkdir -p /mnt//var/db/pkg'
+`->>> Exit status: 0
+,-<<< Executing `/bin/chmod 755 /mnt//var/db/pkg'
+`->>> Exit status: 0
+,-<<< Executing `/bin/mkdir -p /mnt/usr/local'
+`->>> Exit status: 0
+,-<<< Executing `/usr/sbin/mtree -deU -f /etc/mtree/BSD.local.dist -p /mnt/usr/local'
+`->>> Exit status: 0
+,-<<< Executing `/bin/rm -rf /mnt/tmp'
+`->>> Exit status: 0
+,-<<< Executing `/bin/mkdir -p /mnt/tmp'
+`->>> Exit status: 0
+,-<<< Executing `/bin/chmod 1777 /mnt/tmp'
+`->>> Exit status: 0
+,-<<< Executing `/bin/rm -f /mnt//boot/loader.conf'
+`->>> Exit status: 0
+,-<<< Executing `/bin/mkdir -p /mnt//mnt'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo '# Device		Mountpoint	FStype	Options		Dump	Pass#' >/mnt/etc/fstab'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo '/dev/ad0s1a		/		ufs	rw		1	1' >>/mnt//etc/fstab'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo '/dev/ad0s1b		none		swap	sw		0	0' >>/mnt//etc/fstab'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo >>/mnt//etc/rc.conf'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo '# -- BEGIN BSD Installer automatically generated configuration  -- #' >>/mnt//etc/rc.conf'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo '# -- Written on '`date`'-- #' >>/mnt//etc/rc.conf'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo "dumpdev='/dev/ad0s1b'" >>/mnt//etc/rc.conf'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo "dumpdir='/var/crash'" >>/mnt//etc/rc.conf'
+`->>> Exit status: 0
+,-<<< Executing `/bin/echo '# -- END of BSD Installer automatically generated configuration -- #' >>/mnt//etc/rc.conf'
+`->>> Exit status: 0
+Flow executing -> main/install/install_kernel (Install Kernel)
+[Wed Aug 13 10:26:16 2014]
+,-<<< Executing `tar xzpf /kernels/kernel_*SMP*.gz -C /mnt/boot/'
+`->>> Exit status: 0
+,-<<< Executing `echo SMP > /mnt/boot/kernel/pfsense_kernel.txt'
+`->>> Exit status: 0
+Flow executing -> main/install/pfsense_after_install (pfSense After Installation Routines)
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `if [ -f /var/pfSenseDEV ]; then cp /scripts/dev_bootstrap.sh /mnt/usr/local/etc/rc.d/; chmod a+rx /mnt/usr/local/etc/rc.d/dev_bootstrap.sh; fi;'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `rm -rf /mnt/cloop'
+`->>> Exit status: 0
+,-<<< Executing `rm -rf /mnt/dist'
+`->>> Exit status: 0
+,-<<< Executing `rm -f /mnt/etc/rc.d/freesbie_1st'
+`->>> Exit status: 0
+,-<<< Executing `rm -f /mnt/usr/local/share/freesbie/files/000.freesbie_2nd.sh'
+`->>> Exit status: 0
+,-<<< Executing `rm -f /mnt/etc/rc.local'
+`->>> Exit status: 0
+,-<<< Executing `rm -f /mnt/etc/rc.conf'
+`->>> Exit status: 0
+,-<<< Executing `rm -f /mnt/etc/rc.conf'
+`->>> Exit status: 0
+,-<<< Executing `rm -f /mnt/etc/rc.firewall'
+`->>> Exit status: 0
+,-<<< Executing `rm -f /mnt/etc/rc.sendmail'
+`->>> Exit status: 0
+,-<<< Executing `rm -f /mnt/usr/sbin/cleargpt.sh'
+`->>> Exit status: 0
+,-<<< Executing `touch /mnt/etc/rc.conf'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `mkdir -p /mnt/cf/conf'
+`->>> Exit status: 0
+,-<<< Executing `cp -r /cf/conf/* /mnt/cf/conf/'
+`->>> Exit status: 0
+,-<<< Executing `touch /mnt/cf/conf/trigger_initial_wizard'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `touch /mnt/root/.part_mount'
+`->>> Exit status: 0
+,-<<< Executing `touch /mnt/root/.first_time'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `echo autoboot_delay=\"3\" >> /mnt/boot/loader.conf'
+`->>> Exit status: 0
+,-<<< Executing `echo vm.kmem_size=\"435544320\"  >> /mnt/boot/loader.conf'
+`->>> Exit status: 0
+,-<<< Executing `echo vm.kmem_size_max=\"535544320\"  >> /mnt/boot/loader.conf'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `echo kern.ipc.nmbclusters=\"0\" >> /mnt/boot/loader.conf'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `VERSION=`head -n 1 /mnt/etc/version | cut -c 1-3`; if [ "${VERSION}" != "1.2" -a "${VERSION}" != "2.0" ]; then echo hw.usb.no_pf=\"1\" >> /mnt/boot/loader.conf; fi;'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `cd /mnt && rm -rf cloop/ dist/ boot/mfsroot.gz'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `rm -f /mnt/etc/motd'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `echo "pfSense" > /mnt/etc/platform'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `grep -v lua_installer /root/.tcshrc > /mnt/root/.tcshrc'
+`->>> Exit status: 0
+,-<<< Executing `rm -rf /mnt/scripts'
+`->>> Exit status: 0
+,-<<< Executing `find /mnt/ -name installer -or -name lua_installer -exec rm {} \;'
+`->>> Exit status: 0
+,-<<< Executing `find /mnt/ -name 000.unionfs -or -name lua_installer -exec rm {} \;'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `rm -f /mnt/usr/local/bin/after_installation_routines.sh'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `touch /tmp/install_complete'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `chmod a-w /mnt/boot/loader.rc'
+`->>> Exit status: 0
+,-<<< Executing `chflags schg /mnt/boot/loader.rc'
+`->>> Exit status: 0
+,-<<< Executing `'
+`->>> Exit status: 0
+,-<<< Executing `mkdir -p /mnt/var/installer_logs'
+`->>> Exit status: 0
+,-<<< Executing `cp /tmp/install.disklabel /mnt/var/installer_logs'
+`->>> Exit status: 0
+,-<<< Executing `cp /tmp/install.disklabel* /mnt/var/installer_logs'
+`->>> Exit status: 0
+,-<<< Executing `cp /tmp/installer.log /mnt/var/installer_logs'

@@ -1,0 +1,13 @@
+_LICENSE=ART10 GPLv1
+_LICENSE_COMB=dual
+_LICENSE_NAME=Dual (any of): ART10 GPLv1
+_LICENSE_PERMS=dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+_LICENSE_GROUPS=
+_LICENSE_NAME_ART10=Artistic License version 1.0
+_LICENSE_PERMS_ART10=dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+_LICENSE_GROUPS_ART10=OSI
+_LICENSE_DISTFILES_ART10=perl-5.14.2.tar.bz2 BSDPAN-20111107.tar.bz2
+_LICENSE_NAME_GPLv1=GNU General Public License version 1
+_LICENSE_PERMS_GPLv1=dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+_LICENSE_GROUPS_GPLv1=FSF GPL OSI
+_LICENSE_DISTFILES_GPLv1=perl-5.14.2.tar.bz2 BSDPAN-20111107.tar.bz2

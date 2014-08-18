@@ -1,0 +1,26 @@
+lease {
+  interface "em0";
+  fixed-address 10.10.1.102;
+  option subnet-mask 255.255.255.0;
+  option routers 10.10.1.1;
+  option domain-name-servers 10.10.1.1;
+  option dhcp-lease-time 315360000;
+  option dhcp-message-type 5;
+  option dhcp-server-identifier 10.10.1.100;
+  renew 6 2019/8/17 09:29:05;
+  rebind 3 2023/5/17 03:29:05;
+  expire 4 2024/8/15 09:29:05;
+}
+lease {
+  interface "em0";
+  fixed-address 10.10.1.102;
+  option subnet-mask 255.255.255.0;
+  option routers 10.10.1.1;
+  option domain-name-servers 10.10.1.1;
+  option dhcp-lease-time 315360000;
+  option dhcp-message-type 5;
+  option dhcp-server-identifier 10.10.1.100;
+  renew 6 2019/8/17 11:42:36;
+  rebind 3 2023/5/17 05:42:36;
+  expire 4 2024/8/15 11:42:36;
+}

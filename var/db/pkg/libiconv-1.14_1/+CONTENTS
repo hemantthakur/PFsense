@@ -1,0 +1,58 @@
+@comment PKG_FORMAT_REVISION:1.1
+@name libiconv-1.14_1
+@comment ORIGIN:converters/libiconv
+@cwd /usr/local
+man/man1/iconv.1.gz
+@comment MD5:5c4f3aa5c04f006466355e377b1a2560
+man/man3/iconv.3.gz
+@comment MD5:fe29e27c04864ae01620ce530a95fe8e
+man/man3/iconv_open.3.gz
+@comment MD5:fdbca46b3eba4ca4291f9c075608d848
+man/man3/iconv_open_into.3.gz
+@comment MD5:404244bc2aec9b1a7984034f0520aa01
+man/man3/iconv_close.3.gz
+@comment MD5:a23744fa1013d35fab9276bef248b1ea
+man/man3/iconvctl.3.gz
+@comment MD5:c3176e56906b53983c32430f46e64a9e
+bin/iconv
+@comment MD5:23f3a2a0c85faf4a6e759902bbc02e5f
+include/iconv.h
+@comment MD5:57e84aacdcf17910c1d6c46cfb350ba2
+include/libcharset.h
+@comment MD5:350bde758f0bd82af981fc5e789c335b
+include/localcharset.h
+@comment MD5:406e71f7e3dbdf712e7370798d59cb23
+lib/charset.alias
+@comment MD5:6493df62c7a01601b6f2f2121fc8a55e
+lib/libcharset.a
+@comment MD5:e20a5a1083660a9a9cc126e62fecf40a
+lib/libcharset.la
+@comment MD5:46b4c9210e67abe851a5cc7323cdcd41
+lib/libcharset.so
+@comment MD5:fd98af31137e12284142bf4a2d3ab677
+lib/libcharset.so.1
+@comment MD5:afa0b12435b7ed0b2db10624c224b2ba
+lib/libiconv.a
+@comment MD5:c620c16a6adac02aa220e5bd6252ff87
+lib/libiconv.la
+@comment MD5:7a901ad084fe77b32decde802c91be48
+lib/libiconv.so
+@comment MD5:bbaf89f4508a00755061e1c63577175f
+lib/libiconv.so.3
+@comment MD5:ac9169fb6cc29c29dedc127e92d7dabb
+share/doc/libiconv/iconv.1.html
+@comment MD5:5190a9734c3d551f48f83212d0533d17
+share/doc/libiconv/iconv.3.html
+@comment MD5:7934278df84bae226e281a3c29598f5c
+share/doc/libiconv/iconv_close.3.html
+@comment MD5:54dd86cda0d400b7c2ad0df2ba0a1936
+share/doc/libiconv/iconv_open.3.html
+@comment MD5:c9f77b403da29b5e0d5706fd49300186
+share/doc/libiconv/iconv_open_into.3.html
+@comment MD5:eaf56931e743680f4d9ac4834a1dee08
+share/doc/libiconv/iconvctl.3.html
+@comment MD5:6ddfb32f6828651773a5eb584b72d4ba
+@dirrm share/doc/libiconv
+@exec /sbin/ldconfig -m /usr/local/lib
+@unexec /sbin/ldconfig -R
+@comment OPTIONS:+ENCODINGS -PATCHES

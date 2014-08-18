@@ -1,0 +1,6 @@
+# /dev/ad0s1:
+8 partitions:
+#        size   offset    fstype   [fsize bsize bps/cpg]
+  a:	3145633	16	4.2BSD	2048	16384	99
+  b:	1048576	3145649	swap
+  c:    4194225          0    unused        0     0     # "raw" part, don't edit

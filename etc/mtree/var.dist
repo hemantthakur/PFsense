@@ -1,0 +1,274 @@
+#	   user: root
+#	machine: pf2_1_1_amd64.pfsense.org
+#	   tree: /usr/local/pfsense-fs/var
+#	   date: Thu May  1 16:24:25 2014
+
+# .
+/set type=file uid=0 gid=0 mode=0755 nlink=1 flags=none
+.               type=dir nlink=22 size=512 time=1398975407.000000000
+
+# ./account
+account         type=dir nlink=2 size=512 time=1398975407.000000000
+# ./account
+..
+
+
+# ./at
+/set type=file uid=1 gid=0 mode=0755 nlink=1 flags=none
+at              type=dir uid=0 nlink=4 size=512 time=1398975407.000000000
+
+# ./at/jobs
+jobs            type=dir nlink=2 size=512 time=1398975407.000000000
+# ./at/jobs
+..
+
+
+# ./at/spool
+spool           type=dir nlink=2 size=512 time=1398975407.000000000
+# ./at/spool
+..
+
+# ./at
+..
+
+
+# ./audit
+audit           type=dir uid=0 gid=77 mode=0750 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./audit
+..
+
+
+# ./backups
+backups         type=dir uid=0 mode=0750 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./backups
+..
+
+
+# ./crash
+/set type=file uid=0 gid=0 mode=0644 nlink=1 flags=none
+crash           type=dir mode=0750 nlink=2 size=512 \
+                time=1398975434.000000000
+    minfree     size=5 time=1398975434.000000000
+# ./crash
+..
+
+
+# ./cron
+/set type=file uid=0 gid=0 mode=0700 nlink=1 flags=none
+cron            type=dir mode=0750 nlink=3 size=512 \
+                time=1398975407.000000000
+
+# ./cron/tabs
+tabs            type=dir nlink=2 size=512 time=1398975407.000000000
+# ./cron/tabs
+..
+
+# ./cron
+..
+
+
+# ./db
+db              type=dir mode=0755 nlink=8 size=512 \
+                time=1398975434.000000000
+    locate.database \
+                uid=65534 mode=0644 size=0 time=1398975434.000000000
+
+# ./db/entropy
+entropy         type=dir uid=2 gid=5 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./db/entropy
+..
+
+
+# ./db/freebsd-update
+freebsd-update  type=dir nlink=2 size=512 time=1398975407.000000000
+# ./db/freebsd-update
+..
+
+
+# ./db/ipf
+ipf             type=dir nlink=2 size=512 time=1398975407.000000000
+# ./db/ipf
+..
+
+
+# ./db/pkg
+pkg             type=dir mode=0755 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./db/pkg
+..
+
+
+# ./db/ports
+ports           type=dir mode=0755 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./db/ports
+..
+
+
+# ./db/portsnap
+portsnap        type=dir mode=0755 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./db/portsnap
+..
+
+# ./db
+..
+
+
+# ./empty
+empty           type=dir mode=0555 nlink=2 size=512 \
+                time=1398975407.000000000 flags=schg
+# ./empty
+..
+
+
+# ./games
+games           type=dir gid=13 mode=0775 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./games
+..
+
+
+# ./heimdal
+heimdal         type=dir nlink=2 size=512 time=1398975407.000000000
+# ./heimdal
+..
+
+
+# ./log
+log             type=dir mode=0755 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./log
+..
+
+
+# ./mail
+mail            type=dir gid=6 mode=0775 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./mail
+..
+
+
+# ./msgs
+msgs            type=dir uid=1 mode=0755 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./msgs
+..
+
+
+# ./named
+named           type=dir mode=0755 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./named
+..
+
+
+# ./preserve
+preserve        type=dir mode=0755 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./preserve
+..
+
+
+# ./run
+/set type=file uid=0 gid=53 mode=0755 nlink=1 flags=none
+run             type=dir gid=0 nlink=5 size=512 time=1398975407.000000000
+
+# ./run/named
+named           type=dir uid=53 nlink=2 size=512 time=1398975407.000000000
+# ./run/named
+..
+
+
+# ./run/ppp
+ppp             type=dir gid=69 mode=0770 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./run/ppp
+..
+
+
+# ./run/wpa_supplicant
+wpa_supplicant  type=dir gid=0 nlink=2 size=512 time=1398975407.000000000
+# ./run/wpa_supplicant
+..
+
+# ./run
+..
+
+
+# ./rwho
+rwho            type=dir gid=1 mode=0775 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./rwho
+..
+
+
+# ./spool
+/set type=file uid=0 gid=1 mode=0755 nlink=1 flags=none
+spool           type=dir gid=0 nlink=7 size=512 time=1398975407.000000000
+
+# ./spool/lock
+lock            type=dir uid=66 gid=68 mode=0775 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./spool/lock
+..
+
+
+# ./spool/lpd
+lpd             type=dir nlink=2 size=512 time=1398975407.000000000
+# ./spool/lpd
+..
+
+
+# ./spool/mqueue
+mqueue          type=dir nlink=2 size=512 time=1398975407.000000000
+# ./spool/mqueue
+..
+
+
+# ./spool/opielocks
+opielocks       type=dir mode=0700 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./spool/opielocks
+..
+
+
+# ./spool/output
+output          type=dir nlink=3 size=512 time=1398975407.000000000
+
+# ./spool/output/lpd
+lpd             type=dir nlink=2 size=512 time=1398975407.000000000
+# ./spool/output/lpd
+..
+
+# ./spool/output
+..
+
+# ./spool
+..
+
+
+# ./tmp
+/set type=file uid=0 gid=0 mode=01777 nlink=1 flags=none
+tmp             type=dir nlink=3 size=512 time=1398975407.000000000
+
+# ./tmp/vi.recover
+vi.recover      type=dir nlink=2 size=512 time=1398975407.000000000
+# ./tmp/vi.recover
+..
+
+# ./tmp
+..
+
+
+# ./yp
+yp              type=dir mode=0755 nlink=2 size=512 \
+                time=1398975407.000000000
+# ./yp
+..
+
+..
+

@@ -1,0 +1,1979 @@
+@comment PKG_FORMAT_REVISION:1.1
+@name git-1.8.2.1
+@comment ORIGIN:devel/git
+@cwd /usr/local
+@pkgdep expat-2.0.1_2
+@comment DEPORIGIN:textproc/expat2
+@pkgdep ca_root_nss-3.14.3
+@comment DEPORIGIN:security/ca_root_nss
+@pkgdep perl-5.14.2_3
+@comment DEPORIGIN:lang/perl5.14
+@pkgdep p5-Net-SMTP-SSL-1.01_1
+@comment DEPORIGIN:mail/p5-Net-SMTP-SSL
+@pkgdep p5-Error-0.17019
+@comment DEPORIGIN:lang/p5-Error
+@pkgdep curl-7.24.0_2
+@comment DEPORIGIN:ftp/curl
+@pkgdep cvsps-2.1_1
+@comment DEPORIGIN:devel/cvsps
+@pkgdep libiconv-1.14_1
+@comment DEPORIGIN:converters/libiconv
+@pkgdep gettext-0.18.1.1_1
+@comment DEPORIGIN:devel/gettext
+@pkgdep python27-2.7.3_6
+@comment DEPORIGIN:lang/python27
+@conflicts git-subversion-[0-9]*
+@exec echo "===> Creating users and/or groups."
+@exec if ! /usr/sbin/pw groupshow git_daemon >/dev/null 2>&1; then  echo "Creating group 'git_daemon' with gid '964'.";  /usr/sbin/pw groupadd git_daemon -g 964; else echo "Using existing group 'git_daemon'."; fi
+@exec if ! /usr/sbin/pw usershow git_daemon >/dev/null 2>&1; then  echo "Creating user 'git_daemon' with uid '964'.";  /usr/sbin/pw useradd git_daemon -u 964 -g 964  -c "git daemon" -d /nonexistent -s /usr/sbin/nologin;  else echo "Using existing user 'git_daemon'."; fi
+man/man1/git.1.gz
+@comment MD5:48598d4929a0d43cd58fd02a870cf5d8
+man/man1/git-add.1.gz
+@comment MD5:39c1b39f0fbc41f8ea8249faeb6bcb75
+man/man1/git-am.1.gz
+@comment MD5:363a32e6138b3f3dfdf377523da4db84
+man/man1/git-annotate.1.gz
+@comment MD5:4018ae2497d1f5b88fb4f377d3736790
+man/man1/git-apply.1.gz
+@comment MD5:3505633d3a5ce25f42ba2add7d54415b
+man/man1/git-archimport.1.gz
+@comment MD5:3e40b7c9697b9ed2b366dedefff8243b
+man/man1/git-archive.1.gz
+@comment MD5:41033e0e5af4b2c4b24de356cd8b2153
+man/man1/git-bisect.1.gz
+@comment MD5:021a8c49504d4f1c0ab622681b543212
+man/man1/git-blame.1.gz
+@comment MD5:21caf1baa6c333fe48221e45933056d6
+man/man1/git-branch.1.gz
+@comment MD5:a8431a25e974ec1a3c4471a155d3c845
+man/man1/git-bundle.1.gz
+@comment MD5:8f8094c6e0204e9cf5434e93a9dd306d
+man/man1/git-cat-file.1.gz
+@comment MD5:2975e986c5834b42674e87a898de5feb
+man/man1/git-check-attr.1.gz
+@comment MD5:e1760d497916ea39a5a43027c78f5fa4
+man/man1/git-check-ignore.1.gz
+@comment MD5:3999f8cb2a074b1ef86c212f943cb999
+man/man1/git-check-ref-format.1.gz
+@comment MD5:eb607270b999e8dff37f6fec0d999617
+man/man1/git-checkout-index.1.gz
+@comment MD5:ab14f70b3db5fa9bde545557e7b9504a
+man/man1/git-checkout.1.gz
+@comment MD5:d035b3736042631d2ea75bdfd803f8da
+man/man1/git-cherry-pick.1.gz
+@comment MD5:48e1ada30c7db681e6ba4dbcce08cfb9
+man/man1/git-cherry.1.gz
+@comment MD5:017fbeb27ac8c44bcc519dced9f6c7cd
+man/man1/git-clean.1.gz
+@comment MD5:42e806c78449b0d326cca9ceb6cd62e0
+man/man1/git-clone.1.gz
+@comment MD5:a364ef3f3f60c1aaf570d34275b65120
+man/man1/git-column.1.gz
+@comment MD5:fc5bb2180f0c949eadf4594664dc175d
+man/man1/git-commit-tree.1.gz
+@comment MD5:4b1864e4475edb25b0c88c06b51e1d9c
+man/man1/git-commit.1.gz
+@comment MD5:927007af9c2393e0c89c756687f4bd59
+man/man1/git-config.1.gz
+@comment MD5:422c0f86f049a9f8469603ef9ab92995
+man/man1/git-count-objects.1.gz
+@comment MD5:05f3a95b57214727ab94b40fc80afd1f
+man/man1/git-credential.1.gz
+@comment MD5:aee41ef7621a68349c9a0c28e259354e
+man/man1/git-credential-cache--daemon.1.gz
+@comment MD5:5a3c429e0d09cd33685afe257a675341
+man/man1/git-credential-cache.1.gz
+@comment MD5:599f359c82a6f051b9e366098822fcac
+man/man1/git-credential-store.1.gz
+@comment MD5:0c174fe1b7c6107c74c49bff75825d1a
+man/man1/git-daemon.1.gz
+@comment MD5:6a081b2418761b29e782eabe172b7b9f
+man/man1/git-describe.1.gz
+@comment MD5:2805d36787a2b12fed11279aaaed925a
+man/man1/git-diff-files.1.gz
+@comment MD5:35ebf64308b43c1b88c43eb300f4fc03
+man/man1/git-diff-index.1.gz
+@comment MD5:be1b8a19498e6191a108ed7c4e80914f
+man/man1/git-difftool.1.gz
+@comment MD5:165be267d6293a1cb0f163076a96053c
+man/man1/git-diff-tree.1.gz
+@comment MD5:5143926a9a8e61e40ed0403953aeb6bc
+man/man1/git-diff.1.gz
+@comment MD5:600d28545dd44fa2f5b47e3e0d1f49d9
+man/man1/git-fast-export.1.gz
+@comment MD5:c72db49019f726282168df1e825a721f
+man/man1/git-fast-import.1.gz
+@comment MD5:ce0b4b257c80f6b6947dd7d1bd7eb7e3
+man/man1/git-fetch-pack.1.gz
+@comment MD5:28e80a6736a94eec1807f12f7eb0e998
+man/man1/git-fetch.1.gz
+@comment MD5:7fdd12ff65824a63fc55494d2375acbd
+man/man1/git-filter-branch.1.gz
+@comment MD5:34d3080578ccc0696c4db84d5c1e2e55
+man/man1/git-fmt-merge-msg.1.gz
+@comment MD5:b8ef0d1874436d3f3a933ed604c54d43
+man/man1/git-for-each-ref.1.gz
+@comment MD5:6f29926ceeced8712bd5e402965c50e8
+man/man1/git-format-patch.1.gz
+@comment MD5:5135bfbc5179c155ea89af91cdea99bc
+man/man1/git-fsck-objects.1.gz
+@comment MD5:2d683b258b0539920e4d30410d31b9dc
+man/man1/git-fsck.1.gz
+@comment MD5:889bc5858517cfe31797e7f7bb908ac5
+man/man1/git-gc.1.gz
+@comment MD5:8aa77cc3bbf804c57129e855a2fec73e
+man/man1/git-get-tar-commit-id.1.gz
+@comment MD5:ad86c157174c97fcd3ef760f83da309b
+man/man1/git-grep.1.gz
+@comment MD5:3ee74947f3a316853a14194de9a9cdbc
+man/man1/git-hash-object.1.gz
+@comment MD5:e7b7061de2bc6c861cb104677dd5033f
+man/man1/git-help.1.gz
+@comment MD5:5a3cf0d10c84bbabd4cd13bbaabba991
+man/man1/git-http-backend.1.gz
+@comment MD5:54dde38060b8675d3c29e1a952a9fbd5
+man/man1/git-http-fetch.1.gz
+@comment MD5:900375e13706a59316608a52e08dae9f
+man/man1/git-http-push.1.gz
+@comment MD5:f9830a5199b30fef96e833f34977b005
+man/man1/git-imap-send.1.gz
+@comment MD5:235278c179f47b6d748dee7addb6308f
+man/man1/git-index-pack.1.gz
+@comment MD5:735003841203507c46d8a460d04ea623
+man/man1/git-init-db.1.gz
+@comment MD5:e54547bded55cb61e9f729f0af1b8fd3
+man/man1/git-init.1.gz
+@comment MD5:001614adbd70afa0f79ec3734d77d951
+man/man1/git-instaweb.1.gz
+@comment MD5:7ff2a3924cef16de3a85a5d93454ff8b
+man/man1/git-log.1.gz
+@comment MD5:a8d2d89bcde7e440b0911bb709971a57
+man/man1/git-lost-found.1.gz
+@comment MD5:1e0f1a55bd001af6e8f9cec37bb01a7e
+man/man1/git-ls-files.1.gz
+@comment MD5:d8dee050f87a795811433a0e2406baea
+man/man1/git-ls-remote.1.gz
+@comment MD5:acff3f46ecc3433581db5f6d81b0e1fb
+man/man1/git-ls-tree.1.gz
+@comment MD5:a815f5fab2a9a96a2ae608c1cb657be9
+man/man1/git-mailinfo.1.gz
+@comment MD5:e5e86ece62a40270cd60293303b31951
+man/man1/git-mailsplit.1.gz
+@comment MD5:ae948de98ca22e90d2436651c9740338
+man/man1/git-merge-base.1.gz
+@comment MD5:51fcd4e85a6cb4d0199b7e924f68386f
+man/man1/git-merge-file.1.gz
+@comment MD5:693fdb76115f98b281cebb3b6865f1b2
+man/man1/git-merge-index.1.gz
+@comment MD5:9e3da082c1cb93aff762e06aa34ef9b2
+man/man1/git-merge-one-file.1.gz
+@comment MD5:6d2afe027551693888d03f6b98295b75
+man/man1/git-mergetool.1.gz
+@comment MD5:3643b92a3f0ec64e88748c0a05c08e78
+man/man1/git-merge-tree.1.gz
+@comment MD5:751a4d002c9bf1ac656c858259f208b8
+man/man1/git-merge.1.gz
+@comment MD5:191b2af9324090bcf8dfc4ee0305f892
+man/man1/git-mergetool--lib.1.gz
+@comment MD5:fcd6ae15948e1e378596bb3b453b5298
+man/man1/git-mktag.1.gz
+@comment MD5:da18d71e968bdb2cadc75a22fe16f0e9
+man/man1/git-mktree.1.gz
+@comment MD5:b4cc0606701c24bc3d7d9a98d0e97000
+man/man1/git-mv.1.gz
+@comment MD5:b158c5bfc4aab6034bd9d6af9aebbd43
+man/man1/git-name-rev.1.gz
+@comment MD5:2d1d4e85c1ee71a41840ab9d622b0a12
+man/man1/git-notes.1.gz
+@comment MD5:a8f0754ce5a3253d6d99ccb57b597e0b
+man/man1/git-p4.1.gz
+@comment MD5:a4e04f45f7422ec9558cc0112aa4fbf7
+man/man1/git-pack-objects.1.gz
+@comment MD5:ca2bdd07d1ad2aaade022d54bda0371c
+man/man1/git-pack-redundant.1.gz
+@comment MD5:bea295442454682cc711deb0eba14a1e
+man/man1/git-pack-refs.1.gz
+@comment MD5:1be2dd7b7b9554888244d8df389cefd2
+man/man1/git-parse-remote.1.gz
+@comment MD5:0561d9d468209fe6ef702b04f6f9e816
+man/man1/git-patch-id.1.gz
+@comment MD5:2e23ab3db4933f80f7f98f65127ef4f5
+man/man1/git-peek-remote.1.gz
+@comment MD5:5bc1476f4d704e37348fb64e3cd8f4ce
+man/man1/git-prune-packed.1.gz
+@comment MD5:c1622990fe93e2aee1ecb352bd7cea6a
+man/man1/git-prune.1.gz
+@comment MD5:5d08c9b4b4eaacb83e79714a8ecce97f
+man/man1/git-pull.1.gz
+@comment MD5:bc8451508f6b708f97e7d60105a1042a
+man/man1/git-push.1.gz
+@comment MD5:a6915e1ea2d6df7c7c7b192603e58845
+man/man1/git-quiltimport.1.gz
+@comment MD5:01d5ce6ed7ede9dec054328d6fa843ba
+man/man1/git-read-tree.1.gz
+@comment MD5:d0c38939ec032756dd06f76703074e31
+man/man1/git-rebase.1.gz
+@comment MD5:dc51ae31c83bd847a85c9865212504a5
+man/man1/git-receive-pack.1.gz
+@comment MD5:b5ae91ef597e5e1d9c0dda6e5b5d7387
+man/man1/git-reflog.1.gz
+@comment MD5:7ae1478896be067d547ca490a8b506e5
+man/man1/git-relink.1.gz
+@comment MD5:ae7c6dbd4da774fab930bafbd1037c10
+man/man1/git-remote-ext.1.gz
+@comment MD5:3103df7dcfbb30f6dc4bce50aba484c0
+man/man1/git-remote-fd.1.gz
+@comment MD5:632845964d6c2fe12a0f7f421e03aab8
+man/man1/git-remote-testgit.1.gz
+@comment MD5:f49565f441bb4dd0653a156375ea8cb5
+man/man1/git-remote.1.gz
+@comment MD5:793b58e930e9a28841585167225d334c
+man/man1/git-repack.1.gz
+@comment MD5:1c445e08988a4fcbc01deb04769854b3
+man/man1/git-replace.1.gz
+@comment MD5:c73a7f78df471ba82534ef7cd9ba4054
+man/man1/git-repo-config.1.gz
+@comment MD5:511f53148893e6c81ddf21f8a9320029
+man/man1/git-request-pull.1.gz
+@comment MD5:d01d3e51822d742eaa8da33297d47a80
+man/man1/git-rerere.1.gz
+@comment MD5:0d2ce52d43ad049642de232114382c74
+man/man1/git-reset.1.gz
+@comment MD5:26f3c27a337a5f43863fe879173145e0
+man/man1/git-rev-list.1.gz
+@comment MD5:b36777030697055092e8f9d7ac648db5
+man/man1/git-rev-parse.1.gz
+@comment MD5:7c4b860c48202ac66498ea3472fd2e6b
+man/man1/git-revert.1.gz
+@comment MD5:576c4468743b3a6afb6edd1e742e5dca
+man/man1/git-rm.1.gz
+@comment MD5:0d2dc8771039817dd280db5fbe49c57a
+man/man1/git-send-email.1.gz
+@comment MD5:6ebc9feecad8ce55b11c3a14462d4b5f
+man/man1/git-send-pack.1.gz
+@comment MD5:dec51f5943b6a85ddf83d49de03e5a9a
+man/man1/git-sh-setup.1.gz
+@comment MD5:048161c58c32d7e8f296635f0da70ee8
+man/man1/git-sh-i18n.1.gz
+@comment MD5:4287f625247c0b64ed4156b79cc2ac63
+man/man1/git-sh-i18n--envsubst.1.gz
+@comment MD5:ce5c70bb8d0b2de00b55411ffa03c258
+man/man1/git-shell.1.gz
+@comment MD5:fb8a76a2dc462d3eb50cb99bf84c7b53
+man/man1/git-shortlog.1.gz
+@comment MD5:261c959540cecd347cdeb4a9679c300f
+man/man1/git-show-branch.1.gz
+@comment MD5:95e6c1d93d3015c126f12173f033192a
+man/man1/git-show-index.1.gz
+@comment MD5:a3c7bc35748cf053c0210eb9bf7c1702
+man/man1/git-show-ref.1.gz
+@comment MD5:f849a8c3f5ed68eb3ce058549f5dea83
+man/man1/git-show.1.gz
+@comment MD5:a92731ff907a453339e3c60d6d674906
+man/man1/git-stage.1.gz
+@comment MD5:2ac8a962abd704feb4ac3809c4194df6
+man/man1/git-stash.1.gz
+@comment MD5:fcf19de9143a165f8a9d84fb65d1b33e
+man/man1/git-status.1.gz
+@comment MD5:42a4a428cee44a8eb843868275741e7e
+man/man1/git-stripspace.1.gz
+@comment MD5:0b10b7d307c1c29434452bcb574ad7d7
+man/man1/git-submodule.1.gz
+@comment MD5:9d14664d1531b06c9dce1d1b0586409f
+man/man1/git-symbolic-ref.1.gz
+@comment MD5:a53f5973241d669ffb896674e2a53961
+man/man1/git-tag.1.gz
+@comment MD5:fc5566fdc6adc0e45b0dd18e64b152c8
+man/man1/git-tar-tree.1.gz
+@comment MD5:66b56759076d0ea02d6fbcd579ef3f1e
+man/man1/git-unpack-file.1.gz
+@comment MD5:784f3b6048f96d90ceea181da8bd0d2c
+man/man1/git-unpack-objects.1.gz
+@comment MD5:9f11482cd639ff940792e4267f42783c
+man/man1/git-update-index.1.gz
+@comment MD5:07ad797157c276ed4c5ad84e75276f3c
+man/man1/git-update-ref.1.gz
+@comment MD5:ae97f1a4cf3b8cbcf86adafc031f8e47
+man/man1/git-update-server-info.1.gz
+@comment MD5:1d1a92777cbedc6da06f4dc1bf17a97c
+man/man1/git-upload-archive.1.gz
+@comment MD5:c2a964527a77e8ecf1f66d3f85e12fab
+man/man1/git-upload-pack.1.gz
+@comment MD5:ad24906629564b38b09453e4aaa3053a
+man/man1/git-var.1.gz
+@comment MD5:28d39a5c12ca87494555a5ae2c428351
+man/man1/git-verify-pack.1.gz
+@comment MD5:563c39f83da19b1e1f226041dbe6ee39
+man/man1/git-verify-tag.1.gz
+@comment MD5:963009a4869a9c5d3f9fc13c02f93a0a
+man/man1/git-web--browse.1.gz
+@comment MD5:2e63cd0be27f8ffa91739c8d48920d50
+man/man1/git-whatchanged.1.gz
+@comment MD5:bee5c67458b05695ef084ad931bafbfc
+man/man1/git-write-tree.1.gz
+@comment MD5:6fd98966159d4432e5d3fabf6382006f
+man/man1/gitremote-helpers.1.gz
+@comment MD5:e47e24d30f9ed974abdb6fbe1fe68cea
+man/man1/gitweb.1.gz
+@comment MD5:c3448366cc2902d659b3121d275aa7c6
+man/man1/git-cvsimport.1.gz
+@comment MD5:43c22dec3f052b36b5b181efb7629561
+man/man1/git-cvsexportcommit.1.gz
+@comment MD5:896ebe6352b48d8d2252658e8ecdb8fc
+man/man1/git-cvsserver.1.gz
+@comment MD5:2f7cbc3b6709657077f175cb858f91cc
+man/man3/Git.3.gz
+@comment MD5:d1a31dd505171329fa9aea865c3d2285
+man/man3/Git::I18N.3.gz
+@comment MD5:d4a2458bf1eae53a5ed2f106d3e08bfe
+man/man3/Git::SVN::Editor.3.gz
+@comment MD5:10eb56a4e564e35591bc950db47a7237
+man/man3/Git::SVN::Fetcher.3.gz
+@comment MD5:1ca811325fbea014b44c5c00b10c48be
+man/man3/Git::SVN::Memoize::YAML.3.gz
+@comment MD5:d503412e06975b9a113574a029e3fc43
+man/man3/Git::SVN::Prompt.3.gz
+@comment MD5:750ff8dd176cb5360154f078354c6c4a
+man/man3/Git::SVN::Ra.3.gz
+@comment MD5:9e8be2259813b931a5e1c1d2a4afc995
+man/man3/Git::SVN::Utils.3.gz
+@comment MD5:c831eee500c0ed9fdda14026eebdcad2
+man/man5/gitattributes.5.gz
+@comment MD5:2b3d6a8fedbf3fd7f245520273616681
+man/man5/githooks.5.gz
+@comment MD5:635051554670645388848f872a1657cc
+man/man5/gitignore.5.gz
+@comment MD5:65fcd3af4c56883bc777f15ab3ac0b21
+man/man5/gitmodules.5.gz
+@comment MD5:b2414d12a3c912bb5111e5a374e39ba4
+man/man5/gitrepository-layout.5.gz
+@comment MD5:0167ed181bdc7dbe85397d593af79eba
+man/man5/gitweb.conf.5.gz
+@comment MD5:53ee0111f603b8527318072ab19639fc
+man/man7/gitcli.7.gz
+@comment MD5:b20af445f588a9991eb74e2ffe79ef8a
+man/man7/gitcredentials.7.gz
+@comment MD5:32fe04b5c2c9c02ffd10e0bf677a16d3
+man/man7/gitglossary.7.gz
+@comment MD5:062b11e4a21b86769e50f6ce1f8443dc
+man/man7/gittutorial.7.gz
+@comment MD5:c54b59358da30beb0a9a227812aa0a1e
+man/man7/gitcore-tutorial.7.gz
+@comment MD5:59778ecdea1a8799b3a147d1df0886ee
+man/man7/gitdiffcore.7.gz
+@comment MD5:108771176ef586b910e026bf734fa74f
+man/man7/gittutorial-2.7.gz
+@comment MD5:06e8d3b3182a7e3dd259d17981573613
+man/man7/gitworkflows.7.gz
+@comment MD5:3cd486649998aff6e7bd94efe136d948
+man/man7/gitrevisions.7.gz
+@comment MD5:1fcf2636c3f9568e3fd5dd961c16acf0
+man/man7/gitnamespaces.7.gz
+@comment MD5:86e5ae206c2e7f1f628f40d93e0cb621
+man/man7/gitcvs-migration.7.gz
+@comment MD5:e5c42111ea03309b7cdc9b61f4f5379c
+bin/git
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+bin/git-p4
+@comment MD5:1d96f5f7821040cd73dabb19bf36d1ed
+bin/git-p4import
+@comment MD5:21ed4405a6480c40dd0aa6e0f5068b9b
+bin/git-upload-pack
+@comment MD5:9e29b7103e2a60d9b350c9e438933307
+bin/git-receive-pack
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+bin/git-upload-archive
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+bin/git-cvsserver
+@comment MD5:ee19565e992dd51dd5cc3af8632bb753
+bin/git-shell
+@comment MD5:c7a09eb5558218b191752d681c066653
+lib/python2.7/site-packages/git_remote_helpers/__init__.pyc
+@comment MD5:8cc295f84fbe5b08246b49de13395754
+lib/python2.7/site-packages/git_remote_helpers/__init__.py
+@comment MD5:9bd3c11bcb3085111dc8e3e1b266d1f2
+lib/python2.7/site-packages/git_remote_helpers/util.pyc
+@comment MD5:395a347353fc9fb3de98ad7d72611ba0
+lib/python2.7/site-packages/git_remote_helpers/util.py
+@comment MD5:9b62c6567780ce90f0f113b99fe74258
+lib/python2.7/site-packages/git_remote_helpers/git/git.pyc
+@comment MD5:3673247897017f08adccdc6d7eb94d1a
+lib/python2.7/site-packages/git_remote_helpers/git/git.py
+@comment MD5:4dbe4482f3f8ed36df35eb3cdae48f8a
+lib/python2.7/site-packages/git_remote_helpers/git/__init__.py
+@comment MD5:887166273b02a6ebd86cf0d4eee33fff
+lib/python2.7/site-packages/git_remote_helpers/git/__init__.pyc
+@comment MD5:4cded247bde2941bb9959b2e5621b7b5
+lib/python2.7/site-packages/git_remote_helpers/git/repo.py
+@comment MD5:75bd59387c047f45f1c12531a83de7dc
+lib/python2.7/site-packages/git_remote_helpers/git/repo.pyc
+@comment MD5:99a0044ed8896720e33dbe825f2f6217
+lib/python2.7/site-packages/git_remote_helpers/git/non_local.py
+@comment MD5:81ad400c91677782d5938a40260b3f85
+lib/python2.7/site-packages/git_remote_helpers/git/non_local.pyc
+@comment MD5:d0ca74dfbba0c70eeb8dd4580c3ad628
+lib/python2.7/site-packages/git_remote_helpers/git/importer.py
+@comment MD5:c534e279dd4e6c852c25a19cd9c590af
+lib/python2.7/site-packages/git_remote_helpers/git/importer.pyc
+@comment MD5:c8acdc307907654c81518f1f6131dc22
+lib/python2.7/site-packages/git_remote_helpers/git/exporter.py
+@comment MD5:468daa6cff57a48061eee84ebc626159
+lib/python2.7/site-packages/git_remote_helpers/git/exporter.pyc
+@comment MD5:b7b69b696fcb50a670bd0a1c90111037
+lib/python2.7/site-packages/git_remote_helpers-0.1.0-py2.7.egg-info
+@comment MD5:f9dba2c843ba97bb6c6765e69769862b
+libexec/git-core/git
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-add
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-add--interactive
+@comment MD5:c80c661275767de03d753df249fad8d9
+libexec/git-core/git-am
+@comment MD5:2ebbdc1a1f0465616ddeb281c5d290b8
+libexec/git-core/git-annotate
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-apply
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-archimport
+@comment MD5:18ff48f298d9c9903a18f1db28f9901b
+libexec/git-core/git-archive
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-bisect
+@comment MD5:8b3dd552d9f3b3b2f01457c3b25f0f2f
+libexec/git-core/git-bisect--helper
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-blame
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-branch
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-bundle
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-cat-file
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-check-attr
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-check-ignore
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-check-ref-format
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-checkout
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-checkout-index
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-cherry
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-cherry-pick
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+@comment libexec/git-core/git-citool
+libexec/git-core/git-clean
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-clone
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-column
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-commit
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-commit-tree
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-config
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-count-objects
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-credential
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-credential-cache--daemon
+@comment MD5:528d1f9cf2cf3a5047f9851c8d1c8724
+libexec/git-core/git-credential-cache
+@comment MD5:db0fd53869b4160461acdad94708c15a
+libexec/git-core/git-credential-store
+@comment MD5:b317acc2d9148da95b465da0a5a82334
+libexec/git-core/git-cvsexportcommit
+@comment MD5:5eab09654441dbaddc51a4947da7547d
+libexec/git-core/git-cvsimport
+@comment MD5:e780480937ad9490ad0ee3c61791d210
+libexec/git-core/git-cvsserver
+@comment MD5:ee19565e992dd51dd5cc3af8632bb753
+libexec/git-core/git-daemon
+@comment MD5:d2fad0ff964c8b6d5f2ecf0d00d81f69
+libexec/git-core/git-describe
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-diff
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-diff-files
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-diff-index
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-difftool
+@comment MD5:4b48dabab64c90297a804545548a6484
+libexec/git-core/git-difftool--helper
+@comment MD5:f6039254c7f2bb8d70d3a79f75b9dda0
+libexec/git-core/git-diff-tree
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-fast-export
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-fast-import
+@comment MD5:a60d13ca2bf85be0e3fa9d8074b44af6
+libexec/git-core/git-fetch
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-fetch-pack
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-filter-branch
+@comment MD5:c198f6336c2ba056a9e3b9bec8a63492
+libexec/git-core/git-fmt-merge-msg
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-for-each-ref
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-format-patch
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-fsck
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-fsck-objects
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-gc
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-get-tar-commit-id
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-grep
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+@comment libexec/git-core/git-gui
+@comment libexec/git-core/git-gui--askpass
+libexec/git-core/git-hash-object
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-help
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-http-backend
+@comment MD5:477314f2a704f887ecd914242b78b491
+libexec/git-core/git-http-fetch
+@comment MD5:2d23ab77d03ef49a868fb244abb7c8b1
+libexec/git-core/git-http-push
+@comment MD5:fd6e76785503691e7a933665ea6ce7e8
+libexec/git-core/git-imap-send
+@comment MD5:46d36e708733349e07f05ec84949d760
+libexec/git-core/git-index-pack
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-init
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-init-db
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-instaweb
+@comment MD5:4f1550baf8595848561adbc7d12a8e10
+libexec/git-core/git-log
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-lost-found
+@comment MD5:41cc3014a89d9381d11f46284b453520
+libexec/git-core/git-ls-files
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-ls-remote
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-ls-tree
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-mailinfo
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-mailsplit
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-merge
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-merge-base
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-merge-file
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-merge-index
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-merge-octopus
+@comment MD5:656cb90a0e1c4c1e7f2de2f26b5b106b
+libexec/git-core/git-merge-one-file
+@comment MD5:cdeb2266d453f9822c3262f5ce774b65
+libexec/git-core/git-merge-ours
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-merge-recursive
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-merge-resolve
+@comment MD5:c8466908a274e211a43d287e510f2f19
+libexec/git-core/git-merge-subtree
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-mergetool--lib
+@comment MD5:5a49749b392a12bf1f2da0583dc54ad2
+libexec/git-core/git-merge-tree
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-mergetool
+@comment MD5:1fd2f1cb3b5087c68a05682ec3329a69
+libexec/git-core/git-mktag
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-mktree
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-mv
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-name-rev
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-notes
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-p4
+@comment MD5:1d96f5f7821040cd73dabb19bf36d1ed
+libexec/git-core/git-pack-objects
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-pack-redundant
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-pack-refs
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-parse-remote
+@comment MD5:9121b46e541c5fb5aef2de5c1fb2a067
+libexec/git-core/git-patch-id
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-peek-remote
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-prune
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-prune-packed
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-pull
+@comment MD5:4eec214411353ab50a3bc9ad8d864e94
+libexec/git-core/git-push
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-quiltimport
+@comment MD5:8192d40ba99eb80f542d672497db41f3
+libexec/git-core/git-read-tree
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-rebase
+@comment MD5:02d6b4653f41f3e7c9f5b65da2a3a9ab
+libexec/git-core/git-rebase--am
+@comment MD5:fdceff0dc758f0e0aa5330b49085677e
+libexec/git-core/git-rebase--interactive
+@comment MD5:4629f74848f0d5610aadf2c1282301f0
+libexec/git-core/git-rebase--merge
+@comment MD5:77a9bc5f192f39f89255d6e5a0e36ff0
+libexec/git-core/git-receive-pack
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-reflog
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-relink
+@comment MD5:b0893e2c11014120e234513e36be0ca6
+libexec/git-core/git-remote
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-remote-ext
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-remote-fd
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-remote-testpy
+@comment MD5:e2409d2648343026411b916a2d07c780
+libexec/git-core/git-remote-testsvn
+@comment MD5:499872c880322cd455685d7df70914c9
+libexec/git-core/git-remote-http
+@comment MD5:4efc96cf21fa63045d9a5a96d8cd6de2
+libexec/git-core/git-remote-https
+@comment MD5:4efc96cf21fa63045d9a5a96d8cd6de2
+libexec/git-core/git-remote-ftp
+@comment MD5:4efc96cf21fa63045d9a5a96d8cd6de2
+libexec/git-core/git-remote-ftps
+@comment MD5:4efc96cf21fa63045d9a5a96d8cd6de2
+libexec/git-core/git-repack
+@comment MD5:0e35a03ee5362fd2574abfa8f118df97
+libexec/git-core/git-repo-config
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-replace
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-request-pull
+@comment MD5:b627a67c51aab8721239dda9d596b0cf
+libexec/git-core/git-rerere
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-reset
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-rev-list
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-rev-parse
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-revert
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-rm
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-send-email
+@comment MD5:cdb6f0aff90297ed7533e2f7d1c89d75
+libexec/git-core/git-send-pack
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-sh-i18n
+@comment MD5:101f423c1c4f7f64a4f2fdaafaaf5f32
+libexec/git-core/git-sh-i18n--envsubst
+@comment MD5:11a6b7b0a8f4cc5c63005e34440622d0
+libexec/git-core/git-sh-setup
+@comment MD5:788c4e36a7766cb8ce66ae7a240977cf
+libexec/git-core/git-shell
+@comment MD5:c7a09eb5558218b191752d681c066653
+@exec echo "Updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak; echo %D/%F) >/etc/shells; rm -f /etc/shells.bak
+@unexec echo "Updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak) >/etc/shells; rm -f /etc/shells.bak
+libexec/git-core/git-stage
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-shortlog
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-show
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-show-branch
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-show-index
+@comment MD5:7cd5b541cc78a3ed074432952a44c89d
+libexec/git-core/git-show-ref
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-stash
+@comment MD5:700eb90f9ec4907d29787300f0e98187
+libexec/git-core/git-status
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-stripspace
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-submodule
+@comment MD5:2b6f141eae7a296b174cff89ddaeb3bf
+@comment libexec/git-core/git-svn
+libexec/git-core/git-symbolic-ref
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-tag
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-tar-tree
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-unpack-file
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-unpack-objects
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-update-index
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-update-ref
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-update-server-info
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-upload-archive
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-upload-pack
+@comment MD5:9e29b7103e2a60d9b350c9e438933307
+libexec/git-core/git-var
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-verify-pack
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-verify-tag
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-web--browse
+@comment MD5:e957e02cab9bcaada33d0cb38e39c561
+libexec/git-core/git-whatchanged
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/git-write-tree
+@comment MD5:93901b7f6c44951448ef0079484bf7ea
+libexec/git-core/mergetools/codecompare
+@comment MD5:03afcd3625af75f0363db5f90a064334
+libexec/git-core/mergetools/deltawalker
+@comment MD5:ccde9c76854e29dfcd10b658d45696d5
+libexec/git-core/mergetools/xxdiff
+@comment MD5:876d3e1efa4134f00d82de1d5f3a49f7
+libexec/git-core/mergetools/tortoisemerge
+@comment MD5:1a04abf58471028588241349a16805de
+libexec/git-core/mergetools/tkdiff
+@comment MD5:b83e016d08a5780e96c5ab5de0cc34ea
+libexec/git-core/mergetools/bc3
+@comment MD5:3c2e8fe3b7ae78b61f0497f7fbc7ef13
+libexec/git-core/mergetools/kdiff3
+@comment MD5:78d4b9a6c09ccdd03a0ba52b4e5bca2e
+libexec/git-core/mergetools/gvimdiff
+@comment MD5:bdd9fc39701396aaf483db1d69c74f83
+libexec/git-core/mergetools/gvimdiff2
+@comment MD5:bdd9fc39701396aaf483db1d69c74f83
+libexec/git-core/mergetools/vimdiff
+@comment MD5:4520a62034a563598ecd1c266fa0ebf1
+libexec/git-core/mergetools/vimdiff2
+@comment MD5:bdd9fc39701396aaf483db1d69c74f83
+libexec/git-core/mergetools/meld
+@comment MD5:64db90e5bfd9b26ad17bed5c52348f6b
+libexec/git-core/mergetools/ecmerge
+@comment MD5:bb1ff45fb519617283def63b6bfe5c31
+libexec/git-core/mergetools/diffuse
+@comment MD5:ef50ab55061adaff4e4dff8dd1896ba3
+libexec/git-core/mergetools/p4merge
+@comment MD5:d5080180f4e0ff0a9795121c7e897020
+libexec/git-core/mergetools/kompare
+@comment MD5:ed4700a8bf7310a6a490798ab85fadd1
+libexec/git-core/mergetools/opendiff
+@comment MD5:34245911950f22ed4f498635097771d1
+libexec/git-core/mergetools/emerge
+@comment MD5:b0ccca169ca33042d5ba48648e1145b8
+libexec/git-core/mergetools/araxis
+@comment MD5:5b639da656b7dbec126594570cd9c25b
+@comment bin/gitk
+lib/perl5/site_perl/5.14.2/Git.pm
+@comment MD5:3e951764e9bf881ed26c866a670dcf8e
+lib/perl5/site_perl/5.14.2/mach/auto/Git/.packlist
+@comment MD5:f14181eeb74e3fd8e10676f8c2ab6b3c
+lib/perl5/site_perl/5.14.2/Git/I18N.pm
+@comment MD5:4128b2b56f546e4eaf943130e76d87a7
+lib/perl5/site_perl/5.14.2/Git/SVN.pm
+@comment MD5:df1fe673b4f8d926d263828c6c6db46f
+lib/perl5/site_perl/5.14.2/Git/IndexInfo.pm
+@comment MD5:30560a7671aad4360ab3cea1f65aca18
+lib/perl5/site_perl/5.14.2/Git/SVN/Memoize/YAML.pm
+@comment MD5:ad5e060ae2e479d154f3a0fe3e86758d
+lib/perl5/site_perl/5.14.2/Git/SVN/Migration.pm
+@comment MD5:d4020f978432ab2dd2eb9a5f5fcf39b8
+lib/perl5/site_perl/5.14.2/Git/SVN/Log.pm
+@comment MD5:c1946f83a384656aacf677f9c2bcc0fb
+lib/perl5/site_perl/5.14.2/Git/SVN/GlobSpec.pm
+@comment MD5:7a4f4be3613df6d7361a6b00c00dd299
+lib/perl5/site_perl/5.14.2/Git/SVN/Utils.pm
+@comment MD5:eeac385d2a0194c55008b587390a1e26
+lib/perl5/site_perl/5.14.2/Git/SVN/Ra.pm
+@comment MD5:a5afc4366b748f47bc0b545339d2ffc3
+lib/perl5/site_perl/5.14.2/Git/SVN/Prompt.pm
+@comment MD5:9cbbcf504bc363b9b52188a99306ab4f
+lib/perl5/site_perl/5.14.2/Git/SVN/Editor.pm
+@comment MD5:db521477e2211a3d91ce26d631827805
+lib/perl5/site_perl/5.14.2/Git/SVN/Fetcher.pm
+@comment MD5:cb5e3ac5a6aff073c7bdab9382c2305c
+lib/xemacs/site-lisp/git/git.el
+@comment MD5:7a76ed4e693341bab166baf9ee8f6f64
+lib/xemacs/site-lisp/git/git-blame.el
+@comment MD5:01005cba45a045f1fe7e2021f8b857f7
+share/locale/da/LC_MESSAGES/git.mo
+@comment MD5:7acf7a45208b2046a167cdeab1c4e581
+share/locale/de/LC_MESSAGES/git.mo
+@comment MD5:28c8468019031d7b20fead41be7bfa25
+share/locale/is/LC_MESSAGES/git.mo
+@comment MD5:cae70bdd2e2d0fa2fdc56fae1f8e391a
+share/locale/it/LC_MESSAGES/git.mo
+@comment MD5:5cd8d03239473ca91be914a4dbce0179
+share/locale/nl/LC_MESSAGES/git.mo
+@comment MD5:0f59dcf90d6457bc5ecb65893bffb17a
+share/locale/pt_PT/LC_MESSAGES/git.mo
+@comment MD5:0a80c0e0d1a2cefebe7159de1fcdb0fd
+share/locale/sv/LC_MESSAGES/git.mo
+@comment MD5:6bfcf6a9531bf7b8f0b3d45b5ecce570
+share/locale/vi/LC_MESSAGES/git.mo
+@comment MD5:076e806da1d0e0842782156edfbe6e2a
+share/locale/zh_CN/LC_MESSAGES/git.mo
+@comment MD5:0c2f21f8be7c8d83d8d625be3ddedef1
+share/emacs/site-lisp/git/git.el
+@comment MD5:d6e3f3b0cda6f601773e8b60c90b5091
+share/emacs/site-lisp/git/git-blame.el
+@comment MD5:89c864c00b758a59cd18981340cacef0
+share/git-core/templates/description
+@comment MD5:a0a7c3fff21f2aea3cfa1d0316dd816c
+share/git-core/templates/hooks/applypatch-msg.sample
+@comment MD5:9cc72dc973e24f9623bd3fe708f60ef5
+share/git-core/templates/hooks/commit-msg.sample
+@comment MD5:579a3c1e12a1e74a98169175fb913012
+share/git-core/templates/hooks/post-update.sample
+@comment MD5:2b7ea5cee3c49ff53d41e00785eb974c
+share/git-core/templates/hooks/pre-applypatch.sample
+@comment MD5:a4a7e457b55b5ac2877f7973dbba37e9
+share/git-core/templates/hooks/pre-commit.sample
+@comment MD5:15449d98cfa79704332d057b3f91093c
+share/git-core/templates/hooks/pre-push.sample
+@comment MD5:37cd078dc41c68666dd655eb304697b7
+share/git-core/templates/hooks/pre-rebase.sample
+@comment MD5:e8c28bed91d107e9cb158c69368c667e
+share/git-core/templates/hooks/prepare-commit-msg.sample
+@comment MD5:0cfbfb36a20fb61189f768767d205155
+share/git-core/templates/hooks/update.sample
+@comment MD5:f51b02427757e79621b5235d7efdf117
+share/git-core/templates/info/exclude
+@comment MD5:036208b4a1ab4a235d75c181e685e5a3
+@comment share/git-gui/lib/tclIndex
+@comment share/git-gui/lib/about.tcl
+@comment share/git-gui/lib/blame.tcl
+@comment share/git-gui/lib/branch.tcl
+@comment share/git-gui/lib/branch_checkout.tcl
+@comment share/git-gui/lib/branch_create.tcl
+@comment share/git-gui/lib/branch_delete.tcl
+@comment share/git-gui/lib/branch_rename.tcl
+@comment share/git-gui/lib/browser.tcl
+@comment share/git-gui/lib/checkout_op.tcl
+@comment share/git-gui/lib/choose_font.tcl
+@comment share/git-gui/lib/choose_repository.tcl
+@comment share/git-gui/lib/choose_rev.tcl
+@comment share/git-gui/lib/class.tcl
+@comment share/git-gui/lib/commit.tcl
+@comment share/git-gui/lib/console.tcl
+@comment share/git-gui/lib/database.tcl
+@comment share/git-gui/lib/date.tcl
+@comment share/git-gui/lib/diff.tcl
+@comment share/git-gui/lib/encoding.tcl
+@comment share/git-gui/lib/error.tcl
+@comment share/git-gui/lib/git-gui.ico
+@comment share/git-gui/lib/index.tcl
+@comment share/git-gui/lib/line.tcl
+@comment share/git-gui/lib/logo.tcl
+@comment share/git-gui/lib/merge.tcl
+@comment share/git-gui/lib/mergetool.tcl
+@comment share/git-gui/lib/option.tcl
+@comment share/git-gui/lib/remote.tcl
+@comment share/git-gui/lib/remote_add.tcl
+@comment share/git-gui/lib/remote_branch_delete.tcl
+@comment share/git-gui/lib/search.tcl
+@comment share/git-gui/lib/shortcut.tcl
+@comment share/git-gui/lib/spellcheck.tcl
+@comment share/git-gui/lib/sshkey.tcl
+@comment share/git-gui/lib/status_bar.tcl
+@comment share/git-gui/lib/themed.tcl
+@comment share/git-gui/lib/tools_dlg.tcl
+@comment share/git-gui/lib/tools.tcl
+@comment share/git-gui/lib/transport.tcl
+@comment share/git-gui/lib/win32.tcl
+@comment share/git-gui/lib/win32_shortcut.js
+@comment share/git-gui/lib/msgs/de.msg
+@comment share/git-gui/lib/msgs/el.msg
+@comment share/git-gui/lib/msgs/fr.msg
+@comment share/git-gui/lib/msgs/hu.msg
+@comment share/git-gui/lib/msgs/it.msg
+@comment share/git-gui/lib/msgs/ja.msg
+@comment share/git-gui/lib/msgs/nb.msg
+@comment share/git-gui/lib/msgs/pt_br.msg
+@comment share/git-gui/lib/msgs/ru.msg
+@comment share/git-gui/lib/msgs/sv.msg
+@comment share/git-gui/lib/msgs/zh_cn.msg
+@comment share/gitk/lib/msgs/es.msg
+@comment share/gitk/lib/msgs/de.msg
+@comment share/gitk/lib/msgs/fr.msg
+@comment share/gitk/lib/msgs/hu.msg
+@comment share/gitk/lib/msgs/it.msg
+@comment share/gitk/lib/msgs/ja.msg
+@comment share/gitk/lib/msgs/pt_br.msg
+@comment share/gitk/lib/msgs/ru.msg
+@comment share/gitk/lib/msgs/sv.msg
+@comment share/doc/git/git-add.html
+@comment share/doc/git/git-am.html
+@comment share/doc/git/git-annotate.html
+@comment share/doc/git/git-apply.html
+@comment share/doc/git/git-archimport.html
+@comment share/doc/git/git-archive.html
+@comment share/doc/git/git-bisect.html
+@comment share/doc/git/git-bisect-lk2009.html
+@comment share/doc/git/git-bisect-lk2009.txt
+@comment share/doc/git/git-blame.html
+@comment share/doc/git/git-branch.html
+@comment share/doc/git/git-bundle.html
+@comment share/doc/git/git-cat-file.html
+@comment share/doc/git/git-check-attr.html
+@comment share/doc/git/git-check-ref-format.html
+@comment share/doc/git/git-checkout-index.html
+@comment share/doc/git/git-checkout.html
+@comment share/doc/git/git-cherry-pick.html
+@comment share/doc/git/git-cherry.html
+@comment share/doc/git/git-citool.html
+@comment share/doc/git/git-clean.html
+@comment share/doc/git/git-clone.html
+@comment share/doc/git/git-column.html
+@comment share/doc/git/git-column.txt
+@comment share/doc/git/git-commit-tree.html
+@comment share/doc/git/git-commit.html
+@comment share/doc/git/git-config.html
+@comment share/doc/git/git-count-objects.html
+@comment share/doc/git/git-cvsexportcommit.html
+@comment share/doc/git/git-cvsimport.html
+@comment share/doc/git/git-cvsserver.html
+@comment share/doc/git/git-daemon.html
+@comment share/doc/git/git-describe.html
+@comment share/doc/git/git-diff-files.html
+@comment share/doc/git/git-diff-index.html
+@comment share/doc/git/git-diff-tree.html
+@comment share/doc/git/git-diff.html
+@comment share/doc/git/git-difftool.html
+@comment share/doc/git/git-fast-export.html
+@comment share/doc/git/git-fast-import.html
+@comment share/doc/git/git-fetch-pack.html
+@comment share/doc/git/git-fetch.html
+@comment share/doc/git/git-filter-branch.html
+@comment share/doc/git/git-fmt-merge-msg.html
+@comment share/doc/git/git-for-each-ref.html
+@comment share/doc/git/git-format-patch.html
+@comment share/doc/git/git-fsck-objects.html
+@comment share/doc/git/git-fsck.html
+@comment share/doc/git/git-gc.html
+@comment share/doc/git/git-get-tar-commit-id.html
+@comment share/doc/git/git-grep.html
+@comment share/doc/git/git-gui.html
+@comment share/doc/git/git-hash-object.html
+@comment share/doc/git/git-help.html
+@comment share/doc/git/git-http-backend.html
+@comment share/doc/git/git-http-backend.txt
+@comment share/doc/git/git-http-fetch.html
+@comment share/doc/git/git-http-push.html
+@comment share/doc/git/git-imap-send.html
+@comment share/doc/git/git-index-pack.html
+@comment share/doc/git/git-init-db.html
+@comment share/doc/git/git-init.html
+@comment share/doc/git/git-instaweb.html
+@comment share/doc/git/git-log.html
+@comment share/doc/git/git-lost-found.html
+@comment share/doc/git/git-ls-files.html
+@comment share/doc/git/git-ls-remote.html
+@comment share/doc/git/git-ls-tree.html
+@comment share/doc/git/git-mailinfo.html
+@comment share/doc/git/git-mailsplit.html
+@comment share/doc/git/git-merge-base.html
+@comment share/doc/git/git-merge-file.html
+@comment share/doc/git/git-merge-index.html
+@comment share/doc/git/git-merge-one-file.html
+@comment share/doc/git/git-merge-tree.html
+@comment share/doc/git/git-merge.html
+@comment share/doc/git/git-mergetool--lib.html
+@comment share/doc/git/git-mergetool.html
+@comment share/doc/git/git-mktag.html
+@comment share/doc/git/git-mktree.html
+@comment share/doc/git/git-mv.html
+@comment share/doc/git/git-name-rev.html
+@comment share/doc/git/git-notes.html
+@comment share/doc/git/git-notes.txt
+@comment share/doc/git/git-pack-objects.html
+@comment share/doc/git/git-pack-redundant.html
+@comment share/doc/git/git-pack-refs.html
+@comment share/doc/git/git-parse-remote.html
+@comment share/doc/git/git-patch-id.html
+@comment share/doc/git/git-peek-remote.html
+@comment share/doc/git/git-prune-packed.html
+@comment share/doc/git/git-prune.html
+@comment share/doc/git/git-pull.html
+@comment share/doc/git/git-push.html
+@comment share/doc/git/git-quiltimport.html
+@comment share/doc/git/git-read-tree.html
+@comment share/doc/git/git-rebase.html
+@comment share/doc/git/git-receive-pack.html
+@comment share/doc/git/git-reflog.html
+@comment share/doc/git/git-relink.html
+@comment share/doc/git/git-remote.html
+@comment share/doc/git/git-remote-ext.html
+@comment share/doc/git/git-remote-ext.txt
+@comment share/doc/git/git-remote-fd.html
+@comment share/doc/git/git-remote-fd.txt
+@comment share/doc/git/git-remote-helpers.html
+@comment share/doc/git/gitremote-helpers.txt
+@comment share/doc/git/gitremote-helpers.html
+@comment share/doc/git/git-remote-testgit.html
+@comment share/doc/git/git-remote-testgit.txt
+@comment share/doc/git/git-repack.html
+@comment share/doc/git/git-replace.html
+@comment share/doc/git/git-replace.txt
+@comment share/doc/git/git-repo-config.html
+@comment share/doc/git/git-request-pull.html
+@comment share/doc/git/git-rerere.html
+@comment share/doc/git/git-reset.html
+@comment share/doc/git/git-rev-list.html
+@comment share/doc/git/git-rev-parse.html
+@comment share/doc/git/git-revert.html
+@comment share/doc/git/git-rm.html
+@comment share/doc/git/git-send-email.html
+@comment share/doc/git/git-send-pack.html
+@comment share/doc/git/git-sh-i18n.html
+@comment share/doc/git/git-sh-i18n--envsubst.html
+@comment share/doc/git/git-sh-setup.html
+@comment share/doc/git/git-shell.html
+@comment share/doc/git/git-shortlog.html
+@comment share/doc/git/git-show-branch.html
+@comment share/doc/git/git-show-index.html
+@comment share/doc/git/git-show-ref.html
+@comment share/doc/git/git-show.html
+@comment share/doc/git/git-stage.html
+@comment share/doc/git/git-stash.html
+@comment share/doc/git/git-status.html
+@comment share/doc/git/git-stripspace.html
+@comment share/doc/git/git-submodule.html
+@comment share/doc/git/git-svn.html
+@comment share/doc/git/git-symbolic-ref.html
+@comment share/doc/git/git-tag.html
+@comment share/doc/git/git-tar-tree.html
+@comment share/doc/git/git-unpack-file.html
+@comment share/doc/git/git-unpack-objects.html
+@comment share/doc/git/git-var.html
+@comment share/doc/git/git-update-index.html
+@comment share/doc/git/git-update-ref.html
+@comment share/doc/git/git-update-server-info.html
+@comment share/doc/git/git-upload-archive.html
+@comment share/doc/git/git-upload-pack.html
+@comment share/doc/git/git-verify-pack.html
+@comment share/doc/git/git-verify-tag.html
+@comment share/doc/git/git-web--browse.html
+@comment share/doc/git/git-whatchanged.html
+@comment share/doc/git/git-write-tree.html
+@comment share/doc/git/git.html
+@comment share/doc/git/gitattributes.html
+@comment share/doc/git/gitcli.html
+@comment share/doc/git/gitcore-tutorial.html
+@comment share/doc/git/gitcvs-migration.html
+@comment share/doc/git/gitdiffcore.html
+@comment share/doc/git/gitglossary.html
+@comment share/doc/git/githooks.html
+@comment share/doc/git/gitignore.html
+@comment share/doc/git/gitk.html
+@comment share/doc/git/gitmodules.html
+@comment share/doc/git/gitnamespaces.html
+@comment share/doc/git/gitnamespaces.txt
+@comment share/doc/git/gitrepository-layout.html
+@comment share/doc/git/gittutorial-2.html
+@comment share/doc/git/gittutorial.html
+@comment share/doc/git/gitworkflows.html
+@comment share/doc/git/cmds-ancillaryinterrogators.txt
+@comment share/doc/git/cmds-ancillarymanipulators.txt
+@comment share/doc/git/cmds-foreignscminterface.txt
+@comment share/doc/git/cmds-mainporcelain.txt
+@comment share/doc/git/cmds-plumbinginterrogators.txt
+@comment share/doc/git/cmds-plumbingmanipulators.txt
+@comment share/doc/git/cmds-purehelpers.txt
+@comment share/doc/git/cmds-synchelpers.txt
+@comment share/doc/git/cmds-synchingrepositories.txt
+@comment share/doc/git/mailmap.txt
+@comment share/doc/git/git-citool.txt
+@comment share/doc/git/git-hash-object.txt
+@comment share/doc/git/git-lost-found.txt
+@comment share/doc/git/git-commit-tree.txt
+@comment share/doc/git/git-count-objects.txt
+@comment share/doc/git/git-quiltimport.txt
+@comment share/doc/git/index.html
+@comment share/doc/git/git-bundle.txt
+@comment share/doc/git/gitcore-tutorial.txt
+@comment share/doc/git/git-mv.txt
+@comment share/doc/git/git-blame.txt
+@comment share/doc/git/git-archimport.txt
+@comment share/doc/git/everyday.txt
+@comment share/doc/git/gitcli.txt
+@comment share/doc/git/git-shortlog.txt
+@comment share/doc/git/fetch-options.txt
+@comment share/doc/git/git-revert.txt
+@comment share/doc/git/git-stash.txt
+@comment share/doc/git/pretty-formats.txt
+@comment share/doc/git/date-formats.txt
+@comment share/doc/git/diff-options.txt
+@comment share/doc/git/git-send-pack.txt
+@comment share/doc/git/merge-options.txt
+@comment share/doc/git/git-difftool.txt
+@comment share/doc/git/git-tools.html
+@comment share/doc/git/git-apply.txt
+@comment share/doc/git/git-fsck.txt
+@comment share/doc/git/git-config.txt
+@comment share/doc/git/git-cvsserver.txt
+@comment share/doc/git/git-checkout.txt
+@comment share/doc/git/git-mergetool.txt
+@comment share/doc/git/git-mergetool--lib.txt
+@comment share/doc/git/git-archive.txt
+@comment share/doc/git/git-verify-pack.txt
+@comment share/doc/git/git-ls-tree.txt
+@comment share/doc/git/howto-index.txt
+@comment share/doc/git/git-prune.txt
+@comment share/doc/git/git-am.txt
+@comment share/doc/git/git-web--browse.txt
+@comment share/doc/git/git-grep.txt
+@comment share/doc/git/git-ls-remote.txt
+@comment share/doc/git/git-receive-pack.txt
+@comment share/doc/git/howto/new-command.txt
+@comment share/doc/git/howto/new-command.html
+@comment share/doc/git/howto/maintain-git.txt
+@comment share/doc/git/howto/maintain-git.html
+@comment share/doc/git/howto/using-merge-subtree.txt
+@comment share/doc/git/howto/recover-corrupted-blob-object.txt
+@comment share/doc/git/howto/recover-corrupted-blob-object.html
+@comment share/doc/git/howto/setup-git-server-over-http.txt
+@comment share/doc/git/howto/setup-git-server-over-http.html
+@comment share/doc/git/howto/update-hook-example.txt
+@comment share/doc/git/howto/update-hook-example.html
+@comment share/doc/git/howto/rebuild-from-update-hook.txt
+@comment share/doc/git/howto/rebuild-from-update-hook.html
+@comment share/doc/git/howto/revert-branch-rebase.html
+@comment share/doc/git/howto/using-merge-subtree.html
+@comment share/doc/git/howto/revert-a-faulty-merge.txt
+@comment share/doc/git/howto/revert-a-faulty-merge.html
+@comment share/doc/git/howto/revert-branch-rebase.txt
+@comment share/doc/git/howto/separating-topic-branches.txt
+@comment share/doc/git/howto/separating-topic-branches.html
+@comment share/doc/git/howto/rebase-from-internal-branch.txt
+@comment share/doc/git/howto/rebase-from-internal-branch.html
+@comment share/doc/git/howto/use-git-daemon.txt
+@comment share/doc/git/howto/use-git-daemon.html
+@comment share/doc/git/howto/using-signed-tag-in-pull-request.html
+@comment share/doc/git/howto/using-signed-tag-in-pull-request.txt
+@comment share/doc/git/git-credential.html
+@comment share/doc/git/git-credential.txt
+@comment share/doc/git/git-credential-cache--daemon.html
+@comment share/doc/git/git-credential-cache--daemon.txt
+@comment share/doc/git/git-credential-cache.html
+@comment share/doc/git/git-credential-cache.txt
+@comment share/doc/git/git-credential-store.html
+@comment share/doc/git/git-credential-store.txt
+@comment share/doc/git/gitcredentials.html
+@comment share/doc/git/gitcredentials.txt
+@comment share/doc/git/git-p4.html
+@comment share/doc/git/git-p4.txt
+@comment share/doc/git/git-merge-one-file.txt
+@comment share/doc/git/git-fetch-pack.txt
+@comment share/doc/git/git-branch.txt
+@comment share/doc/git/git-log.txt
+@comment share/doc/git/git-fast-import.txt
+@comment share/doc/git/git-fmt-merge-msg.txt
+@comment share/doc/git/git-merge-index.txt
+@comment share/doc/git/git-pack-refs.txt
+@comment share/doc/git/git-rev-parse.txt
+@comment share/doc/git/git-stage.txt
+@comment share/doc/git/git-status.txt
+@comment share/doc/git/git-repack.txt
+@comment share/doc/git/gitworkflows.txt
+@comment share/doc/git/diff-config.txt
+@comment share/doc/git/technical/api-credentials.html
+@comment share/doc/git/technical/api-credentials.txt
+@comment share/doc/git/technical/api-argv-array.html
+@comment share/doc/git/technical/api-argv-array.txt
+@comment share/doc/git/technical/api-sha1-array.html
+@comment share/doc/git/technical/api-sha1-array.txt
+@comment share/doc/git/technical/api-sigchain.html
+@comment share/doc/git/technical/api-sigchain.txt
+@comment share/doc/git/technical/api-hash.html
+@comment share/doc/git/technical/api-merge.html
+@comment share/doc/git/technical/api-merge.txt
+@comment share/doc/git/technical/api-setup.html
+@comment share/doc/git/technical/send-pack-pipeline.txt
+@comment share/doc/git/technical/send-pack-pipeline.html
+@comment share/doc/git/technical/api-quote.txt
+@comment share/doc/git/technical/api-run-command.html
+@comment share/doc/git/technical/api-strbuf.html
+@comment share/doc/git/technical/trivial-merge.txt
+@comment share/doc/git/technical/trivial-merge.html
+@comment share/doc/git/technical/api-parse-options.txt
+@comment share/doc/git/technical/api-gitattributes.html
+@comment share/doc/git/technical/api-object-access.html
+@comment share/doc/git/technical/api-diff.txt
+@comment share/doc/git/technical/api-ref-iteration.txt
+@comment share/doc/git/technical/api-ref-iteration.html
+@comment share/doc/git/technical/api-remote.html
+@comment share/doc/git/technical/api-allocation-growing.html
+@comment share/doc/git/technical/pack-format.txt
+@comment share/doc/git/technical/pack-format.html
+@comment share/doc/git/technical/pack-protocol.txt
+@comment share/doc/git/technical/pack-protocol.html
+@comment share/doc/git/technical/api-index.txt
+@comment share/doc/git/technical/api-hash.txt
+@comment share/doc/git/technical/api-directory-listing.html
+@comment share/doc/git/technical/api-diff.html
+@comment share/doc/git/technical/api-in-core-index.txt
+@comment share/doc/git/technical/api-in-core-index.html
+@comment share/doc/git/technical/api-quote.html
+@comment share/doc/git/technical/api-index.html
+@comment share/doc/git/technical/api-lockfile.txt
+@comment share/doc/git/technical/api-decorate.html
+@comment share/doc/git/technical/api-lockfile.html
+@comment share/doc/git/technical/api-setup.txt
+@comment share/doc/git/technical/api-revision-walking.txt
+@comment share/doc/git/technical/api-allocation-growing.txt
+@comment share/doc/git/technical/api-index-skel.txt
+@comment share/doc/git/technical/api-gitattributes.txt
+@comment share/doc/git/technical/api-strbuf.txt
+@comment share/doc/git/technical/api-string-list.txt
+@comment share/doc/git/technical/api-parse-options.html
+@comment share/doc/git/technical/api-remote.txt
+@comment share/doc/git/technical/api-decorate.txt
+@comment share/doc/git/technical/api-directory-listing.txt
+@comment share/doc/git/technical/api-xdiff-interface.txt
+@comment share/doc/git/technical/api-history-graph.html
+@comment share/doc/git/technical/api-object-access.txt
+@comment share/doc/git/technical/api-revision-walking.html
+@comment share/doc/git/technical/api-builtin.html
+@comment share/doc/git/technical/api-string-list.html
+@comment share/doc/git/technical/api-xdiff-interface.html
+@comment share/doc/git/technical/shallow.txt
+@comment share/doc/git/technical/shallow.html
+@comment share/doc/git/technical/api-config.html
+@comment share/doc/git/technical/api-config.txt
+@comment share/doc/git/technical/api-grep.html
+@comment share/doc/git/technical/racy-git.txt
+@comment share/doc/git/technical/racy-git.html
+@comment share/doc/git/technical/api-tree-walking.html
+@comment share/doc/git/technical/api-grep.txt
+@comment share/doc/git/technical/api-run-command.txt
+@comment share/doc/git/technical/api-builtin.txt
+@comment share/doc/git/technical/api-tree-walking.txt
+@comment share/doc/git/technical/api-history-graph.txt
+@comment share/doc/git/technical/pack-heuristics.txt
+@comment share/doc/git/technical/pack-heuristics.html
+@comment share/doc/git/technical/protocol-common.txt
+@comment share/doc/git/technical/protocol-common.html
+@comment share/doc/git/technical/protocol-capabilities.txt
+@comment share/doc/git/technical/protocol-capabilities.html
+@comment share/doc/git/technical/index-format.txt
+@comment share/doc/git/technical/index-format.html
+@comment share/doc/git/git-check-ignore.txt
+@comment share/doc/git/git-check-ignore.html
+@comment share/doc/git/mergetools-diff.txt
+@comment share/doc/git/mergetools-merge.txt
+@comment share/doc/git/gittutorial.txt
+@comment share/doc/git/git-help.txt
+@comment share/doc/git/git-remote.txt
+@comment share/doc/git/gittutorial-2.txt
+@comment share/doc/git/git-filter-branch.txt
+@comment share/doc/git/git-unpack-file.txt
+@comment share/doc/git/everyday.html
+@comment share/doc/git/git-format-patch.txt
+@comment share/doc/git/git-name-rev.txt
+@comment share/doc/git/git-symbolic-ref.txt
+@comment share/doc/git/git-reset.txt
+@comment share/doc/git/git-commit.txt
+@comment share/doc/git/urls-remotes.txt
+@comment share/doc/git/githooks.txt
+@comment share/doc/git/git-instaweb.txt
+@comment share/doc/git/git-upload-pack.txt
+@comment share/doc/git/blame-options.txt
+@comment share/doc/git/git-describe.txt
+@comment share/doc/git/git-cvsexportcommit.txt
+@comment share/doc/git/git-mailsplit.txt
+@comment share/doc/git/git-reflog.txt
+@comment share/doc/git/git-diff-index.txt
+@comment share/doc/git/git-cvsimport.txt
+@comment share/doc/git/user-manual.html
+@comment share/doc/git/git-gui.txt
+@comment share/doc/git/git-sh-i18n.txt
+@comment share/doc/git/git-sh-i18n--envsubst.txt
+@comment share/doc/git/git-sh-setup.txt
+@comment share/doc/git/git.txt
+@comment share/doc/git/git-cherry-pick.txt
+@comment share/doc/git/git-fetch.txt
+@comment share/doc/git/git-clean.txt
+@comment share/doc/git/diff-format.txt
+@comment share/doc/git/git-pack-objects.txt
+@comment share/doc/git/git-add.txt
+@comment share/doc/git/git-repo-config.txt
+@comment share/doc/git/git-diff-files.txt
+@comment share/doc/git/pretty-options.txt
+@comment share/doc/git/git-show.txt
+@comment share/doc/git/git-imap-send.txt
+@comment share/doc/git/git-http-push.txt
+@comment share/doc/git/git-submodule.txt
+@comment share/doc/git/git-fsck-objects.txt
+@comment share/doc/git/merge-strategies.txt
+@comment share/doc/git/git-for-each-ref.txt
+@comment share/doc/git/git-merge-tree.txt
+@comment share/doc/git/git-show-branch.txt
+@comment share/doc/git/git-parse-remote.txt
+@comment share/doc/git/git-whatchanged.txt
+@comment share/doc/git/docbook-xsl.css
+@comment share/doc/git/git-var.txt
+@comment share/doc/git/git-clone.txt
+@comment share/doc/git/git-rev-list.txt
+@comment share/doc/git/git-mailinfo.txt
+@comment share/doc/git/user-manual.txt
+@comment share/doc/git/git-init-db.txt
+@comment share/doc/git/git-pull.txt
+@comment share/doc/git/git-cat-file.txt
+@comment share/doc/git/git-pack-redundant.txt
+@comment share/doc/git/merge-config.txt
+@comment share/doc/git/git-init.txt
+@comment share/doc/git/gitk.txt
+@comment share/doc/git/gitrepository-layout.txt
+@comment share/doc/git/git-tar-tree.txt
+@comment share/doc/git/gitglossary.txt
+@comment share/doc/git/git-relink.txt
+@comment share/doc/git/git-update-ref.txt
+@comment share/doc/git/git-push.txt
+@comment share/doc/git/git-request-pull.txt
+@comment share/doc/git/git-update-server-info.txt
+@comment share/doc/git/git-mktag.txt
+@comment share/doc/git/git-daemon.txt
+@comment share/doc/git/git-index-pack.txt
+@comment share/doc/git/rev-list-options.txt
+@comment share/doc/git/revisions.txt
+@comment share/doc/git/git-rerere.txt
+@comment share/doc/git/git-fast-export.txt
+@comment share/doc/git/git-get-tar-commit-id.txt
+@comment share/doc/git/diff-generate-patch.txt
+@comment share/doc/git/git-patch-id.txt
+@comment share/doc/git/gitcvs-migration.txt
+@comment share/doc/git/git-cherry.txt
+@comment share/doc/git/git-show-index.txt
+@comment share/doc/git/git-upload-archive.txt
+@comment share/doc/git/glossary-content.txt
+@comment share/doc/git/gitignore.txt
+@comment share/doc/git/git-merge-base.txt
+@comment share/doc/git/git-checkout-index.txt
+@comment share/doc/git/git-diff-tree.txt
+@comment share/doc/git/git-merge-file.txt
+@comment share/doc/git/howto-index.html
+@comment share/doc/git/git-shell.txt
+@comment share/doc/git/git-mktree.txt
+@comment share/doc/git/git-read-tree.txt
+@comment share/doc/git/git-tag.txt
+@comment share/doc/git/git-write-tree.txt
+@comment share/doc/git/git-svn.txt
+@comment share/doc/git/git-ls-files.txt
+@comment share/doc/git/git-stripspace.txt
+@comment share/doc/git/git-prune-packed.txt
+@comment share/doc/git/git-rm.txt
+@comment share/doc/git/git-check-attr.txt
+@comment share/doc/git/config.txt
+@comment share/doc/git/git-http-fetch.txt
+@comment share/doc/git/git-send-email.txt
+@comment share/doc/git/git-annotate.txt
+@comment share/doc/git/gitmodules.txt
+@comment share/doc/git/pull-fetch-param.txt
+@comment share/doc/git/urls.txt
+@comment share/doc/git/git-peek-remote.txt
+@comment share/doc/git/git-bisect.txt
+@comment share/doc/git/git-tools.txt
+@comment share/doc/git/git-show-ref.txt
+@comment share/doc/git/git-rebase.txt
+@comment share/doc/git/git-verify-tag.txt
+@comment share/doc/git/i18n.txt
+@comment share/doc/git/git-merge.txt
+@comment share/doc/git/git-gc.txt
+@comment share/doc/git/gitattributes.txt
+@comment share/doc/git/git-update-index.txt
+@comment share/doc/git/git-check-ref-format.txt
+@comment share/doc/git/git-unpack-objects.txt
+@comment share/doc/git/git-diff.txt
+@comment share/doc/git/gitdiffcore.txt
+@comment share/doc/git/gitrevisions.html
+@comment share/doc/git/gitrevisions.txt
+@comment share/doc/git/gitweb.html
+@comment share/doc/git/gitweb.txt
+@comment share/doc/git/gitweb.conf.html
+@comment share/doc/git/gitweb.conf.txt
+@comment share/doc/git/sequencer.txt
+@comment share/doc/git/RelNotes/1.5.0.txt
+@comment share/doc/git/RelNotes/1.5.0.1.txt
+@comment share/doc/git/RelNotes/1.5.0.2.txt
+@comment share/doc/git/RelNotes/1.5.0.3.txt
+@comment share/doc/git/RelNotes/1.5.0.4.txt
+@comment share/doc/git/RelNotes/1.5.0.5.txt
+@comment share/doc/git/RelNotes/1.5.0.6.txt
+@comment share/doc/git/RelNotes/1.5.0.7.txt
+@comment share/doc/git/RelNotes/1.5.1.txt
+@comment share/doc/git/RelNotes/1.5.1.1.txt
+@comment share/doc/git/RelNotes/1.5.1.2.txt
+@comment share/doc/git/RelNotes/1.5.1.3.txt
+@comment share/doc/git/RelNotes/1.5.1.4.txt
+@comment share/doc/git/RelNotes/1.5.1.5.txt
+@comment share/doc/git/RelNotes/1.5.1.6.txt
+@comment share/doc/git/RelNotes/1.5.2.txt
+@comment share/doc/git/RelNotes/1.5.2.1.txt
+@comment share/doc/git/RelNotes/1.5.2.2.txt
+@comment share/doc/git/RelNotes/1.5.2.3.txt
+@comment share/doc/git/RelNotes/1.5.2.4.txt
+@comment share/doc/git/RelNotes/1.5.2.5.txt
+@comment share/doc/git/RelNotes/1.5.3.txt
+@comment share/doc/git/RelNotes/1.5.3.1.txt
+@comment share/doc/git/RelNotes/1.5.3.2.txt
+@comment share/doc/git/RelNotes/1.5.3.3.txt
+@comment share/doc/git/RelNotes/1.5.3.4.txt
+@comment share/doc/git/RelNotes/1.5.3.5.txt
+@comment share/doc/git/RelNotes/1.5.3.6.txt
+@comment share/doc/git/RelNotes/1.5.3.7.txt
+@comment share/doc/git/RelNotes/1.5.3.8.txt
+@comment share/doc/git/RelNotes/1.5.4.txt
+@comment share/doc/git/RelNotes/1.5.4.1.txt
+@comment share/doc/git/RelNotes/1.5.4.2.txt
+@comment share/doc/git/RelNotes/1.5.4.3.txt
+@comment share/doc/git/RelNotes/1.5.4.4.txt
+@comment share/doc/git/RelNotes/1.5.4.5.txt
+@comment share/doc/git/RelNotes/1.5.4.6.txt
+@comment share/doc/git/RelNotes/1.5.4.7.txt
+@comment share/doc/git/RelNotes/1.5.5.txt
+@comment share/doc/git/RelNotes/1.5.5.1.txt
+@comment share/doc/git/RelNotes/1.5.5.2.txt
+@comment share/doc/git/RelNotes/1.5.5.3.txt
+@comment share/doc/git/RelNotes/1.5.5.4.txt
+@comment share/doc/git/RelNotes/1.5.5.5.txt
+@comment share/doc/git/RelNotes/1.5.5.6.txt
+@comment share/doc/git/RelNotes/1.5.6.txt
+@comment share/doc/git/RelNotes/1.5.6.1.txt
+@comment share/doc/git/RelNotes/1.5.6.2.txt
+@comment share/doc/git/RelNotes/1.5.6.3.txt
+@comment share/doc/git/RelNotes/1.5.6.4.txt
+@comment share/doc/git/RelNotes/1.5.6.5.txt
+@comment share/doc/git/RelNotes/1.5.6.6.txt
+@comment share/doc/git/RelNotes/1.6.0.txt
+@comment share/doc/git/RelNotes/1.6.0.1.txt
+@comment share/doc/git/RelNotes/1.6.0.2.txt
+@comment share/doc/git/RelNotes/1.6.0.3.txt
+@comment share/doc/git/RelNotes/1.6.0.4.txt
+@comment share/doc/git/RelNotes/1.6.0.5.txt
+@comment share/doc/git/RelNotes/1.6.0.6.txt
+@comment share/doc/git/RelNotes/1.6.1.txt
+@comment share/doc/git/RelNotes/1.6.1.1.txt
+@comment share/doc/git/RelNotes/1.6.1.2.txt
+@comment share/doc/git/RelNotes/1.6.1.3.txt
+@comment share/doc/git/RelNotes/1.6.1.4.txt
+@comment share/doc/git/RelNotes/1.6.2.txt
+@comment share/doc/git/RelNotes/1.6.2.1.txt
+@comment share/doc/git/RelNotes/1.6.2.2.txt
+@comment share/doc/git/RelNotes/1.6.2.3.txt
+@comment share/doc/git/RelNotes/1.6.2.4.txt
+@comment share/doc/git/RelNotes/1.6.2.5.txt
+@comment share/doc/git/RelNotes/1.6.3.txt
+@comment share/doc/git/RelNotes/1.6.3.1.txt
+@comment share/doc/git/RelNotes/1.6.3.2.txt
+@comment share/doc/git/RelNotes/1.6.3.3.txt
+@comment share/doc/git/RelNotes/1.6.3.4.txt
+@comment share/doc/git/RelNotes/1.6.4.txt
+@comment share/doc/git/RelNotes/1.6.4.1.txt
+@comment share/doc/git/RelNotes/1.6.4.2.txt
+@comment share/doc/git/RelNotes/1.6.4.3.txt
+@comment share/doc/git/RelNotes/1.6.4.4.txt
+@comment share/doc/git/RelNotes/1.6.4.5.txt
+@comment share/doc/git/RelNotes/1.6.5.txt
+@comment share/doc/git/RelNotes/1.6.5.1.txt
+@comment share/doc/git/RelNotes/1.6.5.2.txt
+@comment share/doc/git/RelNotes/1.6.5.3.txt
+@comment share/doc/git/RelNotes/1.6.5.4.txt
+@comment share/doc/git/RelNotes/1.6.5.5.txt
+@comment share/doc/git/RelNotes/1.6.5.6.txt
+@comment share/doc/git/RelNotes/1.6.5.7.txt
+@comment share/doc/git/RelNotes/1.6.5.8.txt
+@comment share/doc/git/RelNotes/1.6.5.9.txt
+@comment share/doc/git/RelNotes/1.6.6.txt
+@comment share/doc/git/RelNotes/1.6.6.1.txt
+@comment share/doc/git/RelNotes/1.6.6.2.txt
+@comment share/doc/git/RelNotes/1.6.6.3.txt
+@comment share/doc/git/RelNotes/1.7.0.txt
+@comment share/doc/git/RelNotes/1.7.0.1.txt
+@comment share/doc/git/RelNotes/1.7.0.2.txt
+@comment share/doc/git/RelNotes/1.7.0.3.txt
+@comment share/doc/git/RelNotes/1.7.0.4.txt
+@comment share/doc/git/RelNotes/1.7.0.5.txt
+@comment share/doc/git/RelNotes/1.7.0.6.txt
+@comment share/doc/git/RelNotes/1.7.0.7.txt
+@comment share/doc/git/RelNotes/1.7.0.8.txt
+@comment share/doc/git/RelNotes/1.7.0.9.txt
+@comment share/doc/git/RelNotes/1.7.1.txt
+@comment share/doc/git/RelNotes/1.7.1.1.txt
+@comment share/doc/git/RelNotes/1.7.1.2.txt
+@comment share/doc/git/RelNotes/1.7.1.3.txt
+@comment share/doc/git/RelNotes/1.7.1.4.txt
+@comment share/doc/git/RelNotes/1.7.2.txt
+@comment share/doc/git/RelNotes/1.7.2.1.txt
+@comment share/doc/git/RelNotes/1.7.2.2.txt
+@comment share/doc/git/RelNotes/1.7.2.3.txt
+@comment share/doc/git/RelNotes/1.7.2.4.txt
+@comment share/doc/git/RelNotes/1.7.2.5.txt
+@comment share/doc/git/RelNotes/1.7.3.txt
+@comment share/doc/git/RelNotes/1.7.3.1.txt
+@comment share/doc/git/RelNotes/1.7.3.2.txt
+@comment share/doc/git/RelNotes/1.7.3.3.txt
+@comment share/doc/git/RelNotes/1.7.3.4.txt
+@comment share/doc/git/RelNotes/1.7.3.5.txt
+@comment share/doc/git/RelNotes/1.7.4.txt
+@comment share/doc/git/RelNotes/1.7.4.1.txt
+@comment share/doc/git/RelNotes/1.7.4.2.txt
+@comment share/doc/git/RelNotes/1.7.4.3.txt
+@comment share/doc/git/RelNotes/1.7.4.4.txt
+@comment share/doc/git/RelNotes/1.7.4.5.txt
+@comment share/doc/git/RelNotes/1.7.5.txt
+@comment share/doc/git/RelNotes/1.7.5.1.txt
+@comment share/doc/git/RelNotes/1.7.5.2.txt
+@comment share/doc/git/RelNotes/1.7.5.3.txt
+@comment share/doc/git/RelNotes/1.7.5.4.txt
+@comment share/doc/git/RelNotes/1.7.6.txt
+@comment share/doc/git/RelNotes/1.7.6.1.txt
+@comment share/doc/git/RelNotes/1.7.6.2.txt
+@comment share/doc/git/RelNotes/1.7.6.3.txt
+@comment share/doc/git/RelNotes/1.7.6.4.txt
+@comment share/doc/git/RelNotes/1.7.6.5.txt
+@comment share/doc/git/RelNotes/1.7.6.6.txt
+@comment share/doc/git/RelNotes/1.7.7.txt
+@comment share/doc/git/RelNotes/1.7.7.1.txt
+@comment share/doc/git/RelNotes/1.7.7.2.txt
+@comment share/doc/git/RelNotes/1.7.7.3.txt
+@comment share/doc/git/RelNotes/1.7.7.4.txt
+@comment share/doc/git/RelNotes/1.7.7.5.txt
+@comment share/doc/git/RelNotes/1.7.7.6.txt
+@comment share/doc/git/RelNotes/1.7.7.7.txt
+@comment share/doc/git/RelNotes/1.7.8.txt
+@comment share/doc/git/RelNotes/1.7.8.1.txt
+@comment share/doc/git/RelNotes/1.7.8.2.txt
+@comment share/doc/git/RelNotes/1.7.8.3.txt
+@comment share/doc/git/RelNotes/1.7.8.4.txt
+@comment share/doc/git/RelNotes/1.7.8.5.txt
+@comment share/doc/git/RelNotes/1.7.8.6.txt
+@comment share/doc/git/RelNotes/1.7.9.txt
+@comment share/doc/git/RelNotes/1.7.9.1.txt
+@comment share/doc/git/RelNotes/1.7.9.2.txt
+@comment share/doc/git/RelNotes/1.7.9.3.txt
+@comment share/doc/git/RelNotes/1.7.9.4.txt
+@comment share/doc/git/RelNotes/1.7.9.5.txt
+@comment share/doc/git/RelNotes/1.7.9.6.txt
+@comment share/doc/git/RelNotes/1.7.9.7.txt
+@comment share/doc/git/RelNotes/1.7.10.txt
+@comment share/doc/git/RelNotes/1.7.10.1.txt
+@comment share/doc/git/RelNotes/1.7.10.2.txt
+@comment share/doc/git/RelNotes/1.7.10.3.txt
+@comment share/doc/git/RelNotes/1.7.10.4.txt
+@comment share/doc/git/RelNotes/1.7.10.5.txt
+@comment share/doc/git/RelNotes/1.7.11.txt
+@comment share/doc/git/RelNotes/1.7.11.1.txt
+@comment share/doc/git/RelNotes/1.7.11.2.txt
+@comment share/doc/git/RelNotes/1.7.11.3.txt
+@comment share/doc/git/RelNotes/1.7.11.4.txt
+@comment share/doc/git/RelNotes/1.7.11.5.txt
+@comment share/doc/git/RelNotes/1.7.11.6.txt
+@comment share/doc/git/RelNotes/1.7.11.7.txt
+@comment share/doc/git/RelNotes/1.7.12.txt
+@comment share/doc/git/RelNotes/1.7.12.1.txt
+@comment share/doc/git/RelNotes/1.7.12.2.txt
+@comment share/doc/git/RelNotes/1.7.12.3.txt
+@comment share/doc/git/RelNotes/1.7.12.4.txt
+@comment share/doc/git/RelNotes/1.8.0.txt
+@comment share/doc/git/RelNotes/1.8.0.1.txt
+@comment share/doc/git/RelNotes/1.8.0.2.txt
+@comment share/doc/git/RelNotes/1.8.0.3.txt
+@comment share/doc/git/RelNotes/1.8.1.txt
+@comment share/doc/git/RelNotes/1.8.1.1.txt
+@comment share/doc/git/RelNotes/1.8.1.2.txt
+@comment share/doc/git/RelNotes/1.8.1.3.txt
+@comment share/doc/git/RelNotes/1.8.1.4.txt
+@comment share/doc/git/RelNotes/1.8.1.5.txt
+@comment share/doc/git/RelNotes/1.8.1.6.txt
+@comment share/doc/git/RelNotes/1.8.2.txt
+@comment share/doc/git/RelNotes/1.8.2.1.txt
+@comment share/examples/git/gitweb/gitweb.cgi
+@comment share/examples/git/gitweb/static/gitweb.js
+@comment share/examples/git/gitweb/static/gitweb.css
+@comment share/examples/git/gitweb/static/git-favicon.png
+@comment share/examples/git/gitweb/static/git-logo.png
+share/git-core/contrib/diffall/README
+@comment MD5:96889670fd9258288ffe961c25a599a6
+share/git-core/contrib/diffall/git-diffall
+@comment MD5:495fb2dcfb1adeb0440685f01e880f99
+share/git-core/contrib/README
+@comment MD5:83ef7c5e57f8d83050ca3f74f079213f
+share/git-core/contrib/blameview/README
+@comment MD5:16f4659dca41289748d6b2eae8575750
+share/git-core/contrib/blameview/blameview.perl
+@comment MD5:2c5a680e60bc4fa46c31104117d28f13
+share/git-core/contrib/buildsystems/Generators.pm
+@comment MD5:aea848df8617d24c9bfc3695bdbbe6fc
+share/git-core/contrib/buildsystems/Generators/QMake.pm
+@comment MD5:93d2e8f13905e9bbbb90852706bfd61d
+share/git-core/contrib/buildsystems/Generators/Vcproj.pm
+@comment MD5:2eaf94771e121341b0dc85705a12985e
+share/git-core/contrib/buildsystems/engine.pl
+@comment MD5:1055656f46948d4ec1caf178b7a5624c
+share/git-core/contrib/buildsystems/generate
+@comment MD5:0ce98d7d496affcaf7318f3dcba2f499
+share/git-core/contrib/buildsystems/parse.pl
+@comment MD5:60c86926ec951b59d0a523f790c1c8af
+share/git-core/contrib/ciabot/README
+@comment MD5:0320b98bbeb3dc2a45d6ad07b4c9bbde
+share/git-core/contrib/ciabot/INSTALL
+@comment MD5:764c34710598a2ee2204d76b02bfbcc7
+share/git-core/contrib/ciabot/ciabot.py
+@comment MD5:816d3f5b85cf9e680be815b6688ae653
+share/git-core/contrib/ciabot/ciabot.sh
+@comment MD5:c7498b1010edda5c11012044d3e01c3f
+share/git-core/contrib/completion/git-completion.bash
+@comment MD5:54672ba387ecf809e04a54ee10d28d48
+share/git-core/contrib/completion/git-completion.tcsh
+@comment MD5:17e45c859e120c56e9b842d2f30e9b09
+share/git-core/contrib/completion/git-completion.zsh
+@comment MD5:5ff4838edac3f74698c023086d4a9f8c
+share/git-core/contrib/completion/git-prompt.sh
+@comment MD5:2b27fe5039b34cd6d9742a32ccba76d9
+share/git-core/contrib/continuous/cidaemon
+@comment MD5:d5c8f4631eebf97c7bd29d2f3dff1d00
+share/git-core/contrib/continuous/post-receive-cinotify
+@comment MD5:974b73cea966462f26cfad578d326c1a
+share/git-core/contrib/convert-objects/convert-objects.c
+@comment MD5:f2682255a37733afbb0ad1ff784ac1a7
+share/git-core/contrib/convert-objects/git-convert-objects.txt
+@comment MD5:beed474f2d6e1d213cdcd916c78f1a7c
+share/git-core/contrib/credential/gnome-keyring/Makefile
+@comment MD5:e394794cd4a1d3f277f405a465dc3a6c
+share/git-core/contrib/credential/gnome-keyring/git-credential-gnome-keyring.c
+@comment MD5:67387ae71847189468d50fe7d1b45f67
+share/git-core/contrib/credential/gnome-keyring/.gitignore
+@comment MD5:308c31576bda3464fca8aefae7caed5c
+share/git-core/contrib/credential/osxkeychain/Makefile
+@comment MD5:33cded3ba71bf098004604cc1293333a
+share/git-core/contrib/credential/osxkeychain/git-credential-osxkeychain.c
+@comment MD5:62bf224bbe5fd50cc071f05f316e9c93
+share/git-core/contrib/credential/osxkeychain/.gitignore
+@comment MD5:e0bc6a82a656bcf03fd9c43f51833473
+share/git-core/contrib/credential/wincred/Makefile
+@comment MD5:ad488584b42f88075725e142f898060e
+share/git-core/contrib/credential/wincred/git-credential-wincred.c
+@comment MD5:6ccf89a20f65e272347be574cc1f4370
+share/git-core/contrib/diff-highlight/README
+@comment MD5:4c784ba9f81b8cd864e503b004278911
+share/git-core/contrib/diff-highlight/diff-highlight
+@comment MD5:43244beb0bc503c4c603b37b52402190
+share/git-core/contrib/emacs/.gitignore
+@comment MD5:129067daa05e23d6b5ea96635e64e151
+share/git-core/contrib/emacs/Makefile
+@comment MD5:7e35688bfb31396d10f422f3e44aa487
+share/git-core/contrib/emacs/README
+@comment MD5:678d4cf6e7873fc3b2a473bb84604c13
+share/git-core/contrib/emacs/git-blame.el
+@comment MD5:89c864c00b758a59cd18981340cacef0
+share/git-core/contrib/emacs/git.el
+@comment MD5:d6e3f3b0cda6f601773e8b60c90b5091
+share/git-core/contrib/examples/README
+@comment MD5:fd8244ccc82e89b611027219b030e1d2
+share/git-core/contrib/examples/builtin-fetch--tool.c
+@comment MD5:9c8b9581a055842ee86e9989e3397b6b
+share/git-core/contrib/examples/git-checkout.sh
+@comment MD5:d4156eefb54942ae80b0e2e44fe2bc82
+share/git-core/contrib/examples/git-clean.sh
+@comment MD5:636f44a4c7358be8f4222a4c79c0b4f5
+share/git-core/contrib/examples/git-clone.sh
+@comment MD5:2b4edee5d74988ab075b4bccf8e06fb4
+share/git-core/contrib/examples/git-commit.sh
+@comment MD5:ce0910345894a8ac5fa80ab527e18362
+share/git-core/contrib/examples/git-fetch.sh
+@comment MD5:c669128b48907140b418e7091dfa32eb
+share/git-core/contrib/examples/git-gc.sh
+@comment MD5:cf0d1495a6ae3b9ba195f45a1882a3d7
+share/git-core/contrib/examples/git-ls-remote.sh
+@comment MD5:d1f43d3e37323abcd2a4b9590ca5f387
+share/git-core/contrib/examples/git-merge-ours.sh
+@comment MD5:8be26a6ded1578d986b97128d9816865
+share/git-core/contrib/examples/git-merge.sh
+@comment MD5:bdbe756d386865aacee0484f0425efa2
+share/git-core/contrib/examples/git-notes.sh
+@comment MD5:82bd64d8b4e8d1e187a4e6cd95cf688e
+share/git-core/contrib/examples/git-remote.perl
+@comment MD5:de7d8d7b946fbdf04c4a0481d9688759
+share/git-core/contrib/examples/git-rerere.perl
+@comment MD5:899f679e1fdfacb673617826933a2ff4
+share/git-core/contrib/examples/git-reset.sh
+@comment MD5:a808d3259f569df779f1d76fd4f0aa47
+share/git-core/contrib/examples/git-resolve.sh
+@comment MD5:4ae481eab39169b2b6911ee16e06fdc5
+share/git-core/contrib/examples/git-revert.sh
+@comment MD5:5b3e5faa295c23e0079e5696d52c23df
+share/git-core/contrib/examples/git-svnimport.perl
+@comment MD5:d2c5ab970baf44d3cf01c694323c577a
+share/git-core/contrib/examples/git-svnimport.txt
+@comment MD5:e933de7c45de0dbf02096b16572dad18
+share/git-core/contrib/examples/git-tag.sh
+@comment MD5:de2bb7c891bc85ce01f198061cbed09e
+share/git-core/contrib/examples/git-verify-tag.sh
+@comment MD5:a4bb6ccf7ac65a5c221857b9a8f2ee59
+share/git-core/contrib/fast-import/git-p4.README
+@comment MD5:4cae89e217513a8e6de1851026cfacd3
+share/git-core/contrib/fast-import/git-import.perl
+@comment MD5:f93d45cdf3811f246059c11a6a825cbb
+share/git-core/contrib/fast-import/git-import.sh
+@comment MD5:c1f06e09627ad7e3c6a07d08e01034cf
+share/git-core/contrib/fast-import/import-directories.perl
+@comment MD5:d92d52f3e4fbc0186e0b3990bf95a469
+share/git-core/contrib/fast-import/import-tars.perl
+@comment MD5:89ac7d20d03774b8648cc001bb70cf49
+share/git-core/contrib/fast-import/import-zips.py
+@comment MD5:9c9da666274957124de7cee9808c8578
+share/git-core/contrib/git-resurrect.sh
+@comment MD5:8f37241d5fee84f6b604913d93dc9f9e
+share/git-core/contrib/git-jump/README
+@comment MD5:22a2df0a4f6e6008f0b3c0b429190035
+share/git-core/contrib/git-jump/git-jump
+@comment MD5:5a45d2e416e2e88b67589c9d15c3d34d
+share/git-core/contrib/git-shell-commands/README
+@comment MD5:b48d21767927b5eaf1429bf7a5600215
+share/git-core/contrib/git-shell-commands/help
+@comment MD5:4122e83a093363d58c24b8c9569f52f5
+share/git-core/contrib/git-shell-commands/list
+@comment MD5:37a9e30abd7487f0c9afce29727256c7
+share/git-core/contrib/gitview/gitview
+@comment MD5:edbd5ea70174ae950cdfd08a341e1d35
+share/git-core/contrib/gitview/gitview.txt
+@comment MD5:f39232bd08ab3f18bfe7b8b616ea065e
+share/git-core/contrib/hg-to-git/hg-to-git.py
+@comment MD5:a8a94ec3991beba953a53df9cb30600b
+share/git-core/contrib/hg-to-git/hg-to-git.txt
+@comment MD5:4dccc561eeac23210b9ac0156bb6b81e
+share/git-core/contrib/hooks/post-receive-email
+@comment MD5:ac7624ea84fe04321a7db30dcc096799
+share/git-core/contrib/hooks/pre-auto-gc-battery
+@comment MD5:7e1d730aba3b9809527fe0cf8df2fb27
+share/git-core/contrib/hooks/setgitperms.perl
+@comment MD5:9efeb7f62a33a3a5210018c63aae764b
+share/git-core/contrib/hooks/update-paranoid
+@comment MD5:30c32ad59deaf182ed694bcbd7acf2c3
+share/git-core/contrib/mw-to-git/.gitignore
+@comment MD5:e8752fc67600962c3cc9ad1e585d2505
+share/git-core/contrib/mw-to-git/git-remote-mediawiki.perl
+@comment MD5:28ca4a785e4e1d7b8322c7d8e153d27d
+share/git-core/contrib/mw-to-git/git-remote-mediawiki.txt
+@comment MD5:7d5fb67e224d4f9e40dcee4f7dd87824
+share/git-core/contrib/mw-to-git/Makefile
+@comment MD5:d4c16f94146c206e5cd1f10432f78900
+share/git-core/contrib/mw-to-git/t/install-wiki/.gitignore
+@comment MD5:2bb807b6b7039339bec21a22ce80a98e
+share/git-core/contrib/mw-to-git/t/install-wiki/LocalSettings.php
+@comment MD5:fd6f149ff0cbb929b7f29b8e0d3156cf
+share/git-core/contrib/mw-to-git/t/install-wiki/db_install.php
+@comment MD5:3ed12079afa8c042bfd7fec75201bfdc
+share/git-core/contrib/mw-to-git/t/Makefile
+@comment MD5:4a281e8af5d54589abea620dd1d58f12
+share/git-core/contrib/mw-to-git/t/README
+@comment MD5:3a6ae323f04be922f40267d626b03df5
+share/git-core/contrib/mw-to-git/t/install-wiki.sh
+@comment MD5:e96038ab9535c2260925df08ff185292
+share/git-core/contrib/mw-to-git/t/push-pull-tests.sh
+@comment MD5:26ea1c5709d91fa3701ead210f930913
+share/git-core/contrib/mw-to-git/t/t9360-mw-to-git-clone.sh
+@comment MD5:f55b94287878d54b6a908c4fc4ddd256
+share/git-core/contrib/mw-to-git/t/t9361-mw-to-git-push-pull.sh
+@comment MD5:69ff9ef9908bfa568f467afc06518a79
+share/git-core/contrib/mw-to-git/t/t9362-mw-to-git-utf8.sh
+@comment MD5:7ab73902bdfc6e6805965e3675701091
+share/git-core/contrib/mw-to-git/t/t9363-mw-to-git-export-import.sh
+@comment MD5:b3d89877f8b8ac00f5bf77e43be8a384
+share/git-core/contrib/mw-to-git/t/t9364-pull-by-rev.sh
+@comment MD5:4c1cbef74ce4d7ab3ab67d8e55c6f0be
+share/git-core/contrib/mw-to-git/t/test-gitmw-lib.sh
+@comment MD5:3b2b0433528eff8ef298f3aee21c81fc
+share/git-core/contrib/mw-to-git/t/test-gitmw.pl
+@comment MD5:aaa4659e5ef114f737b95c837f06f8b1
+share/git-core/contrib/mw-to-git/t/.gitignore
+@comment MD5:18699b6a1d4f2fec140cbc854cb2484c
+share/git-core/contrib/mw-to-git/t/test.config
+@comment MD5:13c28c973b65f2e397b68946c5bbd9a2
+share/git-core/contrib/p4import/README
+@comment MD5:74b255d82f490e2938e2805553fcd5ed
+share/git-core/contrib/p4import/git-p4import.py
+@comment MD5:21ed4405a6480c40dd0aa6e0f5068b9b
+share/git-core/contrib/p4import/git-p4import.txt
+@comment MD5:e495415f7dba6e11202c47da80a5af7f
+share/git-core/contrib/p4import/git-p4import
+@comment MD5:21ed4405a6480c40dd0aa6e0f5068b9b
+share/git-core/contrib/patches/docbook-xsl-manpages-charmap.patch
+@comment MD5:ae429a19855d1db5893a5e5f8e09ac70
+share/git-core/contrib/remotes2config.sh
+@comment MD5:6e03cd56b2c989734a27a974a2b5da54
+share/git-core/contrib/rerere-train.sh
+@comment MD5:a3138f01cbbd30a9ef07e3bf287bc040
+share/git-core/contrib/persistent-https/client.go
+@comment MD5:64b8ff53f90ee342de1d9be1a3da7b9b
+share/git-core/contrib/persistent-https/Makefile
+@comment MD5:496eaa1e18e3bc69d49fdd3cc3f4f31a
+share/git-core/contrib/persistent-https/README
+@comment MD5:1d65b934e0601bc5fe0db89eeae6661b
+share/git-core/contrib/persistent-https/LICENSE
+@comment MD5:3b83ef96387f14655fc854ddc3c6bd57
+share/git-core/contrib/persistent-https/main.go
+@comment MD5:4c47295d301c41146edcec2261896e89
+share/git-core/contrib/persistent-https/proxy.go
+@comment MD5:3070bf0c0235b33f6f675f07dee6f86a
+share/git-core/contrib/persistent-https/socket.go
+@comment MD5:9a071bbae1629bed5323583f21b56ea0
+share/git-core/contrib/remote-helpers/Makefile
+@comment MD5:1abb3f084441888efb9fdbca56524dc4
+share/git-core/contrib/remote-helpers/git-remote-bzr
+@comment MD5:5ae140b02eafb96eda32b34fc4f6adc0
+share/git-core/contrib/remote-helpers/git-remote-hg
+@comment MD5:3aed5294d2b98d5741803b7ee8d4d8c8
+share/git-core/contrib/remote-helpers/test-bzr.sh
+@comment MD5:7f47a5a6c74cb0fd0cff848ff910a916
+share/git-core/contrib/remote-helpers/test-hg.sh
+@comment MD5:ed399e2a7aeefad8e0cc2c1d141e5a97
+share/git-core/contrib/remote-helpers/test-hg-bidi.sh
+@comment MD5:d37ce06b6f849b826f8a44c994a32db7
+share/git-core/contrib/remote-helpers/test-hg-hg-git.sh
+@comment MD5:45bfa1d98e6d88cbfa7a3a77f8cede2e
+share/git-core/contrib/subtree/t/Makefile
+@comment MD5:bad539adfe4ef1a2853e9712dcc2ae7e
+share/git-core/contrib/subtree/t/t7900-subtree.sh
+@comment MD5:51855bb0d7a7cd0a9266b65dd9c60f4d
+share/git-core/contrib/subtree/COPYING
+@comment MD5:751419260aa954499f7abaabaa882bbe
+share/git-core/contrib/subtree/INSTALL
+@comment MD5:8499e2f23f1708f5b034e053a670ea3c
+share/git-core/contrib/subtree/Makefile
+@comment MD5:e83962a04b5b6b3cc8b4f85e51bf0dcd
+share/git-core/contrib/subtree/README
+@comment MD5:5b60ecfba5aaec4c47df7730c21832cc
+share/git-core/contrib/subtree/git-subtree.sh
+@comment MD5:acd54e5297115e478c3ed5f2d8b0dd0d
+share/git-core/contrib/subtree/git-subtree.txt
+@comment MD5:55df66d300f4e8c450eb64b73771ad3c
+share/git-core/contrib/subtree/.gitignore
+@comment MD5:34cfd3f5f16ff9b9d80f546d9ba6bf9f
+share/git-core/contrib/subtree/todo
+@comment MD5:d958238518c800bb22f882db4ef1eb79
+share/git-core/contrib/stats/git-common-hash
+@comment MD5:b95fac17e40d8c3989442244cd13d47c
+share/git-core/contrib/stats/mailmap.pl
+@comment MD5:77fa03777b383f5b78f1295a7040ff64
+share/git-core/contrib/stats/packinfo.pl
+@comment MD5:db06545057e0bd874decab07a229fdce
+share/git-core/contrib/svn-fe/svnrdump_sim.py
+@comment MD5:20246b7983e89f8aae7297f1ab66fd15
+share/git-core/contrib/svn-fe/svn-fe.c
+@comment MD5:64016559c65794a5bb71e1e7e7eb135b
+share/git-core/contrib/svn-fe/svn-fe.txt
+@comment MD5:8a84a33455b95a2407fc3a3f1704896e
+share/git-core/contrib/svn-fe/.gitignore
+@comment MD5:3048783c8e9fd4508135c37806399b22
+share/git-core/contrib/svn-fe/Makefile
+@comment MD5:4ab729d966daef1e10e2b47053f44764
+share/git-core/contrib/thunderbird-patch-inline/README
+@comment MD5:44d4158a60b65b02dbeaef80d27fe80d
+share/git-core/contrib/thunderbird-patch-inline/appp.sh
+@comment MD5:89fa445a8d4774b574b695a3c00ccf93
+share/git-core/contrib/vim/README
+@comment MD5:c26364917ad56688d4f86f44b59e1613
+share/git-core/contrib/workdir/git-new-workdir
+@comment MD5:2cea334619b5790bc6245e861ed58dfc
+@comment @dirrm share/examples/git/gitweb/static
+@comment @dirrm share/examples/git/gitweb
+@comment @dirrm share/examples/git
+@unexec rmdir "%D/lib/perl5/site_perl/5.14.2/mach/auto/Git" 2>/dev/null || true
+@unexec rmdir "%D/lib/perl5/site_perl/5.14.2/Git/SVN/Memoize" 2>/dev/null || true
+@unexec rmdir "%D/lib/perl5/site_perl/5.14.2/Git/SVN" 2>/dev/null || true
+@unexec rmdir "%D/lib/perl5/site_perl/5.14.2/Git" 2>/dev/null || true
+@dirrm lib/xemacs/site-lisp/git
+@unexec rmdir "%D/lib/xemacs/site-lisp" 2>/dev/null || true
+@unexec rmdir "%D/lib/xemacs" 2>/dev/null || true
+@dirrm share/emacs/site-lisp/git
+@comment @dirrm share/gitk/lib/msgs
+@comment @dirrm share/gitk/lib
+@comment @dirrm share/gitk
+@comment @dirrm share/git-gui/lib/msgs
+@comment @dirrm share/git-gui/lib
+@comment @dirrm share/git-gui
+@comment @dirrm share/doc/git/technical
+@comment @dirrm share/doc/git/RelNotes
+@comment @dirrm share/doc/git/howto
+@comment @dirrm share/doc/git
+@dirrm libexec/git-core/mergetools
+@dirrm libexec/git-core
+@unexec rmdir "%D/share/git-core/templates/branches" 2>/dev/null || true
+@unexec rmdir "%D/share/git-core/templates/hooks" 2>/dev/null || true
+@dirrm share/git-core/templates/info
+@unexec rmdir "%D/share/git-core/templates" 2>/dev/null || true
+@dirrm share/git-core/contrib/blameview
+@dirrm share/git-core/contrib/buildsystems/Generators
+@dirrm share/git-core/contrib/buildsystems
+@dirrm share/git-core/contrib/ciabot
+@dirrm share/git-core/contrib/completion
+@dirrm share/git-core/contrib/continuous
+@dirrm share/git-core/contrib/convert-objects
+@dirrm share/git-core/contrib/credential/gnome-keyring
+@dirrm share/git-core/contrib/credential/osxkeychain
+@dirrm share/git-core/contrib/credential/wincred
+@dirrm share/git-core/contrib/credential
+@dirrm share/git-core/contrib/diffall
+@dirrm share/git-core/contrib/diff-highlight
+@dirrm share/git-core/contrib/emacs
+@dirrm share/git-core/contrib/examples
+@dirrm share/git-core/contrib/fast-import
+@dirrm share/git-core/contrib/git-jump
+@dirrm share/git-core/contrib/git-shell-commands
+@dirrm share/git-core/contrib/gitview
+@dirrm share/git-core/contrib/hg-to-git
+@dirrm share/git-core/contrib/hooks
+@dirrm share/git-core/contrib/mw-to-git/t/install-wiki
+@dirrm share/git-core/contrib/mw-to-git/t/
+@dirrm share/git-core/contrib/mw-to-git/
+@dirrm share/git-core/contrib/p4import
+@dirrm share/git-core/contrib/patches
+@dirrm share/git-core/contrib/persistent-https
+@dirrm share/git-core/contrib/remote-helpers
+@dirrm share/git-core/contrib/subtree/t
+@dirrm share/git-core/contrib/subtree
+@dirrm share/git-core/contrib/stats
+@dirrm share/git-core/contrib/svn-fe
+@dirrm share/git-core/contrib/thunderbird-patch-inline
+@dirrm share/git-core/contrib/vim
+@dirrm share/git-core/contrib/workdir
+@dirrm share/git-core/contrib
+@dirrm share/git-core
+@unexec rmdir "%D/lib/python2.7/site-packages/git_remote_helpers/git" 2>/dev/null || true
+@unexec rmdir "%D/lib/python2.7/site-packages/git_remote_helpers" 2>/dev/null || true
+@comment OPTIONS:+CONTRIB +CURL +CVS +ETCSHELLS -GITWEB -GUI -HTMLDOCS +ICONV +NLS +P4 +PERL -SVN
+@unexec if /usr/sbin/pw usershow git_daemon >/dev/null 2>&1; then  echo "==> You should manually remove the \"git_daemon\" user. "; fi
+@cwd /usr/local
+etc/rc.d/git_daemon
+@comment MD5:1576a5cf90a4d933acf5d2530d73949d
+@comment Build details:  ||||
+@display +DISPLAY

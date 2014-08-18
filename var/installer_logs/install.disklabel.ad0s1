@@ -1,0 +1,5 @@
+# /dev/ad0s1:
+8 partitions:
+#          size     offset    fstype   [fsize bsize bps/cpg]
+  a:    4194209         16    unused        0     0   
+  c:    4194225          0    unused        0     0     # "raw" part, don't edit

@@ -1,0 +1,128 @@
+2014-08-13 15:55:09 [unknown:userdel] admin(0) account removed
+2014-08-13 15:55:09 [unknown:groupadd] all(1998)
+2014-08-13 15:55:09 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-13 15:55:09 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-13 15:55:09 [unknown:useradd] admin(0) home /root made
+2014-08-13 15:55:09 [unknown:groupmod] all(1998)
+2014-08-13 15:55:09 [unknown:groupadd] admins(1999)
+2014-08-13 15:57:31 [unknown:userdel] admin(0) account removed
+2014-08-13 15:57:31 [unknown:groupmod] all(1998)
+2014-08-13 15:57:31 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-13 15:57:31 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-13 15:57:31 [unknown:useradd] admin(0) home /root made
+2014-08-13 15:57:31 [unknown:groupmod] all(1998)
+2014-08-13 15:57:31 [unknown:groupmod] admins(1999)
+2014-08-13 13:20:57 [unknown:userdel] admin(0) account removed
+2014-08-13 13:20:57 [unknown:groupmod] all(1998)
+2014-08-13 13:20:57 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-13 13:20:57 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-13 13:20:57 [unknown:useradd] admin(0) home /root made
+2014-08-13 13:20:57 [unknown:groupmod] all(1998)
+2014-08-13 13:20:57 [unknown:groupmod] admins(1999)
+2014-08-13 19:44:21 [unknown:userdel] admin(0) account removed
+2014-08-13 19:44:21 [unknown:groupmod] all(1998)
+2014-08-13 19:44:21 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-13 19:44:21 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-13 19:44:21 [unknown:useradd] admin(0) home /root made
+2014-08-13 19:44:21 [unknown:groupmod] all(1998)
+2014-08-13 19:44:21 [unknown:groupmod] admins(1999)
+2014-08-13 19:48:43 [unknown:userdel] admin(0) account removed
+2014-08-13 19:48:43 [unknown:groupmod] all(1998)
+2014-08-13 19:48:43 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-13 19:48:43 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-13 19:48:43 [unknown:useradd] admin(0) home /root made
+2014-08-13 19:48:43 [unknown:groupmod] all(1998)
+2014-08-13 19:48:43 [unknown:groupmod] admins(1999)
+2014-08-13 14:52:58 [unknown:userdel] admin(0) account removed
+2014-08-13 14:52:58 [unknown:groupmod] all(1998)
+2014-08-13 14:52:58 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-13 14:52:58 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-13 14:52:58 [unknown:useradd] admin(0) home /root made
+2014-08-13 14:52:58 [unknown:groupmod] all(1998)
+2014-08-13 14:52:58 [unknown:groupmod] admins(1999)
+2014-08-14 08:45:18 [unknown:userdel] admin(0) account removed
+2014-08-14 08:45:18 [unknown:groupmod] all(1998)
+2014-08-14 08:45:18 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-14 08:45:18 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-14 08:45:18 [unknown:useradd] admin(0) home /root made
+2014-08-14 08:45:18 [unknown:groupmod] all(1998)
+2014-08-14 08:45:18 [unknown:groupmod] admins(1999)
+2014-08-14 04:03:18 [unknown:userdel] admin(0) account removed
+2014-08-14 04:03:18 [unknown:groupmod] all(1998)
+2014-08-14 04:03:18 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-14 04:03:18 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-14 04:03:18 [unknown:useradd] admin(0) home /root made
+2014-08-14 04:03:18 [unknown:groupmod] all(1998)
+2014-08-14 04:03:18 [unknown:groupmod] admins(1999)
+2014-08-14 11:14:59 [unknown:userdel] admin(0) account removed
+2014-08-14 11:14:59 [unknown:groupmod] all(1998)
+2014-08-14 11:14:59 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-14 11:14:59 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-14 11:14:59 [unknown:useradd] admin(0) home /root made
+2014-08-14 11:14:59 [unknown:groupmod] all(1998)
+2014-08-14 11:14:59 [unknown:groupmod] admins(1999)
+2014-08-14 13:39:13 [unknown:userdel] admin(0) account removed
+2014-08-14 13:39:13 [unknown:groupmod] all(1998)
+2014-08-14 13:39:13 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-14 13:39:13 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-14 13:39:13 [unknown:useradd] admin(0) home /root made
+2014-08-14 13:39:13 [unknown:groupmod] all(1998)
+2014-08-14 13:39:13 [unknown:groupmod] admins(1999)
+2014-08-14 23:48:14 [unknown:userdel] admin(0) account removed
+2014-08-14 23:48:14 [unknown:groupmod] all(1998)
+2014-08-14 23:48:14 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-14 23:48:14 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-14 23:48:14 [unknown:useradd] admin(0) home /root made
+2014-08-14 23:48:14 [unknown:groupmod] all(1998)
+2014-08-14 23:48:14 [unknown:groupmod] admins(1999)
+2014-08-15 01:34:10 [admin:userdel] admin(0) account removed
+2014-08-15 01:34:10 [admin:groupmod] all(1998)
+2014-08-15 01:34:10 [admin:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-15 01:34:10 [admin:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-15 01:34:10 [admin:useradd] admin(0) home /root made
+2014-08-15 01:34:10 [admin:groupmod] all(1998)
+2014-08-15 01:34:10 [admin:groupmod] admins(1999)
+2014-08-15 01:36:46 [admin:userdel] admin(0) account removed
+2014-08-15 01:36:46 [admin:groupmod] all(1998)
+2014-08-15 01:36:46 [admin:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-15 01:36:46 [admin:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-15 01:36:46 [admin:useradd] admin(0) home /root made
+2014-08-15 01:36:46 [admin:groupmod] all(1998)
+2014-08-15 01:36:46 [admin:groupmod] admins(1999)
+2014-08-15 01:40:39 [unknown:userdel] admin(0) account removed
+2014-08-15 01:40:39 [unknown:groupmod] all(1998)
+2014-08-15 01:40:39 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-15 01:40:39 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-15 01:40:39 [unknown:useradd] admin(0) home /root made
+2014-08-15 01:40:39 [unknown:groupmod] all(1998)
+2014-08-15 01:40:39 [unknown:groupmod] admins(1999)
+2014-08-16 13:31:44 [unknown:userdel] admin(0) account removed
+2014-08-16 13:31:44 [unknown:groupmod] all(1998)
+2014-08-16 13:31:44 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-16 13:31:44 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-16 13:31:44 [unknown:useradd] admin(0) home /root made
+2014-08-16 13:31:44 [unknown:groupmod] all(1998)
+2014-08-16 13:31:44 [unknown:groupmod] admins(1999)
+2014-08-16 18:47:01 [unknown:userdel] admin(0) account removed
+2014-08-16 18:47:01 [unknown:groupmod] all(1998)
+2014-08-16 18:47:01 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-16 18:47:01 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-16 18:47:01 [unknown:useradd] admin(0) home /root made
+2014-08-16 18:47:01 [unknown:groupmod] all(1998)
+2014-08-16 18:47:01 [unknown:groupmod] admins(1999)
+2014-08-18 09:29:07 [unknown:userdel] admin(0) account removed
+2014-08-18 09:29:07 [unknown:groupmod] all(1998)
+2014-08-18 09:29:07 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-18 09:29:07 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-18 09:29:07 [unknown:useradd] admin(0) home /root made
+2014-08-18 09:29:07 [unknown:groupmod] all(1998)
+2014-08-18 09:29:07 [unknown:groupmod] admins(1999)
+2014-08-18 05:28:20 [admin:groupadd] git_daemon(964)
+2014-08-18 05:28:20 [admin:useradd] git_daemon(964):git_daemon(964):git daemon:/nonexistent:/usr/sbin/nologin
+2014-08-18 11:42:39 [unknown:userdel] admin(0) account removed
+2014-08-18 11:42:39 [unknown:groupmod] all(1998)
+2014-08-18 11:42:39 [unknown:usermod] root(0):wheel(0):Charlie &:/root:/bin/sh
+2014-08-18 11:42:39 [unknown:useradd] admin(0):wheel(0):System Administrator:/root:/etc/rc.initial
+2014-08-18 11:42:39 [unknown:useradd] admin(0) home /root made
+2014-08-18 11:42:39 [unknown:groupmod] all(1998)
+2014-08-18 11:42:39 [unknown:groupmod] admins(1999)

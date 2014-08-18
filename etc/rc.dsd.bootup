@@ -1,0 +1,13 @@
+#!/usr/local/bin/php -f
+/* ********************** This is the DSD page to send the LastKnownActivity and HeartBeat to the SOC **************************/
+<?php
+require_once('dsdFunctions.inc');
+	echo "\nSending the Last Known activity to SOC.....\n";
+	if(lastknownActivity())
+		echo "\n.Done.\n";
+	echo "\nSending DSDHeartBeat to SOC....\n";
+	if(dsdHeartBeat())
+		echo "\n.Done.\n";	
+	
+
+?>

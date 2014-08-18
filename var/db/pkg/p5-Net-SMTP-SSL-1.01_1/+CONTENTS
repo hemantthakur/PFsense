@@ -1,0 +1,19 @@
+@comment PKG_FORMAT_REVISION:1.1
+@name p5-Net-SMTP-SSL-1.01_1
+@comment ORIGIN:mail/p5-Net-SMTP-SSL
+@cwd /usr/local
+@pkgdep perl-5.14.4_1
+@comment DEPORIGIN:lang/perl5.14
+lib/perl5/5.14/man/man3/Net::SMTP::SSL.3.gz
+@comment MD5:c5f5359981c0597724ab59ca69666832
+lib/perl5/site_perl/5.14/Net/SMTP/SSL.pm
+@comment MD5:d0d60295e09860b102bc1e653cc23996
+lib/perl5/site_perl/5.14/mach/auto/Net/SMTP/SSL/.packlist
+@comment MD5:f1b914cb5c2c4d18316c37dce1d46c55
+@unexec rmdir "%D/lib/perl5/site_perl/5.14/mach/auto/Net/SMTP/SSL" 2>/dev/null || true
+@unexec rmdir "%D/lib/perl5/site_perl/5.14/mach/auto/Net/SMTP" 2>/dev/null || true
+@unexec rmdir "%D/lib/perl5/site_perl/5.14/mach/auto/Net" 2>/dev/null || true
+@unexec rmdir "%D/lib/perl5/site_perl/5.14/Net/SMTP" 2>/dev/null || true
+@unexec rmdir "%D/lib/perl5/site_perl/5.14/Net" 2>/dev/null || true
+@comment OPTIONS:
+@comment Build details:  ||||

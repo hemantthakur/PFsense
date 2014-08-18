@@ -1,0 +1,4 @@
+a:3:{i:1408362157;a:5:{s:2:"id";s:11:"filter_load";s:6:"notice";s:118:"There were error(s) loading the rules: /tmp/rules.debug:24: syntax error - The line in question reads [24]:  = "{  }"
+";s:3:"url";s:0:"";s:8:"category";s:13:"Filter Reload";s:8:"priority";i:1;}i:1408362161;a:5:{s:2:"id";s:11:"filter_load";s:6:"notice";s:118:"There were error(s) loading the rules: /tmp/rules.debug:24: syntax error - The line in question reads [24]:  = "{  }"
+";s:3:"url";s:0:"";s:8:"category";s:13:"Filter Reload";s:8:"priority";i:1;}i:1408362169;a:5:{s:2:"id";s:11:"filter_load";s:6:"notice";s:118:"There were error(s) loading the rules: /tmp/rules.debug:24: syntax error - The line in question reads [24]:  = "{  }"
+";s:3:"url";s:0:"";s:8:"category";s:13:"Filter Reload";s:8:"priority";i:1;}}

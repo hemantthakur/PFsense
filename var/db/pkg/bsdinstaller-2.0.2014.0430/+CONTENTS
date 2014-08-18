@@ -1,0 +1,275 @@
+@comment PKG_FORMAT_REVISION:1.1
+@name bsdinstaller-2.0.2014.0430
+@comment ORIGIN:sysutils/bsdinstaller
+@cwd /usr/local
+@pkgdep libiconv-1.14_1
+@comment DEPORIGIN:converters/libiconv
+@pkgdep gettext-0.18.3.1
+@comment DEPORIGIN:devel/gettext
+lib/libaura.a
+@comment MD5:0165ab141ce40fd6e2121fd1b12246db
+lib/libaura.so
+@comment MD5:14535f28b19b0ff1508f0f91cdec3f5e
+lib/libaura.so.3
+@comment MD5:a5970d97e2acfc606f961230e9f638f0
+include/aura/buffer.h
+@comment MD5:d3c2ffb8a5ddbd24cc0dda345ecfc50e
+include/aura/dict.h
+@comment MD5:a55fb4ad90fa7858469c368fa0c06bec
+include/aura/fspred.h
+@comment MD5:fe0fdbd415ff580d38dfec0b99c2c625
+include/aura/popen.h
+@comment MD5:c42bc6ce13037b63fee21079a01ae744
+include/aura/mem.h
+@comment MD5:676493548aa460f4999ca066bd7931d7
+lib/libdfui.a
+@comment MD5:aa0cad0b12c9915870ffd77e940926a6
+lib/libdfui.so
+@comment MD5:00f02b3e95680cc5e487d5a9ab80e1fa
+lib/libdfui.so.4
+@comment MD5:6b5b1207b9f8d3cfb57c9a43240f68f5
+include/dfui/dfui.h
+@comment MD5:eeb1293eb4e99fbdebfa3a761720c232
+include/dfui/dump.h
+@comment MD5:fc3862b96a1fd71eeedf8fb4426684da
+include/dfui/lang.h
+@comment MD5:dd6fd682fd4b3823c0d7577e0df27cc6
+include/dfui/system.h
+@comment MD5:68f8459a087b590026c194ae0d701478
+sbin/dfuife_curses
+@comment MD5:82650ea5846dd6d9eaf53eaae9341fb1
+share/dfuife_curses/fred.txt
+@comment MD5:4bf05999f87ebddf49da2ead2b0dd283
+share/locale/ru/LC_MESSAGES/dfuife_curses.mo
+@comment MD5:17ed6e329e6eaf2b8cd1e5dfcfabe238
+www/dfuife.cgi
+@comment MD5:ab459d079f0a31943c771d702eeb1763
+www/dfly-pg.gif
+@comment MD5:317481df0bee24f756898dc259449e9c
+www/fred-bg.gif
+@comment MD5:0752cc67756d4318eda6363784b1a023
+www/fred.png
+@comment MD5:98b6ec01524b8a7acca0c857e1e17ebb
+www/dfuife.css
+@comment MD5:d0c0faa7cd2764f5bf79d9ae56909edd
+www/dfuife.js
+@comment MD5:739a42847a5092462622500c2ec4fe8c
+www/index.html
+@comment MD5:4dac61881de80a3549991f0699292b20
+lib/liblua50.so
+@comment MD5:0f2f06b87ab5e95acfedb45fc32e6804
+lib/liblualib50.so
+@comment MD5:5cb4dc483da96441b281c82381893e9d
+bin/lua50
+@comment MD5:d2514288f2f2ed69ac0880064fcc4c81
+bin/lua50c
+@comment MD5:81a9a533d064d41afa38935a9279c782
+share/lua/5.0/compat-5.1.lua
+@comment MD5:e64ccc605c573c1a91eba63b6ae7a97f
+lib/lua/bsdinstaller-2.0.2014.0430/compat-5.1.c
+@comment MD5:07758ae700ddc250649850b39be87655
+lib/lua/bsdinstaller-2.0.2014.0430/compat-5.1.h
+@comment MD5:c3ee850ecf246fa1ba829e64ef9d06a2
+bin/lua50c51
+@comment MD5:cd7cac495e755935e67bb87e3832abc3
+lib/lua/5.0/lpty.so
+@comment MD5:dbd529e61100f1cc3e33b59775c989a5
+share/lua/5.0/pty.lua
+@comment MD5:a28e98428f2feabda7465006939eacea
+share/lua/5.0/app.lua
+@comment MD5:6502b9a053fb48a5990b74b919e0e97e
+lib/lua/5.0/lgettext.so
+@comment MD5:d93e91a950610eca72d9545d98a5e058
+share/lua/5.0/gettext.lua
+@comment MD5:16a2fcabd0f161712d00b60e93d1c849
+share/lua/5.0/filename.lua
+@comment MD5:85157fb0a36a9f2a8b3b6a9f329a1fbe
+lib/lua/5.0/lposix.so
+@comment MD5:093d1a16a9bf96d05bd9e9e28c885900
+share/lua/5.0/posix.lua
+@comment MD5:fee2be468aa5cd5ad81108bb5c5a79e9
+lib/lua/5.0/ldfui.so
+@comment MD5:17e2e9145a010ec29c74ef001b34ce90
+share/lua/5.0/dfui.lua
+@comment MD5:7bc0d4561a4731297fee0928390cdeda
+lib/lua/5.0/lsocket.so
+@comment MD5:6c6119bc6f74123418ab243ddd81955e
+lib/lua/5.0/lmime.so
+@comment MD5:a4597575faa185b3b9b552170ea85e0a
+share/lua/5.0/ftp.lua
+@comment MD5:dba7255964c01eef5335567dd08ebe85
+share/lua/5.0/http.lua
+@comment MD5:03e9e7d66000e0206609045a536c91ac
+share/lua/5.0/ltn12.lua
+@comment MD5:de0f8afc89b61ae6e87532bc4f594d62
+share/lua/5.0/mime.lua
+@comment MD5:14d585916c515178b983abbc4de0e979
+share/lua/5.0/smtp.lua
+@comment MD5:3a6341927ff5bffedeaa12b72c89feca
+share/lua/5.0/socket.lua
+@comment MD5:63390f5769f3056d8cd0b9892c85050d
+share/lua/5.0/tp.lua
+@comment MD5:994a20327ab5521faf8624e10d0dc222
+share/lua/5.0/url.lua
+@comment MD5:931962c70f8229cdb3f8710f2f2356c8
+share/lua/5.0/transceiver.lua
+@comment MD5:cf72fa7aae61d90a05066772f31a2499
+lib/lua/5.0/lcurses.so
+@comment MD5:5b9d24d1fa6cf6059a85f51e494a49a7
+share/lua/5.0/curses.lua
+@comment MD5:08ef3085d1d999e471cace82866f5c37
+share/dfuibe_lua/main.lua
+@comment MD5:6d924fead7dac44f48dc05c39e053516
+share/dfuibe_lua/200_install.lua
+@comment MD5:077316883f20a5b40ad82140539a52e1
+share/dfuibe_lua/400_configure.lua
+@comment MD5:1c06330ce0c03837684289d49e903a64
+share/dfuibe_lua/600_upgrade.lua
+@comment MD5:f21180a6681ff86d4ca8f5562abade38
+share/dfuibe_lua/800_netboot.lua
+@comment MD5:710ed5448c83d75beabd39ebac902b17
+share/dfuibe_lua/950_reboot.lua
+@comment MD5:93ff63bfaaef2a5655769cb87a7b5e3f
+share/dfuibe_lua/lib/bitwise.lua
+@comment MD5:7930751ff1b7181b878bf4dc66db376e
+share/dfuibe_lua/lib/cmdchain.lua
+@comment MD5:5935bd7e30c5a7bafd17a1367f1cc5fc
+share/dfuibe_lua/lib/configvars.lua
+@comment MD5:79d6d8a6c40edbc1024ada2aadbed7ea
+share/dfuibe_lua/lib/flow.lua
+@comment MD5:d81e3a4dc333eb8362242468d4a22cbc
+share/dfuibe_lua/lib/menu.lua
+@comment MD5:4ee7d62d875c1e51f3f1c0fa22d8d04b
+share/dfuibe_lua/lib/network.lua
+@comment MD5:2988d61e4803539e457235810d0700bb
+share/dfuibe_lua/lib/network_ui.lua
+@comment MD5:9fd2d3fb8a225ec86aebc27b9436b148
+share/dfuibe_lua/lib/package.lua
+@comment MD5:423b2d19def9916341c81fa79f333e3b
+share/dfuibe_lua/lib/package_ui.lua
+@comment MD5:adea3012e9cd6503d6c48c8dd1ce5994
+share/dfuibe_lua/lib/storage.lua
+@comment MD5:f11ac4d15f100a72d04ea4d3678040e6
+share/dfuibe_lua/lib/storage_ui.lua
+@comment MD5:2eafc679cbab37d533d2d6b786b1635f
+share/dfuibe_lua/lib/target_system.lua
+@comment MD5:e35a1777851ec0d96408ef07c6c0724e
+share/dfuibe_lua/lib/target_system_ui.lua
+@comment MD5:518bdea6e003f175a926042d269ede6d
+share/dfuibe_lua/lib/uinav.lua
+@comment MD5:a97fe59ec02051b566e43b5ddd733fce
+share/dfuibe_lua/conf/BSDInstaller.lua
+@comment MD5:11d8091eb89631138e58c577364526b1
+share/dfuibe_lua/conf/DragonFly.lua
+@comment MD5:fe14a4e69169850d02ebf1ea04beffbe
+share/dfuibe_lua/conf/FreeBSD.lua
+@comment MD5:1e2d55f360303fbf21b50f213e697846
+share/dfuibe_lua/conf/NetBSD.lua
+@comment MD5:6c361baee9c8deb7af90e6c29d86fccc
+share/dfuibe_lua/conf/OpenBSD.lua
+@comment MD5:36571bd4369bddaca5c8f06e4720a391
+share/dfuibe_lua/pit/main.lua
+@comment MD5:8cebaf11e9d2645ca8794f0e85154bf9
+share/dfuibe_lua/pit/050_welcome.lua
+@comment MD5:a0cb57a29ac0cb6088ad56491c5c481b
+share/dfuibe_lua/pit/100_select_language.lua
+@comment MD5:a4dc43d5bbc4b1c88f23f648605b497b
+share/dfuibe_lua/pit/150_configure_console.lua
+@comment MD5:dbd540e329a864bf526c193cbbbc9b51
+share/dfuibe_lua/pit/400_load_kernel_modules.lua
+@comment MD5:c91283f9b8371ad399beba610e9fd41d
+share/dfuibe_lua/pit/800_configure_network.lua
+@comment MD5:35f63d5c0511aa58ffbe5ee1a616a745
+share/dfuibe_lua/install/main.lua
+@comment MD5:efa0aeac3462f1decb0af2387f91a192
+share/dfuibe_lua/install/100_welcome.lua
+@comment MD5:17dc2ed1e936a6e45ff78cefa0468321
+share/dfuibe_lua/install/200_select_disk.lua
+@comment MD5:2a3c15232887402d14c6f34b666cb42b
+share/dfuibe_lua/install/220_format_disk.lua
+@comment MD5:6da8ce1028ccb9e48df5eb57cd99e380
+share/dfuibe_lua/install/250_partition_disk.lua
+@comment MD5:598038c9c65d14cc3181976d2df7307a
+share/dfuibe_lua/install/270_install_bootblocks.lua
+@comment MD5:c39b300ecbab9076975794b709fe687d
+share/dfuibe_lua/install/300_select_part.lua
+@comment MD5:1caa4ae51ccdc13cbf4f2ae897336414
+share/dfuibe_lua/install/400_select_subparts.lua
+@comment MD5:b9b881efbb07491071f022f033763e2c
+share/dfuibe_lua/install/405_warn_omitted_subparts.lua
+@comment MD5:a070b7b5745469d308c78feb23be3734
+share/dfuibe_lua/install/407_create_subparts.lua
+@comment MD5:82a7d79001a0213d6c10a30e5eff4acc
+share/dfuibe_lua/install/410_select_additional_filesystems.lua
+@comment MD5:d02f7e96dc7623c8f3dc737ad793c4d4
+share/dfuibe_lua/install/420_preselect_packages.lua
+@comment MD5:90319dcf784f912f946c96ba922c2389
+share/dfuibe_lua/install/450_select_packages.lua
+@comment MD5:5b106f13abdc41302f376b7765ce63d4
+share/dfuibe_lua/install/490_confirm_install_os.lua
+@comment MD5:41b3970923042c88525c7aa8b0fa68d9
+share/dfuibe_lua/install/500_install_os.lua
+@comment MD5:345b964a58562fcf34067ebf15d7baf4
+share/dfuibe_lua/install/800_finished.lua
+@comment MD5:ef6e676590bef5297d966399a45ffa65
+share/dfuibe_lua/install/900_reboot.lua
+@comment MD5:6ab35bb598f97e2486232e0358bda7bc
+share/dfuibe_lua/configure/main.lua
+@comment MD5:fb4f81011d0c6df0e97771b5bf12762f
+share/dfuibe_lua/configure/100_choose_where_from.lua
+@comment MD5:4e35e66640e9730a4d2928c46ce46e2d
+share/dfuibe_lua/configure/200_select_disk.lua
+@comment MD5:191c052001e1e88a38e00d965ee04af9
+share/dfuibe_lua/configure/300_select_part.lua
+@comment MD5:7e41497d97b8a67b425be40e2c14bb08
+share/dfuibe_lua/configure/400_mount_target_system.lua
+@comment MD5:29ab534f79b9d8b8742aea729f29873c
+share/dfuibe_lua/configure/450_init_configuration.lua
+@comment MD5:5ba53fe034ed9d0733bbe0c9cfc8607d
+share/dfuibe_lua/configure/500_menu.lua
+@comment MD5:b2583ad197689e3908439c3a5d7c6d53
+share/dfuibe_lua/configure/550_write_configuration.lua
+@comment MD5:b907df38d054088f0c1e96837887e0ef
+share/dfuibe_lua/configure/600_unmount_target_system.lua
+@comment MD5:d5f246f318997e2a4c58db4881bae1bf
+share/dfuibe_lua/configure/menu/main.lua
+@comment MD5:0d3c58bce34ed15b83ef47d39f0d057a
+share/dfuibe_lua/configure/menu/100_set_root_password.lua
+@comment MD5:a7056061a1dd9910d6027f379989eff8
+share/dfuibe_lua/configure/menu/200_add_user.lua
+@comment MD5:bedc86fececca395979b6973413d5d79
+share/dfuibe_lua/configure/menu/300_set_timezone.lua
+@comment MD5:02b0386015b1b7f331eb67e5dbf6efd0
+share/dfuibe_lua/configure/menu/350_set_datetime.lua
+@comment MD5:22919eb8d27be4a3e76e5876786bb699
+share/dfuibe_lua/configure/menu/400_change_console_settings.lua
+@comment MD5:9ffa6283172b949bfe27266185bf3f81
+share/dfuibe_lua/configure/menu/500_install_packages.lua
+@comment MD5:b3d1659b16a3923b08892ddb82c9d0bb
+share/dfuibe_lua/configure/menu/550_remove_packages.lua
+@comment MD5:a253147991dc157b4d3951d7c84f5a15
+share/dfuibe_lua/upgrade/main.lua
+@comment MD5:bb71415dc94bc4368df03b7d9728d041
+share/dfuibe_lua/upgrade/100_begin_upgrade.lua
+@comment MD5:120725696ce86ebe8f8996587699b32b
+share/dfuibe_lua/upgrade/200_select_disk.lua
+@comment MD5:db270465ff528dc6f41ad148fd83bda5
+share/dfuibe_lua/upgrade/300_select_part.lua
+@comment MD5:93393757d6fd7980677077297abc6d59
+share/dfuibe_lua/upgrade/400_mount_target_system.lua
+@comment MD5:f8331238df25945887dcbca9782271e6
+share/dfuibe_lua/upgrade/500_perform_upgrade.lua
+@comment MD5:696def1b8509c99ff4f42ae0301c4883
+share/dfuibe_lua/upgrade/550_upgrade_configuration.lua
+@comment MD5:b5f8d21463b57b034ccc7b8d13129997
+share/dfuibe_lua/upgrade/600_unmount_target_system.lua
+@comment MD5:4141ec0d77e4f5341b96676fde40c4ab
+share/dfuibe_lua/netboot/main.lua
+@comment MD5:809aa081786d02b97344eddc5d051c9b
+share/dfuibe_lua/netboot/500_setup_server.lua
+@comment MD5:2c8fde79f9de7100257b32680d257d8a
+share/locale/ru/LC_MESSAGES/dfuibe_lua.mo
+@comment MD5:e39d6cb32fcbea98fe0f8b60017aab48
+@comment OPTIONS:+CGI +CURSES -C_BACKEND +LUA_BACKEND +NLS
+@exec echo pkg_install EOL is scheduled for 2014-09-01. Please consider migrating to pkgng
+@exec echo http://blogs.freebsdish.org/portmgr/2014/02/03/time-to-bid-farewell-to-the-old-pkg_-tools/
